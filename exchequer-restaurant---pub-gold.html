@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exchequer Restaurant & Pub - Experience upscale American restaurant in Chicago.">
+    <title>Exchequer Restaurant & Pub | Chicago</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. CSS VARIABLES & RESET --- */
+        :root {
+            --primary: #1c1917;
+            --secondary: #d97706;
+            --accent: #b45309;
+            --text-dark: #292524;
+            --text-light: #78716c;
+            --white: #ffffff;
+            --bg-light: #f5f5f4;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+
+            /* UI Theme Variables */
+            --maroon: #7e1e24;
+            --dark-panel: #161616;
+            --input-bg: #222222;
+            --icon-gold: #d8b486;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; font-family: 'Lato', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; color: inherit; transition: var(--transition); cursor: pointer; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; }
+
+        /* --- 2. UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; }
+        .flex { display: flex; align-items: center; }
+        .grid { display: grid; gap: 30px; }
+
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; border-radius: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border: none; font-size: 0.85rem; transition: var(--transition); }
+        .btn-primary { background-color: var(--secondary); color: var(--white); }
+        .btn-primary:hover { background-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(180, 83, 9, 0.4); }
+        .btn-outline { border: 2px solid var(--white); color: var(--white); background: transparent; }
+        .btn-outline:hover { background-color: var(--white); color: var(--primary); }
+        .btn-outline-dark { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+        .btn-outline-dark:hover { background-color: var(--primary); color: var(--white); }
+
+        .section-header { margin-bottom: 50px; text-align: center; }
+        .section-header h2 { font-size: 2.8rem; color: var(--primary); margin-bottom: 10px; }
+        .section-header .divider { height: 3px; width: 50px; background: var(--secondary); margin: 0 auto; }
+
+        /* --- 3. NAVIGATION --- */
+        header { background: var(--primary); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-size: 1.6rem; font-weight: 700; color: var(--secondary); display: flex; align-items: center; gap: 10px; font-family: 'Playfair Display', serif; }
+        .nav-menu { display: flex; gap: 30px; align-items: center; }
+        .nav-link { font-weight: 600; font-size: 1rem; color: #d6d3d1; position: relative; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
+        .nav-link:hover, .nav-link.active { color: var(--secondary); }
+        .nav-link.active::after { content: ''; position: absolute; width: 100%; height: 2px; bottom: -5px; left: 0; background: var(--secondary); }
+        .hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--secondary); }
+
+        /* --- 4. PAGE SECTIONS (SPA Logic) --- */
+        .page-section { display: none; animation: fadeIn 0.4s ease-in-out; }
+        .page-section.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- 5. HOME HERO --- */
+        .hero { background: linear-gradient(rgba(28, 25, 23, 0.7), rgba(28, 25, 23, 0.8)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1600'); background-size: cover; background-position: center; color: var(--white); padding: 140px 0; text-align: center; }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+        .hero p { font-size: 1.25rem; margin-bottom: 30px; color: #e7e5e4; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 60px; }
+        .stat-card { background: var(--white); padding: 30px; border-radius: 4px; text-align: center; box-shadow: var(--shadow); border-bottom: 3px solid var(--secondary); }
+        .stat-number { font-size: 3rem; font-weight: 700; color: var(--accent); font-family: 'Playfair Display', serif; }
+        .stat-label { color: var(--text-light); margin-top: 5px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
+
+        /* Highlights */
+        .services-container { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .service-card { background: var(--white); padding: 40px 30px; border-radius: 4px; box-shadow: var(--shadow); text-align: center; transition: var(--transition); }
+        .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .icon-box { width: 70px; height: 70px; border: 1px solid var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--accent); font-size: 1.8rem; }
+        .service-card h3 { margin-bottom: 15px; color: var(--primary); font-size: 1.5rem; }
+
+        /* --- 6. ABOUT SECTION --- */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-img { border-radius: 4px; overflow: hidden; box-shadow: var(--shadow-lg); position: relative; }
+        .about-img::after { content: ''; position: absolute; inset: 0; border: 2px solid var(--secondary); transform: translate(15px, 15px); pointer-events: none; z-index: -1; }
+        .check-list li { margin-bottom: 10px; display: flex; gap: 10px; align-items: center; }
+        .check-list i { color: var(--secondary); }
+
+        /* --- 7. NEW MENU SECTION (IMAGELESS, RED-BORDER CARDS) --- */
+        .menu-category { margin-bottom: 60px; }
+        .menu-category-title { font-size: 2.2rem; color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 10px; margin-bottom: 30px; display: inline-block; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .menu-card { background: #ffffff; border-radius: 6px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04); padding: 25px; border: 1px solid #f0f0f0; border-left: 4px solid var(--maroon); display: flex; flex-direction: column; gap: 12px; transition: var(--transition); }
+        .menu-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); border-color: #eaeaea; }
+        .menu-card-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--primary); margin: 0; }
+        .menu-card-desc { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: var(--text-light); line-height: 1.5; margin: 0; flex-grow: 1; }
+        .menu-card-price { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--maroon); margin: 0; }
+
+        /* --- 8. REVIEWS --- */
+        .testimonial-card { background: var(--white); max-width: 800px; margin: 0 auto; padding: 50px; border-radius: 4px; box-shadow: var(--shadow); position: relative; text-align: center; }
+        .testimonial-card::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 6rem; color: #f5f5f4; position: absolute; top: -10px; left: 20px; line-height: 1; }
+        .stars { color: var(--secondary); margin-bottom: 15px; }
+        .review-text { font-size: 1.4rem; font-style: italic; color: #44403c; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+        .reviewer { font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+
+        /* --- 9. NEW CONTACT FORM & INFO LAYOUT --- */
+        .contact-panel { display: flex; flex-wrap: wrap; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); max-width: 1050px; margin: 0 auto; }
+        .contact-info-panel { flex: 1; min-width: 320px; background: var(--maroon); color: var(--white); padding: 50px 45px; display: flex; flex-direction: column; }
+        .contact-info-panel h3 { font-size: 2.2rem; color: var(--white); margin-bottom: 35px; font-family: 'Lato', sans-serif; font-weight: 700; }
+        .info-item { display: flex; gap: 18px; margin-bottom: 32px; align-items: flex-start; }
+        .info-item-icon { color: var(--icon-gold); font-size: 1.4rem; margin-top: 3px; }
+        .info-item-text strong { display: block; color: var(--white); font-size: 1.15rem; font-weight: 700; margin-bottom: 5px; font-family: 'Lato', sans-serif; }
+        .info-item-text span, .info-item-text a { color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; line-height: 1.6; transition: 0.2s ease; }
+        .info-item-text a:hover { color: var(--icon-gold); }
+        .contact-form-panel { flex: 1.8; min-width: 320px; background: var(--dark-panel); padding: 50px 45px; }
+        .contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 25px; }
+        @media (max-width: 600px) { .contact-form-grid { grid-template-columns: 1fr; } }
+        .cf-group { margin-bottom: 0; }
+        .cf-group.full { grid-column: 1 / -1; }
+        .cf-group label { display: block; margin-bottom: 10px; font-size: 0.9rem; font-weight: 700; color: var(--white); font-family: 'Lato', sans-serif; }
+        .cf-input { width: 100%; background: var(--input-bg); border: 1px solid #333; color: var(--white); padding: 14px 16px; border-radius: 6px; font-family: 'Lato', sans-serif; font-size: 0.95rem; transition: var(--transition); }
+        .cf-input::placeholder { color: rgba(255, 255, 255, 0.3); }
+        .cf-input:focus { outline: none; border-color: var(--maroon); background: #282828; }
+        .cf-submit { margin-top: 35px; padding: 15px 35px; background: var(--maroon); color: var(--white); border: none; font-weight: 700; border-radius: 40px; cursor: pointer; font-size: 1.05rem; transition: var(--transition); font-family: 'Lato', sans-serif; }
+        .cf-submit:hover { background: #92222a; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(126, 30, 36, 0.4); }
+
+        /* --- 10. FOOTER --- */
+        footer { background: var(--primary); color: #d6d3d1; padding: 80px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; }
+        @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 576px) { .footer-grid { grid-template-columns: 1fr; } }
+        .footer-section h4 { color: var(--white); font-size: 1.25rem; margin-bottom: 25px; font-family: 'Playfair Display', serif; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a:hover { color: var(--secondary); padding-left: 5px; }
+        .social-links { display: flex; gap: 15px; margin-top: 25px; }
+        .social-link { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: var(--transition); }
+        .social-link:hover { background: var(--secondary); color: var(--white); transform: translateY(-3px); }
+
+        /* --- 11. AI CHATBOT --- */
+        .chatbot-toggle { position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; background: var(--primary); border: 2px solid var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 1.4rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); cursor: pointer; z-index: 2001; transition: var(--transition); }
+        .chatbot-toggle:hover { transform: scale(1.1); background: var(--secondary); color: var(--primary); }
+        .chatbot-window { position: fixed; bottom: 100px; right: 30px; width: 350px; height: 500px; background: white; border-radius: 8px; box-shadow: var(--shadow-lg); display: none; flex-direction: column; z-index: 2001; overflow: hidden; }
+        .chatbot-window.active { display: flex; animation: slideUp 0.3s ease; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .chatbot-header { background: var(--primary); color: var(--white); padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--secondary); }
+        .chatbot-close { cursor: pointer; font-size: 1.2rem; color: var(--secondary); }
+        .chatbot-messages { flex: 1; padding: 20px; overflow-y: auto; background: #fafaf9; }
+        .message { margin-bottom: 15px; display: flex; gap: 10px; }
+        .message.bot { justify-content: flex-start; }
+        .message.user { justify-content: flex-end; }
+        .message-bubble { max-width: 80%; padding: 12px 16px; border-radius: 4px; font-size: 0.95rem; }
+        .message.bot .message-bubble { background: white; border: 1px solid #e7e5e4; }
+        .message.user .message-bubble { background: var(--secondary); color: white; }
+        .chatbot-input { display: flex; padding: 15px; border-top: 1px solid #e7e5e4; background: white; }
+        .chatbot-input input { flex: 1; padding: 10px; border: 1px solid #d6d3d1; border-radius: 4px; margin-right: 10px; }
+        .chatbot-input button { padding: 10px 20px; background: var(--primary); color: var(--secondary); border: none; border-radius: 4px; cursor: pointer; }
+        .quick-replies { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .quick-reply { padding: 6px 12px; border: 1px solid var(--secondary); border-radius: 20px; font-size: 0.8rem; color: var(--secondary); cursor: pointer; transition: var(--transition); }
+        .quick-reply:hover { background: var(--secondary); color: white; }
+
+        /* --- 12. STICKY / MOBILE BARS --- */
+        .sticky-btns { position: fixed; right: 30px; bottom: 95px; display: flex; flex-direction: column; gap: 10px; z-index: 999; }
+        .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: white; box-shadow: var(--shadow); cursor: pointer; transition: var(--transition); border: none; }
+        .reserve-btn { background: var(--maroon); }
+        .phone-btn { background: var(--secondary); }
+        .float-btn:hover { transform: scale(1.1); box-shadow: var(--shadow-lg); }
+        .mobile-bar { position: fixed; bottom: 0; left: 0; width: 100%; height: 65px; background: var(--primary); display: none; align-items: center; justify-content: space-around; z-index: 1000; border-top: 1px solid rgba(255,255,255,0.1); }
+        .mobile-link { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: #d6d3d1; cursor: pointer; gap: 4px; }
+        .mobile-link i { font-size: 1.2rem; color: var(--secondary); }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--primary); flex-direction: column; padding: 20px 0; border-top: 1px solid #292524; }
+            .nav-menu.active { display: flex; }
+            .hamburger { display: block; }
+            .hero h1 { font-size: 2.8rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .mobile-bar { display: flex; }
+            body { padding-bottom: 65px; }
+            .sticky-btns { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <header>
+        <div class="container navbar">
+            <a onclick="router('home')" class="logo">
+                <i class="fas fa-utensils"></i> Exchequer
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a onclick="router('home')" class="nav-link active">Home</a></li>
+                <li><a onclick="router('about')" class="nav-link">Our Story</a></li>
+                <li><a onclick="router('menu')" class="nav-link">Menu</a></li>
+                <li><a onclick="router('booking')" class="nav-link">Reservations</a></li>
+                <li><a onclick="router('reviews')" class="nav-link">Reviews</a></li>
+                <li><a onclick="router('contact')" class="nav-link">Contact</a></li>
+                <li><button onclick="router('booking')" class="btn btn-primary" style="padding: 10px 20px;">Book Now</button></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================== HOME PAGE ===================== -->
+    <section id="home" class="page-section active">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container">
+                <h1>Experience the Art of American restaurant</h1>
+                <p>Experience upscale dining and an extensive wine selection in the heart of Chicago.</p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <button onclick="router('menu')" class="btn btn-primary">View Menus</button>
+                    <button onclick="router('booking')" class="btn btn-outline">Reserve a Table</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top: -60px; position: relative; z-index: 10;">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">4.4★</div>
+                    <div class="stat-label">Guest Rating</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3065+</div>
+                    <div class="stat-label">Happy Reviews</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Fine Wine Labels</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Highlights -->
+        <div class="section-padding container">
+            <div class="section-header">
+                <h2>The Golden Experience</h2>
+                <p style="color: var(--text-light);">Excellence in every detail, from farm to flame.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid services-container">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-fire"></i></div>
+                    <h3>Artisan Grilling</h3>
+                    <p>Experience the deep, rich flavors of wood-fired steaks and signature dishes crafted over open flames.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-wine-glass-alt"></i></div>
+                    <h3>Curated Cellar</h3>
+                    <p>A hand-picked selection of vintage wines and contemporary labels chosen by our resident sommelier.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-leaf"></i></div>
+                    <h3>Seasonal Harvest</h3>
+                    <p>We partner with local growers to ensure only the peak-season ingredients reach your plate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT PAGE ===================== -->
+    <section id="about" class="page-section">
+        <div class="section-padding container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800" alt="Restaurant interior">
+                </div>
+                <div>
+                    <h5 style="color: var(--secondary); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; font-weight: 700;">Since 2011</h5>
+                    <h2 style="font-size: 3rem; margin-bottom: 25px;">Our Journey into Culinary Harmony</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px;">
+                        Decades-old pub with pizza, ribs, burgers & other American grub plus a large beer selection.
+                    </p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle"></i> Award-Winning Culinary Team</li>
+                        <li><i class="fas fa-check-circle"></i> Sourced from 100% Sustainable Local Farms</li>
+                        <li><i class="fas fa-check-circle"></i> Exclusive Chef's Table Experience Available</li>
+                        <li><i class="fas fa-check-circle"></i> Private Dining Chambers for VIP Events</li>
+                    </ul>
+                    <button onclick="router('contact')" class="btn btn-outline-dark" style="margin-top: 35px;">Learn More About Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== MENU PAGE ===================== -->
+    <section id="menu" class="page-section">
+        <div class="section-padding container">
+            <div class="section-header">
+                <h5 style="color: var(--secondary); letter-spacing: 2px; text-transform: uppercase;">Curated Selections</h5>
+                <h2>Our Menus</h2>
+                <div class="divider" style="margin-bottom: 20px;"></div>
+                <p style="max-width: 600px; margin: 0 auto; color: var(--text-light);">Explore our seasonal offerings, from wood-fired specialties to decadent desserts and artisanal pairings.</p>
+            </div>
+
+            <div id="menuContainer">
+            
+            <div class="menu-category">
+                <h3 class="menu-category-title">Appetizers</h3>
+                <div class="menu-grid">
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Crispy Calamari</h4>
+                            <p class="menu-card-desc">Served with marinara sauce and lemon.</p>
+                            <p class="menu-card-price">$12.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Bruschetta</h4>
+                            <p class="menu-card-desc">Toasted bread with fresh tomatoes, basil, and garlic.</p>
+                            <p class="menu-card-price">$9.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Garlic Bread</h4>
+                            <p class="menu-card-desc">Oven-baked with herbs and butter.</p>
+                            <p class="menu-card-price">$6.00</p>
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="menu-category">
+                <h3 class="menu-category-title">Main Courses</h3>
+                <div class="menu-grid">
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Grilled Salmon</h4>
+                            <p class="menu-card-desc">Fresh Atlantic salmon with seasonal vegetables.</p>
+                            <p class="menu-card-price">$24.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Steak Frites</h4>
+                            <p class="menu-card-desc">Classic steak with crispy fries and herb butter.</p>
+                            <p class="menu-card-price">$28.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Chicken Parmesan</h4>
+                            <p class="menu-card-desc">Breaded chicken topped with marinara and mozzarella.</p>
+                            <p class="menu-card-price">$21.00</p>
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="menu-category">
+                <h3 class="menu-category-title">Desserts</h3>
+                <div class="menu-grid">
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Tiramisu</h4>
+                            <p class="menu-card-desc">Classic Italian coffee-flavored dessert.</p>
+                            <p class="menu-card-price">$8.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Cheesecake</h4>
+                            <p class="menu-card-desc">New York style with berry compote.</p>
+                            <p class="menu-card-price">$7.00</p>
+                        </div>
+                    
+                </div>
+            </div>
+        
+            </div>
+
+            <div class="text-center" style="margin-top: 60px;">
+                <p style="font-size: 1.1rem; margin-bottom: 20px; font-family: 'Playfair Display', serif;">Looking for something specific?</p>
+                <button onclick="router('contact')" class="btn btn-outline-dark">Enquire Directly</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== RESERVATIONS PAGE ===================== -->
+    <section id="booking" class="page-section">
+        <div class="section-padding container">
+            <div class="section-header">
+                <h2>Secure Your Experience</h2>
+                <p>Reserve your table at Exchequer Restaurant & Pub for an unforgettable dining journey.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="contact-panel">
+                <div class="contact-info-panel">
+                    <h3>Booking Info</h3>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-item-text"><strong>Phone</strong><a href="tel:3129395633">(312) 939-5633</a></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-item-text"><strong>Location</strong><span>226 S Wabash Ave, Chicago, IL 60604</span></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-clock"></i></div>
+                        <div class="info-item-text"><strong>Hours</strong><span><span>Monday: 11 AM to 10 PM<br></span><span>Tuesday: 11 AM to 10 PM<br></span><span>Wednesday: 11 AM to 10 PM<br></span><span>Thursday: 11 AM to 11 PM<br></span><span>Friday: 11 AM to 11 PM<br></span><span>Saturday: 11 AM to 11 PM<br></span><span>Sunday: 11 AM to 9 PM<br></span></span></div>
+                    </div>
+                </div>
+                <div class="contact-form-panel">
+                    <form onsubmit="event.preventDefault(); alert('Reservation demo submitted!');">
+                        <div class="contact-form-grid">
+                            <div class="cf-group"><label>Full Name *</label><input type="text" class="cf-input" placeholder="Your name" required></div>
+                            <div class="cf-group"><label>Phone *</label><input type="tel" class="cf-input" placeholder="Your phone" required></div>
+                            <div class="cf-group"><label>Date *</label><input type="date" class="cf-input" required></div>
+                            <div class="cf-group"><label>Time *</label><input type="time" class="cf-input" required></div>
+                            <div class="cf-group"><label>Guests *</label><input type="number" class="cf-input" placeholder="How many?" required></div>
+                            <div class="cf-group"><label>Event Type</label>
+                                <select class="cf-input">
+                                    <option>Regular Dining</option>
+                                    <option>Birthday</option>
+                                    <option>Corporate</option>
+                                    <option>Wedding / Anniversary</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="cf-submit">Request Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== REVIEWS PAGE ===================== -->
+    <section id="reviews" class="page-section">
+        <div class="section-padding container">
+            <div class="section-header">
+                <h2>Guest Testimonials</h2>
+                <p>What our valued patrons have to say about their experience.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div id="reviews-carousel">
+                
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Excellent food and service!"</p>
+            <p class="reviewer">— Happy Customer</p>
+        </div>
+    <!-- slide -->
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Great experience, will come again."</p>
+            <p class="reviewer">— Satisfied Diner</p>
+        </div>
+    <!-- slide -->
+        <div class="testimonial-card">
+            <div class="stars">★★★★</div>
+            <p class="review-text">"Amazing flavors and atmosphere."</p>
+            <p class="reviewer">— Local Foodie</p>
+        </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT PAGE ===================== -->
+    <section id="contact" class="page-section">
+        <div class="section-padding container">
+            <div class="contact-panel">
+                <div class="contact-info-panel">
+                    <h3>Contact Us</h3>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-item-text"><strong>Direct Dial</strong><a href="tel:3129395633">(312) 939-5633</a></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-item-text"><strong>Email Us</strong><a href="mailto:info@exchequerpub.com">info@exchequerpub.com</a></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-item-text"><strong>Find Us</strong><span>226 S Wabash Ave, Chicago, IL 60604</span></div>
+                    </div>
+                </div>
+                <div class="contact-form-panel">
+                    <form onsubmit="event.preventDefault(); alert('Inquiry sent!');">
+                        <div class="contact-form-grid">
+                            <div class="cf-group full"><label>Inquiry Subject</label><input type="text" class="cf-input" placeholder="General Inquiry / Events / Careers"></div>
+                            <div class="cf-group full"><label>Your Message</label><textarea class="cf-input" rows="5" placeholder="How can we assist you?"></textarea></div>
+                        </div>
+                        <button type="submit" class="cf-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);">
+                <iframe src="https://www.google.com/maps?q=226%20S%20Wabash%20Ave%2C%20Chicago%2C%20IL%2060604&output=embed" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Exchequer Restaurant & Pub</h4>
+                    <p style="margin-top: 15px;">Elevating the art of American restaurant in the heart of the city.</p>
+                    <div class="social-links">
+                        <a class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a onclick="router('home')">Home</a></li>
+                        <li><a onclick="router('about')">Our Story</a></li>
+                        <li><a onclick="router('menu')">Menus</a></li>
+                        <li><a onclick="router('booking')">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a onclick="router('contact')">Privacy Policy</a></li>
+                        <li><a onclick="router('contact')">Terms of Service</a></li>
+                        <li><a onclick="router('contact')">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Reach Out</h4>
+                    <ul class="footer-links">
+                        <li style="margin-bottom: 5px;"><i class="fas fa-phone" style="width: 20px;"></i> (312) 939-5633</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-envelope" style="width: 20px;"></i> info@exchequerpub.com</li>
+                        <li><button onclick="router('booking')" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Book a Table</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="font-size: 0.85rem; color: #78716c;">&copy; 2026 Exchequer Restaurant & Pub. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI CHATBOT -->
+    <div class="chatbot-toggle" onclick="toggleChatbot()" title="Chat with us!">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <div>
+                <strong>Exchequer Assistant</strong>
+                <div style="font-size: 0.8rem; opacity: 0.9; font-weight: 400;">Online</div>
+            </div>
+            <div class="chatbot-close" onclick="toggleChatbot()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-bubble">
+                    Hi there! Welcome to Exchequer Restaurant & Pub. How can I help you today?
+                    <div class="quick-replies">
+                        <div class="quick-reply" onclick="sendQuickReply('Make a Reservation')">Book Table</div>
+                        <div class="quick-reply" onclick="sendQuickReply('See the Menu')">View Menu</div>
+                        <div class="quick-reply" onclick="sendQuickReply('Opening Hours')">Hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your message here..." onkeypress="handleChatEnter(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- STICKY BUTTONS -->
+    <div class="sticky-btns">
+        <button onclick="router('booking')" class="float-btn reserve-btn" title="Book a Table"><i class="fas fa-calendar-alt"></i></button>
+        <a href="tel:3129395633" class="float-btn phone-btn" title="Call Us"><i class="fas fa-phone"></i></a>
+    </div>
+
+    <!-- MOBILE NAV BOTTOM -->
+    <div class="mobile-bar">
+        <div class="mobile-link" onclick="router('home')"><i class="fas fa-home"></i>Home</div>
+        <div class="mobile-link" onclick="router('menu')"><i class="fas fa-book-open"></i>Menu</div>
+        <div class="mobile-link" onclick="router('booking')"><i class="fas fa-calendar-check"></i>Book</div>
+        <div class="mobile-link" onclick="router('contact')"><i class="fas fa-envelope"></i>Contact</div>
+    </div>
+
+    <script>
+        function router(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.add('active');
+                window.scrollTo(0, 0);
+            }
+
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const text = link.textContent.toLowerCase().trim();
+                const cleanPageId = pageId.toLowerCase().trim();
+                if (text === cleanPageId || (cleanPageId === 'booking' && text === 'reservations')) {
+                    link.classList.add('active');
+                }
+            });
+
+            document.getElementById('navMenu').classList.remove('active');
+        }
+
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
+        function toggleChatbot() {
+            document.getElementById('chatbotWindow').classList.toggle('active');
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            if (!message) return;
+            addMessage(message, 'user');
+            input.value = '';
+            setTimeout(() => addMessage(getBotResponse(message), 'bot'), 600);
+        }
+
+        function handleChatEnter(e) { if (e.key === 'Enter') sendMessage(); }
+
+        function sendQuickReply(message) {
+            addMessage(message, 'user');
+            setTimeout(() => addMessage(getBotResponse(message), 'bot'), 600);
+        }
+
+        function addMessage(text, sender) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message ' + sender;
+            messageDiv.innerHTML = '<div class="message-bubble">' + text + '</div>';
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function getBotResponse(message) {
+            const msg = message.toLowerCase();
+            if (msg.includes('reserve') || msg.includes('book') || msg.includes('table')) {
+                return 'You can reserve your table online here: <a style="cursor:pointer; color:var(--accent); text-decoration:underline;" onclick="router(&#39;booking&#39;); toggleChatbot();">Go to Reservations</a>';
+            } else if (msg.includes('menu') || msg.includes('food')) {
+                return 'We have a wonderful wood-fired selection. <a style="cursor:pointer; color:var(--accent); text-decoration:underline;" onclick="router(&#39;menu&#39;); toggleChatbot();">View our Menu</a>';
+            } else if (msg.includes('location') || msg.includes('where') || msg.includes('address')) {
+                return 'We are located at 226 S Wabash Ave, Chicago, IL 60604.';
+            } else if (msg.includes('hours') || msg.includes('open') || msg.includes('time')) {
+                return 'Our hours are: 11 AM to 10 PM.';
+            } else {
+                return 'Thank you for reaching out! For assistance, please call us at (312) 939-5633.';
+            }
+        }
+    // === LIVE MENU SYNC FROM GOOGLE SHEETS ===
+    (function() {
+      var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwctmysl83TGxd_4PtS0pNnQdJS_k5QBHlyll12rKqF3pYIiPk2cEFh73xSWMQnnWTrpg/exec';
+      var container = document.getElementById('menuContainer');
+      if (!container) return;
+      var lastJson = JSON.stringify([{"name":"Appetizers","items":[{"name":"Crispy Calamari","description":"Served with marinara sauce and lemon.","price":"$12.00"},{"name":"Bruschetta","description":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00"},{"name":"Garlic Bread","description":"Oven-baked with herbs and butter.","price":"$6.00"}]},{"name":"Main Courses","items":[{"name":"Grilled Salmon","description":"Fresh Atlantic salmon with seasonal vegetables.","price":"$24.00"},{"name":"Steak Frites","description":"Classic steak with crispy fries and herb butter.","price":"$28.00"},{"name":"Chicken Parmesan","description":"Breaded chicken topped with marinara and mozzarella.","price":"$21.00"}]},{"name":"Desserts","items":[{"name":"Tiramisu","description":"Classic Italian coffee-flavored dessert.","price":"$8.00"},{"name":"Cheesecake","description":"New York style with berry compote.","price":"$7.00"}]}]);
+
+      function renderLiveMenu(cats) {
+        if (!cats || cats.length === 0) return;
+        var html = '';
+        cats.forEach(function(cat) {
+          html += '<div class="menu-category"><h3 class="menu-category-title">' + cat.name + '</h3><div class="menu-grid">';
+          (cat.items || []).forEach(function(item) {
+            html += '<div class="menu-card"><h4 class="menu-card-title">' + item.name + '</h4><p class="menu-card-desc">' + (item.description || '') + '</p><p class="menu-card-price">' + (item.price || '') + '</p></div>';
+          });
+          html += '</div></div>';
+        });
+        container.innerHTML = html;
+      }
+
+      function fetchMenu() {
+        fetch(SHEET_URL)
+          .then(function(r) {
+            if (!r.ok) throw new Error('Network response was not ok');
+            return r.json();
+          })
+          .then(function(data) {
+            if (!data || !data.menuCategories) {
+              console.warn('Live menu data format unexpected:', data);
+              return;
+            }
+            var json = JSON.stringify(data.menuCategories);
+            if (json !== lastJson) {
+              lastJson = json;
+              renderLiveMenu(data.menuCategories);
+            }
+          })
+          .catch(function(err) {
+            console.warn('Live menu fetch failed. Using initial data.', err);
+          });
+      }
+
+      fetchMenu();
+      setInterval(fetchMenu, 3000);
+    })();
+    </script>
+</body>
+</html>
