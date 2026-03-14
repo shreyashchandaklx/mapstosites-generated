@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Swad Pure Veg Family Restaurant - Restaurant in Maharashtra 413531. 4.8-Star Rated. Reserve a table or call +91 98505 28222.">
+<meta name="theme-color" content="#1a1a1a">
+<title>Swad Pure Veg Family Restaurant | Restaurant — Maharashtra 413531</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--saffron:#7A1C2E;--gold:#C8A96A;--emerald:#2B2B2B;--dark:#1F1F1F;--light:#FAF8F4;--cream:#F3EEE6;--text:#2C2C2C;--text-light:#6B6B6B;--border:#E6DDCF;--radius:12px;--shadow-soft:0 10px 30px rgba(0,0,0,.08);--shadow-hover:0 20px 50px rgba(0,0,0,.15);--transition:all .3s cubic-bezier(.4,0,.2,1)}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--text);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--dark);letter-spacing:.3px}
+section{padding:5rem 2rem;width:100%}
+section>*{max-width:1200px;margin-left:auto;margin-right:auto}
+a{text-decoration:none;color:inherit;transition:color .3s}
+img{max-width:100%;height:auto;display:block}
+.bg-cream{background:var(--cream)}
+.section-header{text-align:center;margin-bottom:3rem}
+.section-title{font-size:clamp(2.3rem,4vw,3.2rem)}
+.highlight{color:var(--saffron)}
+.section-divider{width:70px;height:3px;background:var(--gold);margin:1rem auto 0;border-radius:10px}
+.section-subtitle{color:var(--text-light);font-size:1.1rem;margin-top:1rem}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;width:100%;background:var(--dark);display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;z-index:1000;box-shadow:0 5px 20px rgba(0,0,0,.25)}
+nav.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.4);padding:.5rem 2rem}
+.nav-logo{display:flex;align-items:center;gap:.6rem;cursor:pointer}
+.logo-icon{width:40px;height:40px;border-radius:50%;overflow:hidden}
+.logo-icon img{width:100%;height:100%;object-fit:cover}
+.logo-text{color:var(--gold);font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem}
+.nav-center{list-style:none;display:flex;gap:2rem}
+.nav-center a{text-decoration:none;color:#eee;font-size:.95rem;position:relative}
+.nav-center a::after{content:"";position:absolute;bottom:-6px;left:0;width:0;height:2px;background:var(--gold);transition:var(--transition)}
+.nav-center a:hover::after{width:100%}
+.nav-cta{display:flex;gap:.8rem}
+.nav-btn{border:none;padding:.6rem 1.4rem;border-radius:40px;font-weight:600;cursor:pointer;transition:var(--transition)}
+.nav-call{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.nav-call:hover{background:var(--gold);color:black}
+.nav-reserve{background:var(--saffron);color:white}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.8rem;cursor:pointer}
+.mobile-cta{display:none}
+
+/* PAGES */
+.page{display:none;padding-top:80px;min-height:100vh}
+#home.page{padding-top:0}
+.page.active{display:block;animation:pageIn .5s ease-out}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;min-height:100vh;padding-top:80px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1600891964092-4316c288032e') center/cover no-repeat}
+.hero-content{max-width:700px;padding:0 1rem}
+.hero h1{font-size:clamp(3rem,7vw,4.5rem);color:var(--gold);margin-bottom:1rem}
+.hero p{opacity:.9;margin-bottom:2rem}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* BUTTONS */
+.btn-large{padding:.9rem 2.2rem;border-radius:40px;border:none;cursor:pointer;font-weight:600;display:inline-flex;gap:.5rem;align-items:center;transition:var(--transition)}
+.btn-primary{background:var(--saffron);color:white}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-secondary{background:transparent;border:2px solid var(--gold);color:var(--gold)}
+.btn-secondary:hover{background:var(--gold);color:black}
+
+/* GRIDS */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+
+/* CARDS */
+.card{background:white;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);transition:var(--transition)}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover)}
+.card-image{height:220px;background:var(--saffron);display:flex;align-items:center;justify-content:center;font-size:3rem;color:white}
+.card-content{padding:1.5rem}
+.card h3{font-size:1.5rem;margin-bottom:1rem;color:var(--dark)}
+.card p{color:var(--text-light);margin-bottom:1.5rem;line-height:1.7;flex-grow:1}
+.card-image-icon{position:relative;z-index:1;animation:bobbing 3s ease-in-out infinite}
+@keyframes bobbing{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+
+/* MENU */
+.menu-tabs{display:flex;justify-content:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
+.tab-btn{padding:.7rem 1.6rem;border-radius:40px;border:1px solid var(--border);background:white;cursor:pointer;font-weight:500;transition:var(--transition)}
+.tab-btn.active{background:var(--saffron);color:white;border:none}
+.tab-btn:hover{border-color:var(--saffron);color:var(--saffron)}
+.menu-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:2rem}
+.menu-item{background:white;padding:1.6rem;border-left:4px solid var(--saffron);border-radius:var(--radius);box-shadow:var(--shadow-soft);transition:var(--transition)}
+.menu-item:hover{transform:translateX(8px);box-shadow:0 15px 40px rgba(122,28,46,.15)}
+.menu-item h4{font-size:1.3rem;margin-bottom:.8rem;color:var(--dark)}
+.menu-item-desc{color:var(--text-light);font-size:.95rem;margin-bottom:1.2rem;line-height:1.6}
+.menu-item-price{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--saffron);font-weight:700}
+
+/* CTA */
+.cta-section{background:var(--saffron);color:white;padding:3rem;border-radius:var(--radius);text-align:center;margin-top:3rem}
+.cta-section h2{font-size:2.5rem;margin-bottom:1.5rem;color:white}
+.cta-section p{font-size:1.1rem;margin-bottom:2.5rem;opacity:.95;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-buttons{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}
+.cta-btn{padding:.8rem 1.8rem;border-radius:40px;border:none;cursor:pointer;font-weight:600;transition:var(--transition)}
+.cta-btn.white{background:white;color:var(--saffron)}
+.cta-btn.white:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,0,0,.2)}
+.cta-btn.outline{border:2px solid white;background:transparent;color:white}
+.cta-btn.outline:hover{background:white;color:var(--saffron)}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.gallery-item{height:260px;border-radius:var(--radius);overflow:hidden;position:relative;transition:var(--transition)}
+.gallery-item:hover{transform:scale(1.05)}
+.gallery-overlay{position:absolute;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;opacity:0;transition:var(--transition)}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-overlay i{color:white;font-size:2.5rem}
+
+/* ABOUT */
+.about-image{height:450px;background:linear-gradient(135deg,var(--saffron) 0%,var(--gold) 100%);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:6rem;color:white;box-shadow:0 20px 60px rgba(0,0,0,.2);overflow:hidden}
+.about-image img{width:100%;height:100%;object-fit:cover}
+.about-content h2{font-size:2.8rem;margin-bottom:2rem;color:var(--dark)}
+.about-content p{color:var(--text-light);margin-bottom:1.8rem;line-height:1.9;font-size:1.05rem}
+
+/* TESTIMONIALS */
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
+.testimonial{background:white;padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow-soft);text-align:center;transition:var(--transition)}
+.testimonial:hover{transform:translateY(-8px);box-shadow:0 15px 45px rgba(122,28,46,.2)}
+.stars{color:var(--gold);margin-bottom:.7rem}
+.testimonial p{color:var(--text-light);margin-bottom:1.5rem;line-height:1.8;font-style:italic}
+.testimonial-author{font-weight:700;color:var(--dark);margin-bottom:.3rem}
+.testimonial-role{color:var(--saffron);font-size:.9rem}
+
+/* FAQ */
+.faq-container{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
+.faq-item{background:white;border-radius:var(--radius);box-shadow:var(--shadow-soft);overflow:hidden;transition:var(--transition)}
+.faq-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.faq-item summary{padding:1.5rem;font-size:1.1rem;font-weight:600;color:var(--dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{content:'\f078';font-family:'Font Awesome 6 Free';font-weight:900;color:var(--saffron);transition:transform .3s ease}
+.faq-item details[open] summary:after{transform:rotate(180deg)}
+.faq-item summary:hover{color:var(--saffron)}
+.faq-answer{padding:0 1.5rem 1.5rem;color:var(--text-light);line-height:1.8;animation:fadeIn .4s ease}
+
+/* RESERVE / QUOTE */
+.quote-container{display:flex;flex-wrap:wrap;max-width:1100px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-hover);background:var(--dark)}
+.quote-info{flex:1;min-width:320px;background:var(--saffron);color:white;padding:3rem}
+.quote-info-header{font-family:'Poppins',sans-serif;font-size:1.8rem;font-weight:700;margin-bottom:2rem;color:white}
+.quote-info-item{display:flex;gap:1rem;margin-bottom:2rem;align-items:flex-start}
+.quote-info-item i{color:var(--gold);font-size:1.2rem;margin-top:.2rem}
+.quote-info-item h4{color:white;margin-bottom:.2rem;font-family:'Poppins',sans-serif;font-size:1.1rem}
+.quote-info-item p,.quote-info-item a{color:rgba(255,255,255,.85);font-size:.95rem;text-decoration:none;line-height:1.6}
+.quote-info-item a:hover{color:var(--gold)}
+.quote-map{width:100%;height:250px;border-radius:8px;margin-top:2rem;overflow:hidden}
+.quote-map iframe{width:100%;height:100%;border:0}
+.quote-form-wrapper{flex:1.8;min-width:320px;background:#1a1a1a;padding:3rem}
+.quote-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.quote-form-group{margin-bottom:1.5rem;text-align:left}
+.quote-form-group.full{grid-column:1/-1}
+.quote-form-group label{display:block;margin-bottom:.5rem;font-size:.9rem;font-weight:600;color:white}
+.quote-form-group input,.quote-form-group select,.quote-form-group textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:white;padding:.9rem;border-radius:6px;font-family:inherit;transition:var(--transition)}
+.quote-form-group textarea{min-height:120px;resize:vertical}
+.quote-form-group input:focus,.quote-form-group select:focus,.quote-form-group textarea:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(200,169,106,.2);outline:none;background:rgba(255,255,255,.08)}
+.quote-form-group select option{background:var(--dark);color:white}
+.quote-submit-btn{width:100%;padding:1.1rem;background:var(--gold);color:#000;border:none;font-weight:700;border-radius:40px;cursor:pointer;display:flex;justify-content:center;align-items:center;gap:.5rem;font-size:1.1rem;transition:var(--transition);margin-bottom:1rem}
+.quote-submit-btn:hover{background:white;transform:translateY(-2px)}
+.quote-secure{text-align:center;font-size:.85rem;color:rgba(255,255,255,.5)}
+.quote-secure i{color:var(--gold);margin-right:.3rem}
+
+/* FOOTER */
+footer{background:var(--dark);color:#ccc;padding:3rem 2rem;margin-top:4rem}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;max-width:1100px;margin:auto}
+.footer-section h3{color:var(--gold);margin-bottom:.8rem}
+.footer-section p,.footer-section a{color:rgba(255,249,240,.7);text-decoration:none;line-height:2;transition:var(--transition);font-size:.95rem}
+.footer-section a:hover{color:var(--saffron)}
+.footer-bottom{margin-top:2rem;text-align:center;opacity:.7;font-size:.9rem}
+.social-icons{display:flex;gap:1rem;margin-top:1.5rem}
+.social-icons a{display:inline-flex;align-items:center;justify-content:center;width:45px;height:45px;background:rgba(122,28,46,.2);border-radius:50%;transition:var(--transition);color:#ccc}
+.social-icons a:hover{background:var(--saffron);color:white;transform:translateY(-3px)}
+
+/* SCROLL REVEAL */
+.scroll-reveal{opacity:0;transform:translateY(30px);transition:var(--transition)}
+.scroll-reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ANIMATIONS */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-center{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--dark);padding:1.5rem;gap:1rem;z-index:999}
+  .nav-center.active{display:flex}
+  .menu-toggle{display:block}
+  .nav-cta{display:none}
+  .mobile-cta{display:block;margin-top:.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
+  .mobile-cta a{color:var(--gold)!important;font-weight:600}
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  .hero{min-height:80vh}
+  .hero h1{font-size:2.5rem}
+  .quote-form-grid{grid-template-columns:1fr}
+  .quote-info,.quote-form-wrapper{padding:2rem}
+  .about-image{height:300px}
+  .testimonial-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+}
+@media(max-width:600px){
+  section{padding:3rem 1rem}
+  .hero h1{font-size:2rem}
+  .btn-large{width:100%;justify-content:center}
+  .cta-buttons{flex-direction:column;gap:.8rem}
+  .cta-btn{width:100%}
+  .gallery-grid{grid-template-columns:1fr}
+  .menu-items{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="logo-icon"><img src="https://ui-avatars.com/api/?name=Swad%20Pure%20Veg%20Family%20Restaurant&background=1a1a1a&color=C8A96A&size=512" alt="Swad Pure Veg Family Restaurant"></div>
+    <span class="logo-text">Swad Pure Veg Family Restaurant</span>
+  </div>
+  <ul class="nav-center" id="navMenu">
+    <li><a href="#" onclick="showPage('home'); toggleMenu(); return false;">Home</a></li>
+      <li><a href="#" onclick="showPage('about'); toggleMenu(); return false;">About</a></li>
+      <li><a href="#" onclick="showPage('services'); toggleMenu(); return false;">Services</a></li>
+      <li><a href="#" onclick="showPage('menu'); toggleMenu(); return false;">Menu</a></li>
+      <li><a href="#" onclick="showPage('reviews'); toggleMenu(); return false;">Reviews</a></li>
+      <li><a href="#" onclick="showPage('booking'); toggleMenu(); return false;">Reserve</a></li>
+      <li><a href="#" onclick="showPage('faqs'); toggleMenu(); return false;">FAQs</a></li>
+      <li><a href="#" onclick="showPage('contact'); toggleMenu(); return false;">Contact</a></li>
+    <li class="mobile-cta"><a href="#" onclick="window.location.href='tel:919850528222'; return false;"><i class="fas fa-phone"></i> Call Us</a></li>
+    <li class="mobile-cta"><a href="#" onclick="showPage('booking'); return false;"><i class="fas fa-calendar-alt"></i> Reserve Now</a></li>
+  </ul>
+  <div class="nav-cta">
+    <button class="nav-btn nav-call" onclick="window.location.href='tel:919850528222'"><i class="fas fa-phone"></i></button>
+    <button class="nav-btn nav-reserve" onclick="showPage('booking')"><i class="fas fa-calendar-alt"></i> Reserve</button>
+  </div>
+  <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+</nav>
+
+<!-- HOME PAGE -->
+<div class="page active" id="home">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Swad Pure Veg Family Restaurant</h1>
+      <p>Experience the finest flavors in Maharashtra 413531 — where every dish tells a story.</p>
+      <div class="hero-buttons">
+        <button class="btn-large btn-primary" onclick="showPage('booking')"><i class="fas fa-calendar-check"></i> Reserve Now</button>
+        <button class="btn-large btn-secondary" onclick="window.location.href='tel:919850528222'"><i class="fas fa-phone"></i> Call Us</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="section-header">
+      <h2 class="section-title">Why Choose <span class="highlight">Swad Pure Veg Family Restaurant</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-3">
+      
+        <div class="card">
+          <div class="card-image"><div class="card-image-icon">🍽️</div></div>
+          <div class="card-content">
+            <h3>Chinese restaurant</h3>
+            <p>Specialized Chinese restaurant solutions.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image"><div class="card-image-icon">🎉</div></div>
+          <div class="card-content">
+            <h3>Hotel</h3>
+            <p>Specialized Hotel solutions.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image"><div class="card-image-icon">🚚</div></div>
+          <div class="card-content">
+            <h3>Vegetarian restaurant</h3>
+            <p>Specialized Vegetarian restaurant solutions.</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Experience Premium Dining?</h2>
+      <p>Reserve your table and discover the finest cuisine prepared with passion and perfection.</p>
+      <div class="cta-buttons">
+        <button class="cta-btn white" onclick="showPage('booking')"><i class="fas fa-utensils"></i> Book Table</button>
+        <button class="cta-btn outline" onclick="window.location.href='tel:919850528222'"><i class="fas fa-phone"></i> Call Now</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT PAGE -->
+
+<div class="page" id="about">
+  <section>
+    <div class="grid-2">
+      <div class="about-content">
+        <h2>About <span class="highlight">Swad Pure Veg Family Restaurant</span></h2>
+        <p>Welcome to Swad Pure Veg Family Restaurant. We are dedicated to providing an exceptional dining experience.</p>
+        <p><strong>4.8</strong> ★ rated by <strong>1238+</strong> guests.</p>
+        <button class="btn-large btn-primary" style="margin-top:1.5rem;" onclick="showPage('booking')"><i class="fas fa-calendar-alt"></i> Reserve Now</button>
+      </div>
+      <div class="about-image"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Swad Pure Veg Family Restaurant" style="width:100%;height:100%;object-fit:cover"></div>
+    </div>
+  </section>
+
+  
+  <section class="bg-cream">
+    <div class="section-header">
+      <h2 class="section-title">Guest <span class="highlight">Reviews</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="testimonial-grid">
+    <div class="testimonial">
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p>"Excellent food and service!"</p>
+      <div class="testimonial-author">Happy Customer</div>
+      <div class="testimonial-role">Guest</div>
+    </div>
+  
+    <div class="testimonial">
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p>"Great experience, will come again."</p>
+      <div class="testimonial-author">Satisfied Diner</div>
+      <div class="testimonial-role">Guest</div>
+    </div>
+  
+    <div class="testimonial">
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p>"Amazing flavors and atmosphere."</p>
+      <div class="testimonial-author">Local Foodie</div>
+      <div class="testimonial-role">Guest</div>
+    </div>
+  </div>
+  </section>
+</div>
+
+<!-- SERVICES PAGE -->
+
+<div class="page" id="services">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">What We <span class="highlight">Offer</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-3">
+      
+        <div class="card">
+          <div class="card-image"><div class="card-image-icon">🍽️</div></div>
+          <div class="card-content">
+            <h3>Chinese restaurant</h3>
+            <p>Specialized Chinese restaurant solutions.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image"><div class="card-image-icon">🎉</div></div>
+          <div class="card-content">
+            <h3>Hotel</h3>
+            <p>Specialized Hotel solutions.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image"><div class="card-image-icon">🚚</div></div>
+          <div class="card-content">
+            <h3>Vegetarian restaurant</h3>
+            <p>Specialized Vegetarian restaurant solutions.</p>
+          </div>
+        </div>
+    </div>
+  </section>
+</div>
+
+<!-- MENU PAGE -->
+
+<div class="page" id="menu">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Explore Our <span class="highlight">Menu</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="menu-tabs">
+      <button class="tab-btn active" onclick="filterMenu(event, 'appetizers')"><i class="fas fa-utensils"></i> Appetizers</button>
+        <button class="tab-btn" onclick="filterMenu(event, 'main_courses')"><i class="fas fa-utensils"></i> Main Courses</button>
+        <button class="tab-btn" onclick="filterMenu(event, 'desserts')"><i class="fas fa-utensils"></i> Desserts</button>
+    </div>
+    <div class="menu-items" id="menuContainer"></div>
+  </section>
+</div>
+
+<!-- GALLERY PAGE -->
+
+
+<!-- REVIEWS PAGE -->
+
+<div class="page" id="reviews">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">What Our <span class="highlight">Guests Say</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Excellent food and service!"</p>
+        <div class="testimonial-author">Happy Customer</div>
+        <div class="testimonial-role">Guest</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Great experience, will come again."</p>
+        <div class="testimonial-author">Satisfied Diner</div>
+        <div class="testimonial-role">Guest</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Amazing flavors and atmosphere."</p>
+        <div class="testimonial-author">Local Foodie</div>
+        <div class="testimonial-role">Guest</div>
+      </div></div>
+  </section>
+</div>
+
+<!-- BOOKING/RESERVE PAGE -->
+
+<div class="page" id="booking">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Table <span class="highlight">Reservation</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Book your experience at Swad Pure Veg Family Restaurant.</p>
+    </div>
+    <div class="quote-container">
+      <div class="quote-info">
+        <h2 class="quote-info-header">Contact Info</h2>
+        <div class="quote-info-item"><i class="fas fa-phone"></i><div><h4>Phone</h4><p><a href="tel:919850528222">+91 98505 28222</a></p></div></div>
+        <div class="quote-info-item"><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>Ambajogai Road, New Renapur Naka, near MIT Bridge, Kashilingeshwar Nagar, Maharashtra 413531, India</p></div></div>
+        <div class="quote-info-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p><a href="mailto:contact@google.com">contact@google.com</a></p></div></div>
+        <div class="quote-info-item"><i class="fas fa-clock"></i><div><h4>Hours</h4><p>Monday: 9 AM - 10 PM</p><p>Tuesday: 9 AM - 10 PM</p><p>Wednesday: 9 AM - 10 PM</p><p>Thursday: 9 AM - 10 PM</p><p>Friday: 9 AM - 11 PM</p><p>Saturday: 10 AM - 11 PM</p><p>Sunday: 10 AM - 9 PM</p></div></div>
+        <div class="quote-map"><iframe src="https://www.google.com/maps?q=Ambajogai%20Road%2C%20New%20Renapur%20Naka%2C%20near%20MIT%20Bridge%2C%20Kashilingeshwar%20Nagar%2C%20Maharashtra%20413531%2C%20India&output=embed" allowfullscreen="" loading="lazy"></iframe></div>
+      </div>
+      <div class="quote-form-wrapper">
+        <form onsubmit="event.preventDefault(); alert('This is a demo site. Please call +91 98505 28222 to make a real reservation.');">
+          <div class="quote-form-grid">
+            <div class="quote-form-group"><label>Full Name *</label><input type="text" placeholder="Your full name" required></div>
+            <div class="quote-form-group"><label>Phone Number *</label><input type="tel" placeholder="Your phone" required></div>
+            <div class="quote-form-group"><label>Date *</label><input type="date" required></div>
+            <div class="quote-form-group"><label>Time *</label><input type="time" required></div>
+            <div class="quote-form-group"><label>Guests *</label><input type="number" min="1" placeholder="Number of guests" required></div>
+            <div class="quote-form-group"><label>Occasion</label><select><option value="">Select...</option><option>Regular Dining</option><option>Birthday</option><option>Anniversary</option><option>Business</option><option>Other</option></select></div>
+            <div class="quote-form-group full"><label>Special Requests</label><textarea placeholder="Dietary restrictions, seating preferences..."></textarea></div>
+          </div>
+          <button type="submit" class="quote-submit-btn"><i class="fas fa-paper-plane"></i> Reserve a Table</button>
+          <div class="quote-secure"><i class="fas fa-lock"></i> Your info is safe.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FAQ PAGE -->
+
+<div class="page" id="faqs">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="faq-container">
+        <div class="faq-item"><details>
+          <summary>Do you take reservations?</summary>
+          <div class="faq-answer">Yes! You can reserve a table by calling us at +91 98505 28222 or using our online booking form.</div>
+        </details></div>
+        <div class="faq-item"><details>
+          <summary>Do you offer vegetarian/vegan options?</summary>
+          <div class="faq-answer">Absolutely! We have a diverse menu with plenty of vegetarian and vegan dishes.</div>
+        </details></div>
+        <div class="faq-item"><details>
+          <summary>Is there parking available?</summary>
+          <div class="faq-answer">Yes, we have convenient parking for our guests.</div>
+        </details></div>
+        <div class="faq-item"><details>
+          <summary>Do you cater for private events?</summary>
+          <div class="faq-answer">Yes, Swad Pure Veg Family Restaurant offers catering and private event hosting. Contact us for details.</div>
+        </details></div>
+        <div class="faq-item"><details>
+          <summary>What are your operating hours?</summary>
+          <div class="faq-answer">Please check our Hours section or call us for the most up-to-date schedule.</div>
+        </details></div></div>
+  </section>
+</div>
+
+<!-- CONTACT PAGE -->
+
+<div class="page" id="contact">
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Get in <span class="highlight">Touch</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-2">
+      <div style="border-radius:var(--radius);overflow:hidden;min-height:380px;box-shadow:var(--shadow-soft)">
+        <iframe src="https://www.google.com/maps?q=Ambajogai%20Road%2C%20New%20Renapur%20Naka%2C%20near%20MIT%20Bridge%2C%20Kashilingeshwar%20Nagar%2C%20Maharashtra%20413531%2C%20India&output=embed" style="width:100%;height:100%;border:0" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div>
+        <h3 style="margin-bottom:1.5rem">Contact Information</h3>
+        <div style="margin-bottom:1.5rem"><i class="fas fa-map-marker-alt" style="color:var(--saffron);margin-right:.8rem"></i><strong>Address:</strong> Ambajogai Road, New Renapur Naka, near MIT Bridge, Kashilingeshwar Nagar, Maharashtra 413531, India</div>
+        <div style="margin-bottom:1.5rem"><i class="fas fa-phone" style="color:var(--saffron);margin-right:.8rem"></i><strong>Phone:</strong> <a href="tel:919850528222" style="color:var(--saffron)">+91 98505 28222</a></div>
+        <div style="margin-bottom:1.5rem"><i class="fas fa-envelope" style="color:var(--saffron);margin-right:.8rem"></i><strong>Email:</strong> <a href="mailto:contact@google.com" style="color:var(--saffron)">contact@google.com</a></div>
+        <div style="margin-bottom:1.5rem"><i class="fas fa-globe" style="color:var(--saffron);margin-right:.8rem"></i><strong>Website:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Swad%20Pure%20Veg%20Family%20Restaurant&query_place_id=ChIJ5yZlJS2FzzsRwtS_bjPIJxw" target="_blank" rel="noopener" style="color:var(--saffron)">https://www.google.com/maps/search/?api=1&query=Swad%20Pure%20Veg%20Family%20Restaurant&query_place_id=ChIJ5yZlJS2FzzsRwtS_bjPIJxw</a></div>
+        <div style="margin-top:2rem"><h4 style="margin-bottom:.5rem">Hours</h4><p>Monday: 9 AM - 10 PM</p><p>Tuesday: 9 AM - 10 PM</p><p>Wednesday: 9 AM - 10 PM</p><p>Thursday: 9 AM - 10 PM</p><p>Friday: 9 AM - 11 PM</p><p>Saturday: 10 AM - 11 PM</p><p>Sunday: 10 AM - 9 PM</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-section">
+      <h3>Swad Pure Veg Family Restaurant</h3>
+      <p>Welcome to Swad Pure Veg Family Restaurant. We are dedicated to providing an exceptional dining experience....</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Hours</h3>
+      <p>Monday: 9 AM - 10 PM</p><p>Tuesday: 9 AM - 10 PM</p><p>Wednesday: 9 AM - 10 PM</p><p>Thursday: 9 AM - 10 PM</p><p>Friday: 9 AM - 11 PM</p><p>Saturday: 10 AM - 11 PM</p><p>Sunday: 10 AM - 9 PM</p>
+    </div>
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Ambajogai Road, New Renapur Naka, near MIT Bridge, Kashilingeshwar Nagar, Maharashtra 413531, India</p>
+      <p><i class="fas fa-phone"></i> <a href="tel:919850528222">+91 98505 28222</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:contact@google.com">contact@google.com</a></p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <p><a href="#" onclick="showPage('about'); return false;">About</a></p>
+        <p><a href="#" onclick="showPage('services'); return false;">Services</a></p>
+        <p><a href="#" onclick="showPage('menu'); return false;">Menu</a></p>
+        <p><a href="#" onclick="showPage('reviews'); return false;">Reviews</a></p>
+        <p><a href="#" onclick="showPage('booking'); return false;">Reserve</a></p>
+        <p><a href="#" onclick="showPage('faqs'); return false;">FAQs</a></p>
+        <p><a href="#" onclick="showPage('contact'); return false;">Contact</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Swad Pure Veg Family Restaurant. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+var menuData = {"appetizers":[{"name":"Crispy Calamari","desc":"Served with marinara sauce and lemon.","price":"$12.00"},{"name":"Bruschetta","desc":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00"},{"name":"Garlic Bread","desc":"Oven-baked with herbs and butter.","price":"$6.00"}],"main_courses":[{"name":"Grilled Salmon","desc":"Fresh Atlantic salmon with seasonal vegetables.","price":"$24.00"},{"name":"Steak Frites","desc":"Classic steak with crispy fries and herb butter.","price":"$28.00"},{"name":"Chicken Parmesan","desc":"Breaded chicken topped with marinara and mozzarella.","price":"$21.00"}],"desserts":[{"name":"Tiramisu","desc":"Classic Italian coffee-flavored dessert.","price":"$8.00"},{"name":"Cheesecake","desc":"New York style with berry compote.","price":"$7.00"}]};
+
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
+  var el = document.getElementById(pageId);
+  if(el) el.classList.add('active');
+  window.scrollTo(0,0);
+  if(pageId==='menu') {
+    var firstKey = Object.keys(menuData)[0];
+    if(firstKey) filterMenu(null, firstKey);
+  }
+}
+
+function toggleMenu() {
+  document.getElementById('navMenu').classList.toggle('active');
+}
+
+function filterMenu(event, category) {
+  if(event) event.preventDefault();
+  var container = document.getElementById('menuContainer');
+  if(!container) return;
+  var items = menuData[category] || [];
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+  if(event) event.target.closest('.tab-btn').classList.add('active');
+  else {
+    var tabs = document.querySelectorAll('.tab-btn');
+    if(tabs.length) tabs[0].classList.add('active');
+  }
+  container.innerHTML = items.map(function(item){
+    return '<div class="menu-item"><h4>'+item.name+'</h4><p class="menu-item-desc">'+item.desc+'</p>'+(item.price?'<div class="menu-item-price">'+item.price+'</div>':'')+'</div>';
+  }).join('');
+}
+
+// Scroll effect for nav
+window.addEventListener('scroll', function(){
+  var nav = document.querySelector('nav');
+  if(window.pageYOffset>100) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// Scroll reveal
+var observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+  });
+},{threshold:0.1,rootMargin:'0px 0px -100px 0px'});
+
+document.addEventListener('DOMContentLoaded', function(){
+  // Init first menu tab
+  var firstKey = Object.keys(menuData)[0];
+  if(firstKey) filterMenu(null, firstKey);
+
+  // Scroll reveals
+  document.querySelectorAll('.card,.menu-item,.testimonial,.gallery-item,.faq-item').forEach(function(el){
+    el.classList.add('scroll-reveal');
+    observer.observe(el);
+  });
+});
+
+// === LIVE MENU SYNC FROM GOOGLE SHEETS ===
+(function() {
+  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwctmysl83TGxd_4PtS0pNnQdJS_k5QBHlyll12rKqF3pYIiPk2cEFh73xSWMQnnWTrpg/exec';
+  var container = document.getElementById('menuContainer');
+  if (!container) return;
+  var lastJson = JSON.stringify([{"name":"Appetizers","items":[{"name":"Crispy Calamari","description":"Served with marinara sauce and lemon.","price":"$12.00"},{"name":"Bruschetta","description":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00"},{"name":"Garlic Bread","description":"Oven-baked with herbs and butter.","price":"$6.00"}]},{"name":"Main Courses","items":[{"name":"Grilled Salmon","description":"Fresh Atlantic salmon with seasonal vegetables.","price":"$24.00"},{"name":"Steak Frites","description":"Classic steak with crispy fries and herb butter.","price":"$28.00"},{"name":"Chicken Parmesan","description":"Breaded chicken topped with marinara and mozzarella.","price":"$21.00"}]},{"name":"Desserts","items":[{"name":"Tiramisu","description":"Classic Italian coffee-flavored dessert.","price":"$8.00"},{"name":"Cheesecake","description":"New York style with berry compote.","price":"$7.00"}]}]);
+
+  function renderLiveMenu(cats) {
+    if (!cats || cats.length === 0) return;
+    // Rebuild menuData from sheet data
+    var newMenuData = {};
+    var tabsHtml = '';
+    cats.forEach(function(c, i) {
+      var catKey = c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      newMenuData[catKey] = (c.items || []).map(function(item) {
+        return { name: item.name, desc: item.description || '', price: item.price || '' };
+      });
+      tabsHtml += '<button class="tab-btn' + (i === 0 ? ' active' : '') + '" onclick="filterMenu(event, \'' + catKey + '\')"><i class="fas fa-utensils"></i> ' + c.name + '</button>';
+    });
+    menuData = newMenuData;
+    // Update tabs
+    var tabsContainer = container.closest('section').querySelector('.menu-tabs');
+    if (tabsContainer) tabsContainer.innerHTML = tabsHtml;
+    // Re-render active category
+    var firstKey = Object.keys(menuData)[0];
+    if (firstKey) filterMenu(null, firstKey);
+  }
+
+  function fetchMenu() {
+    fetch(SHEET_URL)
+      .then(function(r) {
+        if (!r.ok) throw new Error('Network response was not ok');
+        return r.json();
+      })
+      .then(function(data) {
+        if (!data || !data.menuCategories) {
+          console.warn('Live menu data format unexpected:', data);
+          return;
+        }
+        var json = JSON.stringify(data.menuCategories);
+        if (json !== lastJson) {
+          lastJson = json;
+          renderLiveMenu(data.menuCategories);
+        }
+      })
+      .catch(function(err) {
+        console.warn('Live menu fetch failed. Using initial data.', err);
+      });
+  }
+
+  fetchMenu();
+  setInterval(fetchMenu, 3000);
+})();
+</script>
+
+</body>
+</html>
