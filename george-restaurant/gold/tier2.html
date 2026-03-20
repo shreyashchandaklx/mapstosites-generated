@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="George Restaurant - Experience upscale Family restaurant in Maharashtra 411001.">
+    <title>George Restaurant | Maharashtra 411001</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. CSS VARIABLES & RESET --- */
+        :root {
+            --primary: #1c1917;
+            --secondary: #d97706;
+            --accent: #b45309;
+            --text-dark: #292524;
+            --text-light: #78716c;
+            --white: #ffffff;
+            --bg-light: #f5f5f4;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+
+            /* UI Theme Variables */
+            --maroon: #7e1e24;
+            --dark-panel: #161616;
+            --input-bg: #222222;
+            --icon-gold: #d8b486;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; font-family: 'Lato', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; color: inherit; transition: var(--transition); cursor: pointer; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; }
+
+        /* --- 2. UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; }
+        .flex { display: flex; align-items: center; }
+        .grid { display: grid; gap: 30px; }
+
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; border-radius: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border: none; font-size: 0.85rem; transition: var(--transition); }
+        .btn-primary { background-color: var(--secondary); color: var(--white); }
+        .btn-primary:hover { background-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(180, 83, 9, 0.4); }
+        .btn-outline { border: 2px solid var(--white); color: var(--white); background: transparent; }
+        .btn-outline:hover { background-color: var(--white); color: var(--primary); }
+        .btn-outline-dark { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+        .btn-outline-dark:hover { background-color: var(--primary); color: var(--white); }
+
+        .section-header { margin-bottom: 50px; text-align: center; }
+        .section-header h2 { font-size: 2.8rem; color: var(--primary); margin-bottom: 10px; }
+        .section-header .divider { height: 3px; width: 50px; background: var(--secondary); margin: 0 auto; }
+
+        /* --- 3. NAVIGATION --- */
+        header { background: var(--primary); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-size: 1.6rem; font-weight: 700; color: var(--secondary); display: flex; align-items: center; gap: 10px; font-family: 'Playfair Display', serif; }
+        .nav-menu { display: flex; gap: 30px; align-items: center; }
+        .nav-link { font-weight: 600; font-size: 1rem; color: #d6d3d1; position: relative; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
+        .nav-link:hover, .nav-link.active { color: var(--secondary); }
+        .nav-link.active::after { content: ''; position: absolute; width: 100%; height: 2px; bottom: -5px; left: 0; background: var(--secondary); }
+        .hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--secondary); }
+
+        /* --- 4. PAGE SECTIONS (SPA Logic) --- */
+        .page-section { display: none; animation: fadeIn 0.4s ease-in-out; }
+        .page-section.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- 5. HOME HERO --- */
+        .hero { background: linear-gradient(rgba(28, 25, 23, 0.7), rgba(28, 25, 23, 0.8)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1600'); background-size: cover; background-position: center; color: var(--white); padding: 140px 0; text-align: center; }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+        .hero p { font-size: 1.25rem; margin-bottom: 30px; color: #e7e5e4; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 60px; }
+        .stat-card { background: var(--white); padding: 30px; border-radius: 4px; text-align: center; box-shadow: var(--shadow); border-bottom: 3px solid var(--secondary); }
+        .stat-number { font-size: 3rem; font-weight: 700; color: var(--accent); font-family: 'Playfair Display', serif; }
+        .stat-label { color: var(--text-light); margin-top: 5px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
+
+        /* Highlights */
+        .services-container { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .service-card { background: var(--white); padding: 40px 30px; border-radius: 4px; box-shadow: var(--shadow); text-align: center; transition: var(--transition); }
+        .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .icon-box { width: 70px; height: 70px; border: 1px solid var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--accent); font-size: 1.8rem; }
+        .service-card h3 { margin-bottom: 15px; color: var(--primary); font-size: 1.5rem; }
+
+        /* --- 6. ABOUT SECTION --- */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-img { border-radius: 4px; overflow: hidden; box-shadow: var(--shadow-lg); position: relative; }
+        .about-img::after { content: ''; position: absolute; inset: 0; border: 2px solid var(--secondary); transform: translate(15px, 15px); pointer-events: none; z-index: -1; }
+        .check-list li { margin-bottom: 10px; display: flex; gap: 10px; align-items: center; }
+        .check-list i { color: var(--secondary); }
+
+        /* --- 7. NEW MENU SECTION (IMAGELESS, RED-BORDER CARDS) --- */
+        .menu-category { margin-bottom: 60px; }
+        .menu-category-title { font-size: 2.2rem; color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 10px; margin-bottom: 30px; display: inline-block; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .menu-card { background: #ffffff; border-radius: 6px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04); padding: 25px; border: 1px solid #f0f0f0; border-left: 4px solid var(--maroon); display: flex; flex-direction: column; gap: 12px; transition: var(--transition); }
+        .menu-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); border-color: #eaeaea; }
+        .menu-card-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--primary); margin: 0; }
+        .menu-card-desc { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: var(--text-light); line-height: 1.5; margin: 0; flex-grow: 1; }
+        .menu-card-price { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--maroon); margin: 0; }
+
+        /* --- 8. REVIEWS --- */
+        .testimonial-card { background: var(--white); max-width: 800px; margin: 0 auto; padding: 50px; border-radius: 4px; box-shadow: var(--shadow); position: relative; text-align: center; }
+        .testimonial-card::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 6rem; color: #f5f5f4; position: absolute; top: -10px; left: 20px; line-height: 1; }
+        .stars { color: var(--secondary); margin-bottom: 15px; }
+        .review-text { font-size: 1.4rem; font-style: italic; color: #44403c; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+        .reviewer { font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+
+        /* --- 9. NEW CONTACT FORM & INFO LAYOUT --- */
+        .contact-panel { display: flex; flex-wrap: wrap; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); max-width: 1050px; margin: 0 auto; }
+        .contact-info-panel { flex: 1; min-width: 320px; background: var(--maroon); color: var(--white); padding: 50px 45px; display: flex; flex-direction: column; }
+        .contact-info-panel h3 { font-size: 2.2rem; color: var(--white); margin-bottom: 35px; font-family: 'Lato', sans-serif; font-weight: 700; }
+        .info-item { display: flex; gap: 18px; margin-bottom: 32px; align-items: flex-start; }
+        .info-item-icon { color: var(--icon-gold); font-size: 1.4rem; margin-top: 3px; }
+        .info-item-text strong { display: block; color: var(--white); font-size: 1.15rem; font-weight: 700; margin-bottom: 5px; font-family: 'Lato', sans-serif; }
+        .info-item-text span, .info-item-text a { color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; line-height: 1.6; transition: 0.2s ease; }
+        .info-item-text a:hover { color: var(--icon-gold); }
+        .contact-form-panel { flex: 1.8; min-width: 320px; background: var(--dark-panel); padding: 50px 45px; }
+        .contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 25px; }
+        @media (max-width: 600px) { .contact-form-grid { grid-template-columns: 1fr; } }
+        .cf-group { margin-bottom: 0; }
+        .cf-group.full { grid-column: 1 / -1; }
+        .cf-group label { display: block; margin-bottom: 10px; font-size: 0.9rem; font-weight: 700; color: var(--white); font-family: 'Lato', sans-serif; }
+        .cf-input { width: 100%; background: var(--input-bg); border: 1px solid #333; color: var(--white); padding: 14px 16px; border-radius: 6px; font-family: 'Lato', sans-serif; font-size: 0.95rem; transition: var(--transition); }
+        .cf-input::placeholder { color: rgba(255, 255, 255, 0.3); }
+        .cf-input:focus { outline: none; border-color: var(--maroon); background: #282828; }
+        .cf-submit { margin-top: 35px; padding: 15px 35px; background: var(--maroon); color: var(--white); border: none; font-weight: 700; border-radius: 40px; cursor: pointer; font-size: 1.05rem; transition: var(--transition); font-family: 'Lato', sans-serif; }
+        .cf-submit:hover { background: #92222a; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(126, 30, 36, 0.4); }
+
+        /* --- 10. FOOTER --- */
+        footer { background: var(--primary); color: #d6d3d1; padding: 80px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; }
+        @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 576px) { .footer-grid { grid-template-columns: 1fr; } }
+        .footer-section h4 { color: var(--white); font-size: 1.25rem; margin-bottom: 25px; font-family: 'Playfair Display', serif; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a:hover { color: var(--secondary); padding-left: 5px; }
+        .social-links { display: flex; gap: 15px; margin-top: 25px; }
+        .social-link { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: var(--transition); }
+        .social-link:hover { background: var(--secondary); color: var(--white); transform: translateY(-3px); }
+
+        /* --- 11. AI CHATBOT --- */
+        /* --- 12. FLOATING ACTION BUTTONS --- */
+        #fab-container { position: fixed; bottom: 24px; right: 24px; display: flex; flex-direction: column; gap: 12px; z-index: 9999; }
+        .float-btn { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: white !important; box-shadow: 0 4px 15px rgba(0,0,0,0.25); cursor: pointer; transition: all 0.2s; border: none; text-decoration: none; }
+        .float-btn:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+        .phone-btn { background: var(--secondary); }
+        .whatsapp-btn { background: #25D366; }
+        .chatbot-btn { background: #1c1917 !important; border: 1px solid var(--secondary); color: white !important; }
+        .chatbot-btn:hover { background: var(--secondary) !important; color: white !important; }
+
+        .chatbot-window { position: fixed; bottom: 90px; right: 24px; width: 350px; height: 500px; background: white; border-radius: 12px; box-shadow: var(--shadow-lg); display: none; flex-direction: column; z-index: 10000; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); }
+        .chatbot-window.active { display: flex; animation: slideUp 0.3s ease; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .chatbot-header { background: var(--primary); color: var(--white); padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--secondary); }
+        .chatbot-close { cursor: pointer; font-size: 1.2rem; color: var(--secondary); }
+        .chatbot-messages { flex: 1; padding: 20px; overflow-y: auto; background: #fafaf9; display: flex; flex-direction: column; gap: 12px; }
+        .message { display: flex; gap: 10px; }
+        .message.bot { justify-content: flex-start; }
+        .message.user { justify-content: flex-end; }
+        .message-bubble { max-width: 85%; padding: 10px 14px; border-radius: 8px; font-size: 0.9rem; line-height: 1.5; }
+        .message.bot .message-bubble { background: white; border: 1px solid #eee; color: var(--text-dark); }
+        .message.user .message-bubble { background: var(--secondary); color: white; }
+        .chatbot-input { display: flex; padding: 12px; border-top: 1px solid #eee; background: white; gap: 8px; }
+        .chatbot-input input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 20px; outline: none; font-size: 0.9rem; }
+        .chatbot-input button { width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: var(--secondary); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .quick-replies { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+        .quick-reply { padding: 4px 10px; border: 1px solid var(--secondary); border-radius: 15px; font-size: 0.75rem; color: var(--secondary); cursor: pointer; }
+        .quick-reply:hover { background: var(--secondary); color: white; }
+        .mobile-bar { position: fixed; bottom: 0; left: 0; width: 100%; height: 65px; background: var(--primary); display: none; align-items: center; justify-content: space-around; z-index: 1000; border-top: 1px solid rgba(255,255,255,0.1); }
+        .mobile-link { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: #d6d3d1; cursor: pointer; gap: 4px; }
+        .mobile-link i { font-size: 1.2rem; color: var(--secondary); }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--primary); flex-direction: column; padding: 20px 0; border-top: 1px solid #292524; }
+            .nav-menu.active { display: flex; }
+            .hamburger { display: block; }
+            .hero h1 { font-size: 2.8rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .mobile-bar { display: flex; }
+            body { padding-bottom: 65px; }
+            #fab-container { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <header>
+        <div class="container navbar">
+            <a onclick="router('home')" class="logo">
+                <i class="fas fa-utensils"></i> George
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a onclick="router('home')" class="nav-link active">Home</a></li>
+                <li><a onclick="router('about')" class="nav-link">Our Story</a></li>
+                <li><a onclick="router('menu')" class="nav-link">Menu</a></li>
+                <li><a onclick="router('booking')" class="nav-link">Bookings</a></li>
+                <li><a onclick="router('reviews')" class="nav-link">Reviews</a></li>
+                <li><a onclick="router('contact')" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================== HOME PAGE ===================== -->
+    <section id="home" class="page-section active">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container">
+                <h1>Experience the Art of Family restaurant</h1>
+                <p>Experience upscale dining and an extensive wine selection in the heart of Maharashtra 411001.</p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <button onclick="router('menu')" class="btn btn-primary">View Menus</button>
+                    <button onclick="router('contact')" class="btn btn-outline">Reserve a Table</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top: -60px; position: relative; z-index: 10;">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">4.1★</div>
+                    <div class="stat-label">Guest Rating</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">17052+</div>
+                    <div class="stat-label">Happy Reviews</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Fine Wine Labels</div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+
+    <!-- ===================== ABOUT PAGE ===================== -->
+    <section id="about" class="page-section">
+        <div class="section-padding container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800" alt="Restaurant interior">
+                </div>
+                <div>
+                    <h5 style="color: var(--secondary); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; font-weight: 700;">Since 2011</h5>
+                    <h2 style="font-size: 3rem; margin-bottom: 25px;">Our Journey into Culinary Harmony</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px;">
+                        Welcome to George Restaurant. We are dedicated to providing an exceptional dining experience.
+                    </p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle"></i> Award-Winning Culinary Team</li>
+                        <li><i class="fas fa-check-circle"></i> Sourced from 100% Sustainable Local Farms</li>
+                        <li><i class="fas fa-check-circle"></i> Exclusive Chef's Table Experience Available</li>
+                        <li><i class="fas fa-check-circle"></i> Private Dining Chambers for VIP Events</li>
+                    </ul>
+                    <button onclick="router('contact')" class="btn btn-outline-dark" style="margin-top: 35px;">Learn More About Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== MENU PAGE ===================== -->
+    <section id="menu" class="page-section">
+        <div class="section-padding container">
+            <div class="section-header">
+                <h5 style="color: var(--secondary); letter-spacing: 2px; text-transform: uppercase;">Curated Selections</h5>
+                <h2>Our Menus</h2>
+                <div class="divider" style="margin-bottom: 20px;"></div>
+                <p style="max-width: 600px; margin: 0 auto; color: var(--text-light);">Explore our seasonal offerings, from wood-fired specialties to decadent desserts and artisanal pairings.</p>
+            </div>
+
+            <div id="menuContainer">
+            
+            <div class="menu-category">
+                <h3 class="menu-category-title">Appetizers</h3>
+                <div class="menu-grid">
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Crispy Calamari</h4>
+                            <p class="menu-card-desc">Served with marinara sauce and lemon.</p>
+                            <p class="menu-card-price">$12.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Bruschetta</h4>
+                            <p class="menu-card-desc">Toasted bread with fresh tomatoes, basil, and garlic.</p>
+                            <p class="menu-card-price">$9.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Garlic Bread</h4>
+                            <p class="menu-card-desc">Oven-baked with herbs and butter.</p>
+                            <p class="menu-card-price">$6.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Stuffed Mushrooms</h4>
+                            <p class="menu-card-desc">Portobello mushrooms filled with herbed cream cheese.</p>
+                            <p class="menu-card-price">$11.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Corinne Wedge</h4>
+                            <p class="menu-card-desc">Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.</p>
+                            <p class="menu-card-price">$17.00</p>
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="menu-category">
+                <h3 class="menu-category-title">Main Courses</h3>
+                <div class="menu-grid">
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Grilled Salmon</h4>
+                            <p class="menu-card-desc">Fresh Atlantic salmon with seasonal vegetables.</p>
+                            <p class="menu-card-price">$24.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Steak Frites</h4>
+                            <p class="menu-card-desc">Classic steak with crispy fries and herb butter.</p>
+                            <p class="menu-card-price">$28.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Chicken Parmesan</h4>
+                            <p class="menu-card-desc">Breaded chicken topped with marinara and mozzarella.</p>
+                            <p class="menu-card-price">$21.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Lamb Chops</h4>
+                            <p class="menu-card-desc">Herb-crusted lamb chops with roasted potatoes and mint sauce.</p>
+                            <p class="menu-card-price">$32.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Pasta Primavera</h4>
+                            <p class="menu-card-desc">Penne with sautéed seasonal vegetables in a light cream sauce.</p>
+                            <p class="menu-card-price">$18.00</p>
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="menu-category">
+                <h3 class="menu-category-title">Desserts</h3>
+                <div class="menu-grid">
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Tiramisu</h4>
+                            <p class="menu-card-desc">Classic Italian coffee-flavored dessert.</p>
+                            <p class="menu-card-price">$8.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Cheesecake</h4>
+                            <p class="menu-card-desc">New York style with berry compote.</p>
+                            <p class="menu-card-price">$7.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Chocolate Lava Cake</h4>
+                            <p class="menu-card-desc">Warm molten chocolate cake with vanilla ice cream.</p>
+                            <p class="menu-card-price">$10.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Crème Brûlée</h4>
+                            <p class="menu-card-desc">Classic French custard with a caramelized sugar crust.</p>
+                            <p class="menu-card-price">$9.00</p>
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="menu-category">
+                <h3 class="menu-category-title">Mocktails</h3>
+                <div class="menu-grid">
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Virgin Mojito</h4>
+                            <p class="menu-card-desc">Fresh mint, lime, sugar, and sparkling soda.</p>
+                            <p class="menu-card-price">$6.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Mango Sunrise</h4>
+                            <p class="menu-card-desc">Mango purée, orange juice, and a splash of grenadine.</p>
+                            <p class="menu-card-price">$7.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Berry Bliss</h4>
+                            <p class="menu-card-desc">Mixed berries, lemon, and honey with crushed ice.</p>
+                            <p class="menu-card-price">$7.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Cucumber Cooler</h4>
+                            <p class="menu-card-desc">Cucumber, mint, lime, and tonic water.</p>
+                            <p class="menu-card-price">$6.00</p>
+                        </div>
+                    
+                </div>
+            </div>
+        
+            <div class="menu-category">
+                <h3 class="menu-category-title">Cocktails</h3>
+                <div class="menu-grid">
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Classic Margarita</h4>
+                            <p class="menu-card-desc">Tequila, lime juice, and triple sec with a salted rim.</p>
+                            <p class="menu-card-price">$12.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Old Fashioned</h4>
+                            <p class="menu-card-desc">Bourbon, bitters, sugar, and an orange twist.</p>
+                            <p class="menu-card-price">$14.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Espresso Martini</h4>
+                            <p class="menu-card-desc">Vodka, espresso, coffee liqueur, shaken and chilled.</p>
+                            <p class="menu-card-price">$13.00</p>
+                        </div>
+                    
+                        <div class="menu-card">
+                            <h4 class="menu-card-title">Aperol Spritz</h4>
+                            <p class="menu-card-desc">Aperol, prosecco, and a splash of soda over ice.</p>
+                            <p class="menu-card-price">$11.00</p>
+                        </div>
+                    
+                </div>
+            </div>
+        
+            </div>
+
+            <div class="text-center" style="margin-top: 60px;">
+                <p style="font-size: 1.1rem; margin-bottom: 20px; font-family: 'Playfair Display', serif;">Looking for something specific?</p>
+                <button onclick="router('contact')" class="btn btn-outline-dark">Enquire Directly</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== RESERVATIONS PAGE ===================== -->
+    <section id="booking" class="page-section">
+        <div class="section-padding container">
+            <div class="section-header">
+                <h2>Secure Your Experience</h2>
+                <p>Reserve your table at George Restaurant for an unforgettable dining journey.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="contact-panel">
+                <div class="contact-info-panel">
+                    <h3>Booking Info</h3>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-item-text"><strong>Phone</strong><a href="tel:912066020121">+91 20 6602 0121</a></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-item-text"><strong>Location</strong><span>2436, General Thimayya Road, East St, Camp, Pune, Maharashtra 411001, India</span></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-clock"></i></div>
+                        <div class="info-item-text"><strong>Hours</strong><span><span>Monday: 9 AM to 11:25 PM<br></span><span>Tuesday: 9 AM to 11:25 PM<br></span><span>Wednesday: 9 AM to 11:25 PM<br></span><span>Thursday: 9 AM to 11:25 PM<br></span><span>Friday: 9 AM to 11:25 PM<br></span><span>Saturday: 9 AM to 11:25 PM<br></span><span>Sunday: 9 AM to 11:25 PM<br></span></span></div>
+                    </div>
+                </div>
+                <div class="contact-form-panel">
+                    <form onsubmit="event.preventDefault(); alert('Reservation demo submitted!');">
+                        <div class="contact-form-grid">
+                            <div class="cf-group"><label>Full Name *</label><input type="text" class="cf-input" placeholder="Your name" required></div>
+                            <div class="cf-group"><label>Phone *</label><input type="tel" class="cf-input" placeholder="Your phone" required></div>
+                            <div class="cf-group"><label>Date *</label><input type="date" class="cf-input" required></div>
+                            <div class="cf-group"><label>Time *</label><input type="time" class="cf-input" required></div>
+                            <div class="cf-group"><label>Guests *</label><input type="number" class="cf-input" placeholder="How many?" required></div>
+                            <div class="cf-group"><label>Event Type</label>
+                                <select class="cf-input">
+                                    <option>Regular Dining</option>
+                                    <option>Birthday</option>
+                                    <option>Corporate</option>
+                                    <option>Wedding / Anniversary</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="cf-submit">Request Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== REVIEWS PAGE ===================== -->
+    <section id="reviews" class="page-section">
+        <div class="section-padding container">
+            <div class="section-header">
+                <h2>Guest Testimonials</h2>
+                <p>What our valued patrons have to say about their experience.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div id="reviews-carousel">
+                
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Excellent food and service!"</p>
+            <p class="reviewer">— Happy Customer</p>
+        </div>
+    <!-- slide -->
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Great experience, will come again."</p>
+            <p class="reviewer">— Satisfied Diner</p>
+        </div>
+    <!-- slide -->
+        <div class="testimonial-card">
+            <div class="stars">★★★★</div>
+            <p class="review-text">"Amazing flavors and atmosphere."</p>
+            <p class="reviewer">— Local Foodie</p>
+        </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT PAGE ===================== -->
+    <section id="contact" class="page-section">
+        <div class="section-padding container">
+            <div class="contact-panel">
+                <div class="contact-info-panel">
+                    <h3>Contact Us</h3>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-item-text"><strong>Direct Dial</strong><a href="tel:912066020121">+91 20 6602 0121</a></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-item-text"><strong>Email Us</strong><a href="mailto:info@google.com">info@google.com</a></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-item-text"><strong>Find Us</strong><span>2436, General Thimayya Road, East St, Camp, Pune, Maharashtra 411001, India</span></div>
+                    </div>
+                </div>
+                <div class="contact-form-panel">
+                    <form onsubmit="event.preventDefault(); alert('Inquiry sent!');">
+                        <div class="contact-form-grid">
+                            <div class="cf-group full"><label>Inquiry Subject</label><input type="text" class="cf-input" placeholder="General Inquiry / Events / Careers"></div>
+                            <div class="cf-group full"><label>Your Message</label><textarea class="cf-input" rows="5" placeholder="How can we assist you?"></textarea></div>
+                        </div>
+                        <button type="submit" class="cf-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);">
+                <iframe src="https://www.google.com/maps?q=2436%2C%20General%20Thimayya%20Road%2C%20East%20St%2C%20Camp%2C%20Pune%2C%20Maharashtra%20411001%2C%20India&output=embed" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>George Restaurant</h4>
+                    <p style="margin-top: 15px;">Elevating the art of Family restaurant in the heart of the city.</p>
+                    <div class="social-links">
+                        <a class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a onclick="router('home')">Home</a></li>
+                        <li><a onclick="router('about')">Our Story</a></li>
+                        <li><a onclick="router('menu')">Menus</a></li>
+                        <li><a onclick="router('contact')">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a onclick="router('contact')">Privacy Policy</a></li>
+                        <li><a onclick="router('contact')">Terms of Service</a></li>
+                        <li><a onclick="router('contact')">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Reach Out</h4>
+                    <ul class="footer-links">
+                        <li style="margin-bottom: 5px;"><i class="fas fa-phone" style="width: 20px;"></i> +91 20 6602 0121</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-envelope" style="width: 20px;"></i> info@google.com</li>
+                        <li><button onclick="router('contact')" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Contact Us</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="font-size: 0.85rem; color: #78716c;">&copy; 2026 George Restaurant. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI CHATBOT -->
+    <!-- Floating Action Buttons -->
+    <div id="fab-container">
+        <!-- Phone -->
+        <a href="tel:912066020121" class="float-btn phone-btn" title="Call Us">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/912066020121" target="_blank" class="float-btn whatsapp-btn" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- Chatbot -->
+        <button class="float-btn chatbot-btn" onclick="toggleChatbot()" title="Chat with us">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <div>
+                <strong>George Assistant</strong>
+                <div style="font-size: 0.75rem; opacity: 0.8; font-weight: 400;">Online</div>
+            </div>
+            <div class="chatbot-close" onclick="toggleChatbot()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div id="chatMessages" class="chatbot-messages">
+            <div class="message bot">
+                <div class="message-bubble">
+                    Hi! Welcome to <strong>George Restaurant</strong>. How can I help you today?
+                    <div class="quick-replies">
+                        <div class="quick-reply" onclick="sendQuickReply('Make a Reservation')">Book Table</div>
+                        <div class="quick-reply" onclick="sendQuickReply('See the Menu')">View Menu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatEnter(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- MOBILE NAV BOTTOM -->
+    <div class="mobile-bar">
+        <div class="mobile-link" onclick="router('home')"><i class="fas fa-home"></i>Home</div>
+        <div class="mobile-link" onclick="router('menu')"><i class="fas fa-book-open"></i>Menu</div>
+        <div class="mobile-link" onclick="router('contact')">Book</div>
+        <div class="mobile-link" onclick="router('contact')"><i class="fas fa-envelope"></i>Contact</div>
+    </div>
+
+    <script>
+        function router(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.add('active');
+                window.scrollTo(0, 0);
+            }
+
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const text = link.textContent.toLowerCase().trim();
+                const cleanPageId = pageId.toLowerCase().trim();
+                if (text === cleanPageId || (cleanPageId === 'booking' && text === 'reservations')) {
+                    link.classList.add('active');
+                }
+            });
+
+            document.getElementById('navMenu').classList.remove('active');
+        }
+
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
+        function toggleChatbot() {
+            document.getElementById('chatbotWindow').classList.toggle('active');
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            if (!message) return;
+            addMessage(message, 'user');
+            input.value = '';
+            setTimeout(() => addMessage(getBotResponse(message), 'bot'), 600);
+        }
+
+        function handleChatEnter(e) { if (e.key === 'Enter') sendMessage(); }
+
+        function sendQuickReply(message) {
+            addMessage(message, 'user');
+            setTimeout(() => addMessage(getBotResponse(message), 'bot'), 600);
+        }
+
+        function addMessage(text, sender) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message ' + sender;
+            messageDiv.innerHTML = '<div class="message-bubble">' + text + '</div>';
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function getBotResponse(message) {
+            const msg = message.toLowerCase();
+            if (msg.includes('reserve') || msg.includes('book') || msg.includes('table')) {
+                return 'You can reserve your table online here: <a style="cursor:pointer; color:var(--accent); text-decoration:underline;" onclick="router(&#39;booking&#39;); toggleChatbot();">Go to Reservations</a>';
+            } else if (msg.includes('menu') || msg.includes('food')) {
+                return 'We have a wonderful wood-fired selection. <a style="cursor:pointer; color:var(--accent); text-decoration:underline;" onclick="router(&#39;menu&#39;); toggleChatbot();">View our Menu</a>';
+            } else if (msg.includes('location') || msg.includes('where') || msg.includes('address')) {
+                return 'We are located at 2436, General Thimayya Road, East St, Camp, Pune, Maharashtra 411001, India.';
+            } else if (msg.includes('hours') || msg.includes('open') || msg.includes('time')) {
+                return 'Our hours are: 9 AM to 11:25 PM.';
+            } else {
+                return 'Thank you for reaching out! For assistance, please call us at +91 20 6602 0121.';
+            }
+        }
+    // === LIVE MENU SYNC FROM GOOGLE SHEETS ===
+    (function() {
+      var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwctmysl83TGxd_4PtS0pNnQdJS_k5QBHlyll12rKqF3pYIiPk2cEFh73xSWMQnnWTrpg/exec';
+      var container = document.getElementById('menuContainer');
+      if (!container) return;
+      var lastJson = JSON.stringify([{"name":"Appetizers","items":[{"description":"Served with marinara sauce and lemon.","name":"Crispy Calamari","price":"$12.00"},{"name":"Bruschetta","description":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00"},{"price":"$6.00","description":"Oven-baked with herbs and butter.","name":"Garlic Bread"},{"name":"Stuffed Mushrooms","description":"Portobello mushrooms filled with herbed cream cheese.","price":"$11.00"},{"name":"Corinne Wedge","description":"Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.","price":"$17.00"}]},{"name":"Main Courses","items":[{"price":"$24.00","description":"Fresh Atlantic salmon with seasonal vegetables.","name":"Grilled Salmon"},{"price":"$28.00","name":"Steak Frites","description":"Classic steak with crispy fries and herb butter."},{"price":"$21.00","description":"Breaded chicken topped with marinara and mozzarella.","name":"Chicken Parmesan"},{"name":"Lamb Chops","description":"Herb-crusted lamb chops with roasted potatoes and mint sauce.","price":"$32.00"},{"name":"Pasta Primavera","description":"Penne with sautéed seasonal vegetables in a light cream sauce.","price":"$18.00"}]},{"items":[{"price":"$8.00","description":"Classic Italian coffee-flavored dessert.","name":"Tiramisu"},{"name":"Cheesecake","description":"New York style with berry compote.","price":"$7.00"},{"description":"Warm molten chocolate cake with vanilla ice cream.","name":"Chocolate Lava Cake","price":"$10.00"},{"price":"$9.00","description":"Classic French custard with a caramelized sugar crust.","name":"Crème Brûlée"}],"name":"Desserts"},{"name":"Mocktails","items":[{"description":"Fresh mint, lime, sugar, and sparkling soda.","name":"Virgin Mojito","price":"$6.00"},{"description":"Mango purée, orange juice, and a splash of grenadine.","name":"Mango Sunrise","price":"$7.00"},{"price":"$7.00","name":"Berry Bliss","description":"Mixed berries, lemon, and honey with crushed ice."},{"name":"Cucumber Cooler","description":"Cucumber, mint, lime, and tonic water.","price":"$6.00"}]},{"items":[{"description":"Tequila, lime juice, and triple sec with a salted rim.","name":"Classic Margarita","price":"$12.00"},{"name":"Old Fashioned","description":"Bourbon, bitters, sugar, and an orange twist.","price":"$14.00"},{"price":"$13.00","description":"Vodka, espresso, coffee liqueur, shaken and chilled.","name":"Espresso Martini"},{"name":"Aperol Spritz","description":"Aperol, prosecco, and a splash of soda over ice.","price":"$11.00"}],"name":"Cocktails"}]);
+
+      function renderLiveMenu(cats) {
+        if (!cats || cats.length === 0) return;
+        var html = '';
+        cats.forEach(function(cat) {
+          html += '<div class="menu-category"><h3 class="menu-category-title">' + cat.name + '</h3><div class="menu-grid">';
+          (cat.items || []).forEach(function(item) {
+            html += '<div class="menu-card"><h4 class="menu-card-title">' + item.name + '</h4><p class="menu-card-desc">' + (item.description || '') + '</p><p class="menu-card-price">' + (item.price || '') + '</p></div>';
+          });
+          html += '</div></div>';
+        });
+        container.innerHTML = html;
+      }
+
+      function fetchMenu() {
+        fetch(SHEET_URL)
+          .then(function(r) {
+            if (!r.ok) throw new Error('Network response was not ok');
+            return r.json();
+          })
+          .then(function(data) {
+            if (!data || !data.menuCategories) {
+              console.warn('Live menu data format unexpected:', data);
+              return;
+            }
+            var json = JSON.stringify(data.menuCategories);
+            if (json !== lastJson) {
+              lastJson = json;
+              renderLiveMenu(data.menuCategories);
+            }
+          })
+          .catch(function(err) {
+            console.warn('Live menu fetch failed. Using initial data.', err);
+          });
+      }
+
+      fetchMenu();
+      setInterval(fetchMenu, 3000);
+    })();
+    </script>
+
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <span><i class="fas fa-robot"></i> Chat with us</span>
+    <button onclick="toggleChatbot()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg bot">Hi there! Welcome to <strong>${bizName}</strong>. How can I help you today? You can ask about our menu, hours, reservations, or anything else!</div>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button onclick="sendChat()">Send</button>
+  </div>
+</div>
+
+<script>
+function toggleChatbot(){
+  document.getElementById('chatWindow').classList.toggle('open');
+  if(document.getElementById('chatWindow').classList.contains('open')){
+    document.getElementById('chatInput').focus();
+  }
+}
+function sendChat(){
+  var input=document.getElementById('chatInput');
+  var msg=input.value.trim();
+  if(!msg)return;
+  var body=document.getElementById('chatBody');
+  body.innerHTML+='<div class="chat-msg user">'+msg+'</div>';
+  input.value='';
+  body.scrollTop=body.scrollHeight;
+  setTimeout(function(){
+    var reply=getChatReply(msg);
+    body.innerHTML+='<div class="chat-msg bot">'+reply+'</div>';
+    body.scrollTop=body.scrollHeight;
+  },600);
+}
+function getChatReply(msg){
+  var m=msg.toLowerCase();
+  if(m.includes('hour')||m.includes('open')||m.includes('close')||m.includes('time'))return 'Our hours vary by day. Please check our Contact page for detailed hours, or call us at <strong>${phone}</strong>.';
+  if(m.includes('reserv')||m.includes('book')||m.includes('table'))return 'You can reserve a table right from our website! Click the <strong>Reserve</strong> button or call us at <strong>${phone}</strong>.';
+  if(m.includes('menu')||m.includes('food')||m.includes('dish')||m.includes('eat'))return 'Check out our full menu on the <strong>Menu</strong> page! We have a wide variety of delicious options.';
+  if(m.includes('locat')||m.includes('address')||m.includes('where')||m.includes('direction'))return 'We are located at <strong>${address}</strong>. Check our Contact page for a map!';
+  if(m.includes('phone')||m.includes('call')||m.includes('number'))return 'You can reach us at <strong>${phone}</strong>. We would love to hear from you!';
+  if(m.includes('thank'))return 'You are welcome! Is there anything else I can help with?';
+  if(m.includes('hi')||m.includes('hello')||m.includes('hey'))return 'Hello! How can I assist you today?';
+  return 'Thanks for your message! For detailed inquiries, please call us at <strong>${phone}</strong> or visit our Contact page. Is there anything specific I can help with — like our menu, hours, or reservations?';
+}
+</script>
+
+</body>
+</html>
