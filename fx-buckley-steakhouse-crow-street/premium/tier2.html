@@ -209,8 +209,10 @@ img { max-width:100%; height:auto; display:block; }
 }
 .menu-tab-btn.active, .menu-tab-btn:hover { background:var(--rest-navy); color:#fff; }
 .menu-cat-grid { max-width:680px; margin:0 auto; }
-.menu-dish { padding:22px 0; border-bottom:1px solid var(--rest-border); }
+.menu-dish { padding:22px 0; border-bottom:1px solid var(--rest-border); display:flex; align-items:flex-start; gap:16px; }
 .menu-dish:last-child { border-bottom:none; }
+.dish-img { width:70px; height:70px; border-radius:8px; object-fit:cover; flex-shrink:0; }
+.dish-text { flex:1; min-width:0; }
 .dish-header { display:flex; align-items:baseline; justify-content:space-between; gap:20px; }
 .dish-name { font-family:var(--font-heading); font-size:1.1rem; font-weight:600; color:var(--rest-navy); }
 .dish-price { font-family:var(--font-heading); font-weight:600; color:var(--rest-burgundy); font-size:1.05rem; white-space:nowrap; }
@@ -395,7 +397,7 @@ img { max-width:100%; height:auto; display:block; }
       <div class="about-highlights">
         <div class="hl"><div class="hl-num">4.7</div><div class="hl-label">Rating</div></div>
         <div class="hl"><div class="hl-num">2448+</div><div class="hl-label">Reviews</div></div>
-        <div class="hl"><div class="hl-num">14+</div><div class="hl-label">Years</div></div>
+        <div class="hl"><div class="hl-num">15+</div><div class="hl-label">Years</div></div>
       </div>
     </div>
   </div>
@@ -410,113 +412,179 @@ img { max-width:100%; height:auto; display:block; }
           <div class="section-head"><span class="section-sub">Our Menu</span><h2>Explore Our Dishes</h2><div class="head-line"></div></div>
           <div id="live-menu-area"><div class="menu-tabs"><button class="menu-tab-btn active" data-menu-cat="0">Appetizers</button><button class="menu-tab-btn" data-menu-cat="1">Main Courses</button><button class="menu-tab-btn" data-menu-cat="2">Desserts</button><button class="menu-tab-btn" data-menu-cat="3">Mocktails</button><button class="menu-tab-btn" data-menu-cat="4">Cocktails</button></div><div class="menu-cat-grid" data-cat="0" style="">
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Crispy Calamari</h4><span class="dish-price">$12.00</span></div>
-          <p class="dish-desc">Served with marinara sauce and lemon.</p>
+          <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Crispy Calamari" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Crispy Calamari</h4><span class="dish-price">$12.00</span></div>
+            <p class="dish-desc">Served with marinara sauce and lemon.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Bruschetta</h4><span class="dish-price">$9.00</span></div>
-          <p class="dish-desc">Toasted bread with fresh tomatoes, basil, and garlic.</p>
+          <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Bruschetta" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Bruschetta</h4><span class="dish-price">$9.00</span></div>
+            <p class="dish-desc">Toasted bread with fresh tomatoes, basil, and garlic.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Garlic Bread</h4><span class="dish-price">$6.00</span></div>
-          <p class="dish-desc">Oven-baked with herbs and butter.</p>
+          <img src="https://images.unsplash.com/photo-1549931319-a545753467c8?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Garlic Bread" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Garlic Bread</h4><span class="dish-price">$6.00</span></div>
+            <p class="dish-desc">Oven-baked with herbs and butter.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Stuffed Mushrooms</h4><span class="dish-price">$11.00</span></div>
-          <p class="dish-desc">Portobello mushrooms filled with herbed cream cheese.</p>
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Stuffed Mushrooms" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Stuffed Mushrooms</h4><span class="dish-price">$11.00</span></div>
+            <p class="dish-desc">Portobello mushrooms filled with herbed cream cheese.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Corinne Wedge</h4><span class="dish-price">$17.00</span></div>
-          <p class="dish-desc">Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.</p>
+          <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Corinne Wedge" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Corinne Wedge</h4><span class="dish-price">$17.00</span></div>
+            <p class="dish-desc">Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.</p>
+          </div>
         </div>
       </div><div class="menu-cat-grid" data-cat="1" style="display:none">
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Grilled Salmon</h4><span class="dish-price">$24.00</span></div>
-          <p class="dish-desc">Fresh Atlantic salmon with seasonal vegetables.</p>
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Grilled Salmon" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Grilled Salmon</h4><span class="dish-price">$24.00</span></div>
+            <p class="dish-desc">Fresh Atlantic salmon with seasonal vegetables.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Steak Frites</h4><span class="dish-price">$28.00</span></div>
-          <p class="dish-desc">Classic steak with crispy fries and herb butter.</p>
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Steak Frites" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Steak Frites</h4><span class="dish-price">$28.00</span></div>
+            <p class="dish-desc">Classic steak with crispy fries and herb butter.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Chicken Parmesan</h4><span class="dish-price">$21.00</span></div>
-          <p class="dish-desc">Breaded chicken topped with marinara and mozzarella.</p>
+          <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Chicken Parmesan" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Chicken Parmesan</h4><span class="dish-price">$21.00</span></div>
+            <p class="dish-desc">Breaded chicken topped with marinara and mozzarella.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Lamb Chops</h4><span class="dish-price">$32.00</span></div>
-          <p class="dish-desc">Herb-crusted lamb chops with roasted potatoes and mint sauce.</p>
+          <img src="https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Lamb Chops" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Lamb Chops</h4><span class="dish-price">$32.00</span></div>
+            <p class="dish-desc">Herb-crusted lamb chops with roasted potatoes and mint sauce.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Pasta Primavera</h4><span class="dish-price">$18.00</span></div>
-          <p class="dish-desc">Penne with sautéed seasonal vegetables in a light cream sauce.</p>
+          <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Pasta Primavera" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Pasta Primavera</h4><span class="dish-price">$18.00</span></div>
+            <p class="dish-desc">Penne with sautéed seasonal vegetables in a light cream sauce.</p>
+          </div>
         </div>
       </div><div class="menu-cat-grid" data-cat="2" style="display:none">
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Tiramisu</h4><span class="dish-price">$8.00</span></div>
-          <p class="dish-desc">Classic Italian coffee-flavored dessert.</p>
+          <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Tiramisu" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Tiramisu</h4><span class="dish-price">$8.00</span></div>
+            <p class="dish-desc">Classic Italian coffee-flavored dessert.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Cheesecake</h4><span class="dish-price">$7.00</span></div>
-          <p class="dish-desc">New York style with berry compote.</p>
+          <img src="https://images.unsplash.com/photo-1565060127061-29f07613ba80?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Cheesecake" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Cheesecake</h4><span class="dish-price">$7.00</span></div>
+            <p class="dish-desc">New York style with berry compote.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Chocolate Lava Cake</h4><span class="dish-price">$10.00</span></div>
-          <p class="dish-desc">Warm molten chocolate cake with vanilla ice cream.</p>
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Chocolate Lava Cake" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Chocolate Lava Cake</h4><span class="dish-price">$10.00</span></div>
+            <p class="dish-desc">Warm molten chocolate cake with vanilla ice cream.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Crème Brûlée</h4><span class="dish-price">$9.00</span></div>
-          <p class="dish-desc">Classic French custard with a caramelized sugar crust.</p>
+          <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Crème Brûlée" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Crème Brûlée</h4><span class="dish-price">$9.00</span></div>
+            <p class="dish-desc">Classic French custard with a caramelized sugar crust.</p>
+          </div>
         </div>
       </div><div class="menu-cat-grid" data-cat="3" style="display:none">
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Virgin Mojito</h4><span class="dish-price">$6.00</span></div>
-          <p class="dish-desc">Fresh mint, lime, sugar, and sparkling soda.</p>
+          <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Virgin Mojito" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Virgin Mojito</h4><span class="dish-price">$6.00</span></div>
+            <p class="dish-desc">Fresh mint, lime, sugar, and sparkling soda.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Mango Sunrise</h4><span class="dish-price">$7.00</span></div>
-          <p class="dish-desc">Mango purée, orange juice, and a splash of grenadine.</p>
+          <img src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Mango Sunrise" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Mango Sunrise</h4><span class="dish-price">$7.00</span></div>
+            <p class="dish-desc">Mango purée, orange juice, and a splash of grenadine.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Berry Bliss</h4><span class="dish-price">$7.00</span></div>
-          <p class="dish-desc">Mixed berries, lemon, and honey with crushed ice.</p>
+          <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Berry Bliss" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Berry Bliss</h4><span class="dish-price">$7.00</span></div>
+            <p class="dish-desc">Mixed berries, lemon, and honey with crushed ice.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Cucumber Cooler</h4><span class="dish-price">$6.00</span></div>
-          <p class="dish-desc">Cucumber, mint, lime, and tonic water.</p>
+          <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Cucumber Cooler" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Cucumber Cooler</h4><span class="dish-price">$6.00</span></div>
+            <p class="dish-desc">Cucumber, mint, lime, and tonic water.</p>
+          </div>
         </div>
       </div><div class="menu-cat-grid" data-cat="4" style="display:none">
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Classic Margarita</h4><span class="dish-price">$12.00</span></div>
-          <p class="dish-desc">Tequila, lime juice, and triple sec with a salted rim.</p>
+          <img src="https://images.unsplash.com/photo-1556855810-ac404aa91e85?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Classic Margarita" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Classic Margarita</h4><span class="dish-price">$12.00</span></div>
+            <p class="dish-desc">Tequila, lime juice, and triple sec with a salted rim.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Old Fashioned</h4><span class="dish-price">$14.00</span></div>
-          <p class="dish-desc">Bourbon, bitters, sugar, and an orange twist.</p>
+          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Old Fashioned" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Old Fashioned</h4><span class="dish-price">$14.00</span></div>
+            <p class="dish-desc">Bourbon, bitters, sugar, and an orange twist.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Espresso Martini</h4><span class="dish-price">$13.00</span></div>
-          <p class="dish-desc">Vodka, espresso, coffee liqueur, shaken and chilled.</p>
+          <img src="https://images.unsplash.com/photo-1575023782549-62ca0d244b39?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Espresso Martini" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Espresso Martini</h4><span class="dish-price">$13.00</span></div>
+            <p class="dish-desc">Vodka, espresso, coffee liqueur, shaken and chilled.</p>
+          </div>
         </div>
       
         <div class="menu-dish">
-          <div class="dish-header"><h4 class="dish-name">Aperol Spritz</h4><span class="dish-price">$11.00</span></div>
-          <p class="dish-desc">Aperol, prosecco, and a splash of soda over ice.</p>
+          <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=600&q=80" class="dish-img" alt="Aperol Spritz" ${needsHF ? `onload="loadHuggingFaceImage(this, '${dishNameSlug}')"` : ''}>
+          <div class="dish-text">
+            <div class="dish-header"><h4 class="dish-name">Aperol Spritz</h4><span class="dish-price">$11.00</span></div>
+            <p class="dish-desc">Aperol, prosecco, and a splash of soda over ice.</p>
+          </div>
         </div>
       </div></div>
         </div>
@@ -735,23 +803,28 @@ window.addEventListener('scroll', function() {
   var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwctmysl83TGxd_4PtS0pNnQdJS_k5QBHlyll12rKqF3pYIiPk2cEFh73xSWMQnnWTrpg/exec';
   var menuArea = document.getElementById('live-menu-area');
   if (!menuArea) return;
-  var lastJson = JSON.stringify([{"name":"Appetizers","items":[{"name":"Crispy Calamari","description":"Served with marinara sauce and lemon.","price":"$12.00","image":"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=600&q=80"},{"name":"Bruschetta","description":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00","image":"https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80"},{"name":"Garlic Bread","description":"Oven-baked with herbs and butter.","price":"$6.00","image":"https://images.unsplash.com/photo-1549931319-a545753467c8?auto=format&fit=crop&w=600&q=80"},{"name":"Stuffed Mushrooms","description":"Portobello mushrooms filled with herbed cream cheese.","price":"$11.00","image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"},{"name":"Corinne Wedge","description":"Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.","price":"$17.00","image":"https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=600&q=80"}]},{"name":"Main Courses","items":[{"name":"Grilled Salmon","description":"Fresh Atlantic salmon with seasonal vegetables.","price":"$24.00","image":"https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80"},{"name":"Steak Frites","description":"Classic steak with crispy fries and herb butter.","price":"$28.00","image":"https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=600&q=80"},{"name":"Chicken Parmesan","description":"Breaded chicken topped with marinara and mozzarella.","price":"$21.00","image":"https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80"},{"name":"Lamb Chops","description":"Herb-crusted lamb chops with roasted potatoes and mint sauce.","price":"$32.00","image":"https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&w=600&q=80"},{"name":"Pasta Primavera","description":"Penne with sautéed seasonal vegetables in a light cream sauce.","price":"$18.00","image":"https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=600&q=80"}]},{"name":"Desserts","items":[{"name":"Tiramisu","description":"Classic Italian coffee-flavored dessert.","price":"$8.00","image":"https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80"},{"name":"Cheesecake","description":"New York style with berry compote.","price":"$7.00","image":"https://images.unsplash.com/photo-1565060127061-29f07613ba80?auto=format&fit=crop&w=600&q=80"},{"name":"Chocolate Lava Cake","description":"Warm molten chocolate cake with vanilla ice cream.","price":"$10.00","image":"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"},{"name":"Crème Brûlée","description":"Classic French custard with a caramelized sugar crust.","price":"$9.00","image":"https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=600&q=80"}]},{"name":"Mocktails","items":[{"name":"Virgin Mojito","description":"Fresh mint, lime, sugar, and sparkling soda.","price":"$6.00","image":"https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=600&q=80"},{"name":"Mango Sunrise","description":"Mango purée, orange juice, and a splash of grenadine.","price":"$7.00","image":"https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=600&q=80"},{"name":"Berry Bliss","description":"Mixed berries, lemon, and honey with crushed ice.","price":"$7.00","image":"https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"},{"name":"Cucumber Cooler","description":"Cucumber, mint, lime, and tonic water.","price":"$6.00","image":"https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"}]},{"name":"Cocktails","items":[{"name":"Classic Margarita","description":"Tequila, lime juice, and triple sec with a salted rim.","price":"$12.00","image":"https://images.unsplash.com/photo-1556855810-ac404aa91e85?auto=format&fit=crop&w=600&q=80"},{"name":"Old Fashioned","description":"Bourbon, bitters, sugar, and an orange twist.","price":"$14.00","image":"https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80"},{"name":"Espresso Martini","description":"Vodka, espresso, coffee liqueur, shaken and chilled.","price":"$13.00","image":"https://images.unsplash.com/photo-1575023782549-62ca0d244b39?auto=format&fit=crop&w=600&q=80"},{"name":"Aperol Spritz","description":"Aperol, prosecco, and a splash of soda over ice.","price":"$11.00","image":"https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=600&q=80"}]}]);
+  var lastJson = JSON.stringify([{"name":"Appetizers","items":[{"price":"$12.00","image":"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=600&q=80","name":"Crispy Calamari","description":"Served with marinara sauce and lemon."},{"description":"Toasted bread with fresh tomatoes, basil, and garlic.","name":"Bruschetta","image":"https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80","price":"$9.00"},{"price":"$6.00","image":"https://images.unsplash.com/photo-1549931319-a545753467c8?auto=format&fit=crop&w=600&q=80","name":"Garlic Bread","description":"Oven-baked with herbs and butter."},{"name":"Stuffed Mushrooms","description":"Portobello mushrooms filled with herbed cream cheese.","price":"$11.00","image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"},{"description":"Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.","name":"Corinne Wedge","image":"https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=600&q=80","price":"$17.00"}]},{"name":"Main Courses","items":[{"image":"https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80","price":"$24.00","description":"Fresh Atlantic salmon with seasonal vegetables.","name":"Grilled Salmon"},{"description":"Classic steak with crispy fries and herb butter.","name":"Steak Frites","image":"https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=600&q=80","price":"$28.00"},{"description":"Breaded chicken topped with marinara and mozzarella.","name":"Chicken Parmesan","image":"https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80","price":"$21.00"},{"description":"Herb-crusted lamb chops with roasted potatoes and mint sauce.","name":"Lamb Chops","image":"https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&w=600&q=80","price":"$32.00"},{"image":"https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=600&q=80","price":"$18.00","description":"Penne with sautéed seasonal vegetables in a light cream sauce.","name":"Pasta Primavera"}]},{"name":"Desserts","items":[{"description":"Classic Italian coffee-flavored dessert.","name":"Tiramisu","image":"https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80","price":"$8.00"},{"name":"Cheesecake","description":"New York style with berry compote.","price":"$7.00","image":"https://images.unsplash.com/photo-1565060127061-29f07613ba80?auto=format&fit=crop&w=600&q=80"},{"description":"Warm molten chocolate cake with vanilla ice cream.","name":"Chocolate Lava Cake","image":"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80","price":"$10.00"},{"image":"https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=600&q=80","price":"$9.00","description":"Classic French custard with a caramelized sugar crust.","name":"Crème Brûlée"}]},{"name":"Mocktails","items":[{"name":"Virgin Mojito","description":"Fresh mint, lime, sugar, and sparkling soda.","price":"$6.00","image":"https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=600&q=80"},{"name":"Mango Sunrise","description":"Mango purée, orange juice, and a splash of grenadine.","price":"$7.00","image":"https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=600&q=80"},{"name":"Berry Bliss","description":"Mixed berries, lemon, and honey with crushed ice.","price":"$7.00","image":"https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"},{"price":"$6.00","image":"https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80","name":"Cucumber Cooler","description":"Cucumber, mint, lime, and tonic water."}]},{"name":"Cocktails","items":[{"description":"Tequila, lime juice, and triple sec with a salted rim.","name":"Classic Margarita","image":"https://images.unsplash.com/photo-1556855810-ac404aa91e85?auto=format&fit=crop&w=600&q=80","price":"$12.00"},{"price":"$14.00","image":"https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80","name":"Old Fashioned","description":"Bourbon, bitters, sugar, and an orange twist."},{"price":"$13.00","image":"https://images.unsplash.com/photo-1575023782549-62ca0d244b39?auto=format&fit=crop&w=600&q=80","name":"Espresso Martini","description":"Vodka, espresso, coffee liqueur, shaken and chilled."},{"image":"https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=600&q=80","price":"$11.00","description":"Aperol, prosecco, and a splash of soda over ice.","name":"Aperol Spritz"}]}]);
 
   function renderMenu(cats) {
-    if (!cats || cats.length === 0) {
-      menuArea.innerHTML = '<p style="text-align:center;color:var(--rest-muted);font-size:1.1rem;">Live menu update unavailable. Showing regular menu.</p>';
-      return;
-    }
+    if (!cats || cats.length === 0) return;
     var tabs = cats.map(function(c, i) {
       return '<button class="menu-tab-btn' + (i === 0 ? ' active' : '') + '" data-menu-cat="' + i + '">' + c.name + '</button>';
     }).join('');
     var grids = cats.map(function(c, i) {
       var items = (c.items || []).map(function(item) {
-        return '<div class="menu-dish"><div class="dish-header"><h4 class="dish-name">' + item.name + '</h4><span class="dish-price">' + (item.price || '') + '</span></div><p class="dish-desc">' + (item.description || '') + '</p></div>';
+        var dishNameSlug = (item.name || 'dish').replace(/'/g, "\'");
+        var imgUrl = (item.image || item.img || item['Image URL'] || getDishImageUrl(item.name));
+        var needsHF = !item.image && !item.img && !item['Image URL'];
+        var imgHtml = '<img src="' + imgUrl + '" class="dish-img" alt="' + item.name + '"' + (needsHF ? ' onload="loadHuggingFaceImage(this, \'' + dishNameSlug + '\')"' : '') + '>';
+        return '<div class="menu-dish">' + imgHtml + '<div class="dish-text"><div class="dish-header"><h4 class="dish-name">' + item.name + '</h4><span class="dish-price">' + (item.price || '') + '</span></div><p class="dish-desc">' + (item.description || '') + '</p></div></div>';
       }).join('');
       return '<div class="menu-cat-grid" data-cat="' + i + '" style="' + (i === 0 ? '' : 'display:none') + '">' + items + '</div>';
     }).join('');
     menuArea.innerHTML = '<div class="menu-tabs">' + tabs + '</div>' + grids;
+  }
+
+  function getDishImageUrl(name) {
+    return 'https://loremflickr.com/512/512/food,' + encodeURIComponent(name || 'delicious');
   }
 
   function fetchMenu() {
@@ -765,6 +838,7 @@ window.addEventListener('scroll', function() {
           console.warn('Live menu data format unexpected:', data);
           return;
         }
+        
         var json = JSON.stringify(data.menuCategories);
         if (json !== lastJson) {
           lastJson = json;
