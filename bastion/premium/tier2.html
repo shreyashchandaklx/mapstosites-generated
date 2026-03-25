@@ -209,10 +209,10 @@ img { max-width:100%; height:auto; display:block; }
 }
 .menu-tab-btn.active, .menu-tab-btn:hover { background:var(--rest-navy); color:#fff; }
 .menu-cat-grid { max-width:680px; margin:0 auto; }
-.menu-dish { padding:22px 0; border-bottom:1px solid var(--rest-border); display:flex; align-items:flex-start; gap:16px; }
+.menu-dish { padding:22px 0; border-bottom:1px solid var(--rest-border); display:flex; gap:20px; align-items:flex-start; }
+.dish-img { width:90px; height:90px; border-radius:4px; object-fit:cover; flex-shrink:0; }
+.dish-info { flex:1; }
 .menu-dish:last-child { border-bottom:none; }
-.dish-img { width:70px; height:70px; border-radius:8px; object-fit:cover; flex-shrink:0; }
-.dish-text { flex:1; min-width:0; }
 .dish-header { display:flex; align-items:baseline; justify-content:space-between; gap:20px; }
 .dish-name { font-family:var(--font-heading); font-size:1.1rem; font-weight:600; color:var(--rest-navy); }
 .dish-price { font-family:var(--font-heading); font-weight:600; color:var(--rest-burgundy); font-size:1.05rem; white-space:nowrap; }
@@ -373,7 +373,7 @@ img { max-width:100%; height:auto; display:block; }
 <header class="rest-hero" style="display:flex;" role="banner">
   <div class="hero-content">
     <div class="hero-badge">Fine dining restaurant · Cork</div>
-    <h1>Savor the Craft<br>of <span>Bastion</span></h1>
+    <h1>The Art of Dining<br>at <span>Bastion</span></h1>
     <p>Experience the finest flavors in Cork — where every dish tells a story.</p>
     <div class="hero-btns">
       <a href="#menu" class="btn-primary page-link" data-page="menu">View Menu</a>
@@ -382,8 +382,48 @@ img { max-width:100%; height:auto; display:block; }
   </div>
 </header>
 <div class="usp-bar" style="display:flex;" aria-label="Highlights">
-  <div class="usp-item"><i class="fas fa-check-circle"></i>Farm-Fresh Ingredients</div><div class="usp-item"><i class="fas fa-check-circle"></i>Award-Winning Chef</div><div class="usp-item"><i class="fas fa-check-circle"></i>Cozy & Elegant Ambiance</div><div class="usp-item"><i class="fas fa-check-circle"></i>4.7★ Rated by 217+ Guests</div>
+  <div class="usp-item"><i class="fas fa-check-circle"></i>[object Object]</div><div class="usp-item"><i class="fas fa-check-circle"></i>[object Object]</div><div class="usp-item"><i class="fas fa-check-circle"></i>[object Object]</div><div class="usp-item"><i class="fas fa-check-circle"></i>[object Object]</div>
 </div>
+</div>
+
+<div id="highlights" class="rest-section alt" aria-label="Our highlights">
+  <div class="rest-container">
+    <div class="section-head">
+      <span class="section-sub">Experience</span>
+      <h2>The Bastion Difference</h2>
+      <div class="head-line"></div>
+    </div>
+    <div class="v-panels" style="margin-top:40px;">
+      <div class="v-panel">
+        <img src="https://images.unsplash.com/photo-1550966841-3ecfcdac896f?auto=format&fit=crop&q=80&w=600" alt="Sustainable">
+        <div class="v-panel-overlay">
+          <h4 class="v-panel-title">Sustainable</h4>
+          <p class="v-panel-desc">We source directly from local artisans to ensure the freshest seasonal produce on every plate.</p>
+        </div>
+      </div>
+      <div class="v-panel">
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=600" alt="Excellence">
+        <div class="v-panel-overlay">
+          <h4 class="v-panel-title">Excellence</h4>
+          <p class="v-panel-desc">Our award-winning culinary team is dedicated to pushing the boundaries of traditional flavors.</p>
+        </div>
+      </div>
+      <div class="v-panel">
+        <img src="https://images.unsplash.com/photo-1517524458217-cc043ae745fa?auto=format&fit=crop&q=80&w=600" alt="Atmosphere">
+        <div class="v-panel-overlay">
+          <h4 class="v-panel-title">Atmosphere</h4>
+          <p class="v-panel-desc">Relax in a space designed for comfort, luxury, and the creation of unforgettable memories.</p>
+        </div>
+      </div>
+      <div class="v-panel">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600" alt="Hospitality">
+        <div class="v-panel-overlay">
+          <h4 class="v-panel-title">Hospitality</h4>
+          <p class="v-panel-desc">Our dedicated staff is trained to provide a level of personalized attention that is truly exceptional.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- About — Split Panel -->
@@ -397,7 +437,7 @@ img { max-width:100%; height:auto; display:block; }
       <div class="about-highlights">
         <div class="hl"><div class="hl-num">4.7</div><div class="hl-label">Rating</div></div>
         <div class="hl"><div class="hl-num">217+</div><div class="hl-label">Reviews</div></div>
-        <div class="hl"><div class="hl-num">19+</div><div class="hl-label">Years</div></div>
+        <div class="hl"><div class="hl-num">15+</div><div class="hl-label">Years</div></div>
       </div>
     </div>
   </div>
@@ -412,176 +452,176 @@ img { max-width:100%; height:auto; display:block; }
           <div class="section-head"><span class="section-sub">Our Menu</span><h2>Explore Our Dishes</h2><div class="head-line"></div></div>
           <div id="live-menu-area"><div class="menu-tabs"><button class="menu-tab-btn active" data-menu-cat="0">Appetizers</button><button class="menu-tab-btn" data-menu-cat="1">Main Courses</button><button class="menu-tab-btn" data-menu-cat="2">Desserts</button><button class="menu-tab-btn" data-menu-cat="3">Mocktails</button><button class="menu-tab-btn" data-menu-cat="4">Cocktails</button></div><div class="menu-cat-grid" data-cat="0" style="">
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Crispy%20Calamari%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Crispy Calamari">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Crispy Calamari" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Crispy Calamari</h4><span class="dish-price">$12.00</span></div>
             <p class="dish-desc">Served with marinara sauce and lemon.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Bruschetta%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Bruschetta">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=400&q=80" alt="Bruschetta" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Bruschetta</h4><span class="dish-price">$9.00</span></div>
             <p class="dish-desc">Toasted bread with fresh tomatoes, basil, and garlic.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Garlic%20Bread%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Garlic Bread">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Garlic Bread" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Garlic Bread</h4><span class="dish-price">$6.00</span></div>
             <p class="dish-desc">Oven-baked with herbs and butter.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Stuffed%20Mushrooms%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Stuffed Mushrooms">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80" alt="Stuffed Mushrooms" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Stuffed Mushrooms</h4><span class="dish-price">$11.00</span></div>
             <p class="dish-desc">Portobello mushrooms filled with herbed cream cheese.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Corinne%20Wedge%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Corinne Wedge">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=400&q=80" alt="Corinne Wedge" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Corinne Wedge</h4><span class="dish-price">$17.00</span></div>
             <p class="dish-desc">Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.</p>
           </div>
         </div>
       </div><div class="menu-cat-grid" data-cat="1" style="display:none">
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Grilled%20Salmon%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Grilled Salmon">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=400&q=80" alt="Grilled Salmon" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Grilled Salmon</h4><span class="dish-price">$24.00</span></div>
             <p class="dish-desc">Fresh Atlantic salmon with seasonal vegetables.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Steak%20Frites%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Steak Frites">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1432139509613-5c4255a1d862?auto=format&fit=crop&w=400&q=80" alt="Steak Frites" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Steak Frites</h4><span class="dish-price">$28.00</span></div>
             <p class="dish-desc">Classic steak with crispy fries and herb butter.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Chicken%20Parmesan%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Chicken Parmesan">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Chicken Parmesan" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Chicken Parmesan</h4><span class="dish-price">$21.00</span></div>
             <p class="dish-desc">Breaded chicken topped with marinara and mozzarella.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Lamb%20Chops%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Lamb Chops">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=400&q=80" alt="Lamb Chops" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Lamb Chops</h4><span class="dish-price">$32.00</span></div>
             <p class="dish-desc">Herb-crusted lamb chops with roasted potatoes and mint sauce.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Pasta%20Primavera%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Pasta Primavera">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80" alt="Pasta Primavera" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Pasta Primavera</h4><span class="dish-price">$18.00</span></div>
             <p class="dish-desc">Penne with sautéed seasonal vegetables in a light cream sauce.</p>
           </div>
         </div>
       </div><div class="menu-cat-grid" data-cat="2" style="display:none">
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Tiramisu%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Tiramisu">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Tiramisu" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Tiramisu</h4><span class="dish-price">$8.00</span></div>
             <p class="dish-desc">Classic Italian coffee-flavored dessert.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Cheesecake%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Cheesecake">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=400&q=80" alt="Cheesecake" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Cheesecake</h4><span class="dish-price">$7.00</span></div>
             <p class="dish-desc">New York style with berry compote.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Chocolate%20Lava%20Cake%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Chocolate Lava Cake">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Chocolate Lava Cake" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Chocolate Lava Cake</h4><span class="dish-price">$10.00</span></div>
             <p class="dish-desc">Warm molten chocolate cake with vanilla ice cream.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Cr%C3%A8me%20Br%C3%BBl%C3%A9e%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Crème Brûlée">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80" alt="Crème Brûlée" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Crème Brûlée</h4><span class="dish-price">$9.00</span></div>
             <p class="dish-desc">Classic French custard with a caramelized sugar crust.</p>
           </div>
         </div>
       </div><div class="menu-cat-grid" data-cat="3" style="display:none">
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Virgin%20Mojito%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Virgin Mojito">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=400&q=80" alt="Virgin Mojito" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Virgin Mojito</h4><span class="dish-price">$6.00</span></div>
             <p class="dish-desc">Fresh mint, lime, sugar, and sparkling soda.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Mango%20Sunrise%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Mango Sunrise">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=400&q=80" alt="Mango Sunrise" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Mango Sunrise</h4><span class="dish-price">$7.00</span></div>
             <p class="dish-desc">Mango purée, orange juice, and a splash of grenadine.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Berry%20Bliss%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Berry Bliss">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1432139509613-5c4255a1d862?auto=format&fit=crop&w=400&q=80" alt="Berry Bliss" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Berry Bliss</h4><span class="dish-price">$7.00</span></div>
             <p class="dish-desc">Mixed berries, lemon, and honey with crushed ice.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Cucumber%20Cooler%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Cucumber Cooler">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Cucumber Cooler" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Cucumber Cooler</h4><span class="dish-price">$6.00</span></div>
             <p class="dish-desc">Cucumber, mint, lime, and tonic water.</p>
           </div>
         </div>
       </div><div class="menu-cat-grid" data-cat="4" style="display:none">
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Classic%20Margarita%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Classic Margarita">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=400&q=80" alt="Classic Margarita" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Classic Margarita</h4><span class="dish-price">$12.00</span></div>
             <p class="dish-desc">Tequila, lime juice, and triple sec with a salted rim.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Old%20Fashioned%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Old Fashioned">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80" alt="Old Fashioned" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Old Fashioned</h4><span class="dish-price">$14.00</span></div>
             <p class="dish-desc">Bourbon, bitters, sugar, and an orange twist.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Espresso%20Martini%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Espresso Martini">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Espresso Martini" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Espresso Martini</h4><span class="dish-price">$13.00</span></div>
             <p class="dish-desc">Vodka, espresso, coffee liqueur, shaken and chilled.</p>
           </div>
         </div>
       
         <div class="menu-dish">
-          <img src="https://gen.pollinations.ai/image/Aperol%20Spritz%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl" class="dish-img" alt="Aperol Spritz">
-          <div class="dish-text">
+          <img class="dish-img" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=400&q=80" alt="Aperol Spritz" loading="lazy">
+          <div class="dish-info">
             <div class="dish-header"><h4 class="dish-name">Aperol Spritz</h4><span class="dish-price">$11.00</span></div>
             <p class="dish-desc">Aperol, prosecco, and a splash of soda over ice.</p>
           </div>
@@ -803,27 +843,38 @@ window.addEventListener('scroll', function() {
   var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwctmysl83TGxd_4PtS0pNnQdJS_k5QBHlyll12rKqF3pYIiPk2cEFh73xSWMQnnWTrpg/exec';
   var menuArea = document.getElementById('live-menu-area');
   if (!menuArea) return;
-  var lastJson = JSON.stringify([{"name":"Appetizers","items":[{"name":"Crispy Calamari","description":"Served with marinara sauce and lemon.","price":"$12.00","image":"https://gen.pollinations.ai/image/Crispy%20Calamari%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Bruschetta","description":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00","image":"https://gen.pollinations.ai/image/Bruschetta%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Garlic Bread","description":"Oven-baked with herbs and butter.","price":"$6.00","image":"https://gen.pollinations.ai/image/Garlic%20Bread%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Stuffed Mushrooms","description":"Portobello mushrooms filled with herbed cream cheese.","price":"$11.00","image":"https://gen.pollinations.ai/image/Stuffed%20Mushrooms%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Corinne Wedge","description":"Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.","price":"$17.00","image":"https://gen.pollinations.ai/image/Corinne%20Wedge%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"}]},{"name":"Main Courses","items":[{"name":"Grilled Salmon","description":"Fresh Atlantic salmon with seasonal vegetables.","price":"$24.00","image":"https://gen.pollinations.ai/image/Grilled%20Salmon%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Steak Frites","description":"Classic steak with crispy fries and herb butter.","price":"$28.00","image":"https://gen.pollinations.ai/image/Steak%20Frites%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Chicken Parmesan","description":"Breaded chicken topped with marinara and mozzarella.","price":"$21.00","image":"https://gen.pollinations.ai/image/Chicken%20Parmesan%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Lamb Chops","description":"Herb-crusted lamb chops with roasted potatoes and mint sauce.","price":"$32.00","image":"https://gen.pollinations.ai/image/Lamb%20Chops%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Pasta Primavera","description":"Penne with sautéed seasonal vegetables in a light cream sauce.","price":"$18.00","image":"https://gen.pollinations.ai/image/Pasta%20Primavera%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"}]},{"name":"Desserts","items":[{"name":"Tiramisu","description":"Classic Italian coffee-flavored dessert.","price":"$8.00","image":"https://gen.pollinations.ai/image/Tiramisu%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Cheesecake","description":"New York style with berry compote.","price":"$7.00","image":"https://gen.pollinations.ai/image/Cheesecake%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Chocolate Lava Cake","description":"Warm molten chocolate cake with vanilla ice cream.","price":"$10.00","image":"https://gen.pollinations.ai/image/Chocolate%20Lava%20Cake%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Crème Brûlée","description":"Classic French custard with a caramelized sugar crust.","price":"$9.00","image":"https://gen.pollinations.ai/image/Cr%C3%A8me%20Br%C3%BBl%C3%A9e%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"}]},{"name":"Mocktails","items":[{"name":"Virgin Mojito","description":"Fresh mint, lime, sugar, and sparkling soda.","price":"$6.00","image":"https://gen.pollinations.ai/image/Virgin%20Mojito%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Mango Sunrise","description":"Mango purée, orange juice, and a splash of grenadine.","price":"$7.00","image":"https://gen.pollinations.ai/image/Mango%20Sunrise%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Berry Bliss","description":"Mixed berries, lemon, and honey with crushed ice.","price":"$7.00","image":"https://gen.pollinations.ai/image/Berry%20Bliss%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Cucumber Cooler","description":"Cucumber, mint, lime, and tonic water.","price":"$6.00","image":"https://gen.pollinations.ai/image/Cucumber%20Cooler%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"}]},{"name":"Cocktails","items":[{"name":"Classic Margarita","description":"Tequila, lime juice, and triple sec with a salted rim.","price":"$12.00","image":"https://gen.pollinations.ai/image/Classic%20Margarita%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Old Fashioned","description":"Bourbon, bitters, sugar, and an orange twist.","price":"$14.00","image":"https://gen.pollinations.ai/image/Old%20Fashioned%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Espresso Martini","description":"Vodka, espresso, coffee liqueur, shaken and chilled.","price":"$13.00","image":"https://gen.pollinations.ai/image/Espresso%20Martini%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"},{"name":"Aperol Spritz","description":"Aperol, prosecco, and a splash of soda over ice.","price":"$11.00","image":"https://gen.pollinations.ai/image/Aperol%20Spritz%2C%20professional%20food%20photography%2C%20restaurant%20dish%2C%20top-down%20view%2C%20white%20plate%2C%20soft%20lighting?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl"}]}]);
+  var lastJson = JSON.stringify([{"name":"Appetizers","items":[{"name":"Crispy Calamari","description":"Served with marinara sauce and lemon.","price":"$12.00"},{"name":"Bruschetta","description":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00"},{"name":"Garlic Bread","description":"Oven-baked with herbs and butter.","price":"$6.00"},{"name":"Stuffed Mushrooms","description":"Portobello mushrooms filled with herbed cream cheese.","price":"$11.00"},{"name":"Corinne Wedge","description":"Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.","price":"$17.00"}]},{"name":"Main Courses","items":[{"name":"Grilled Salmon","description":"Fresh Atlantic salmon with seasonal vegetables.","price":"$24.00"},{"name":"Steak Frites","description":"Classic steak with crispy fries and herb butter.","price":"$28.00"},{"name":"Chicken Parmesan","description":"Breaded chicken topped with marinara and mozzarella.","price":"$21.00"},{"name":"Lamb Chops","description":"Herb-crusted lamb chops with roasted potatoes and mint sauce.","price":"$32.00"},{"name":"Pasta Primavera","description":"Penne with sautéed seasonal vegetables in a light cream sauce.","price":"$18.00"}]},{"name":"Desserts","items":[{"name":"Tiramisu","description":"Classic Italian coffee-flavored dessert.","price":"$8.00"},{"name":"Cheesecake","description":"New York style with berry compote.","price":"$7.00"},{"name":"Chocolate Lava Cake","description":"Warm molten chocolate cake with vanilla ice cream.","price":"$10.00"},{"name":"Crème Brûlée","description":"Classic French custard with a caramelized sugar crust.","price":"$9.00"}]},{"name":"Mocktails","items":[{"name":"Virgin Mojito","description":"Fresh mint, lime, sugar, and sparkling soda.","price":"$6.00"},{"name":"Mango Sunrise","description":"Mango purée, orange juice, and a splash of grenadine.","price":"$7.00"},{"name":"Berry Bliss","description":"Mixed berries, lemon, and honey with crushed ice.","price":"$7.00"},{"name":"Cucumber Cooler","description":"Cucumber, mint, lime, and tonic water.","price":"$6.00"}]},{"name":"Cocktails","items":[{"name":"Classic Margarita","description":"Tequila, lime juice, and triple sec with a salted rim.","price":"$12.00"},{"name":"Old Fashioned","description":"Bourbon, bitters, sugar, and an orange twist.","price":"$14.00"},{"name":"Espresso Martini","description":"Vodka, espresso, coffee liqueur, shaken and chilled.","price":"$13.00"},{"name":"Aperol Spritz","description":"Aperol, prosecco, and a splash of soda over ice.","price":"$11.00"}]}]);
 
+  var MENU_IMAGES = [
+    'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80',
+    'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=400&q=80',
+    'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80',
+    'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80',
+    'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=400&q=80',
+    'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=400&q=80',
+    'https://images.unsplash.com/photo-1432139509613-5c4255a1d862?auto=format&fit=crop&w=400&q=80',
+    'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
+    'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=400&q=80',
+    'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80'
+  ];
   function renderMenu(cats) {
-    if (!cats || cats.length === 0) return;
+    if (!cats || cats.length === 0) {
+      menuArea.innerHTML = '<p style="text-align:center;color:var(--rest-muted);font-size:1.1rem;">Live menu update unavailable. Showing regular menu.</p>';
+      return;
+    }
     var tabs = cats.map(function(c, i) {
       return '<button class="menu-tab-btn' + (i === 0 ? ' active' : '') + '" data-menu-cat="' + i + '">' + c.name + '</button>';
     }).join('');
+    var itemIndex = 0;
     var grids = cats.map(function(c, i) {
       var items = (c.items || []).map(function(item) {
-        var dishImgUrl = (item.image || item.img || item['Image URL'] || getDishImageUrl(item.name));
-        var imgHtml = '<img src="' + dishImgUrl + '" class="dish-img" alt="' + item.name + '">';
-        return '<div class="menu-dish">' + imgHtml + '<div class="dish-text"><div class="dish-header"><h4 class="dish-name">' + item.name + '</h4><span class="dish-price">' + (item.price || '') + '</span></div><p class="dish-desc">' + (item.description || '') + '</p></div></div>';
+        var imgSrc = MENU_IMAGES[itemIndex % MENU_IMAGES.length];
+        itemIndex++;
+        return '<div class="menu-dish"><img class="dish-img" src="' + imgSrc + '" alt="' + item.name + '" loading="lazy"><div class="dish-info"><div class="dish-header"><h4 class="dish-name">' + item.name + '</h4><span class="dish-price">' + (item.price || '') + '</span></div><p class="dish-desc">' + (item.description || '') + '</p></div></div>';
       }).join('');
       return '<div class="menu-cat-grid" data-cat="' + i + '" style="' + (i === 0 ? '' : 'display:none') + '">' + items + '</div>';
     }).join('');
     menuArea.innerHTML = '<div class="menu-tabs">' + tabs + '</div>' + grids;
-  }
-
-  function getDishImageUrl(name) {
-    var prompt = encodeURIComponent((name || 'delicious food') + ', professional food photography, restaurant dish, top-down view, white plate, soft lighting');
-    return 'https://gen.pollinations.ai/image/' + prompt + '?model=flux&width=512&height=512&seed=42&safe=true&quality=medium&key=sk_WXOfn80hFA3NbCPihbZlJngLhogGMpxl';
   }
 
   function fetchMenu() {
@@ -837,7 +888,6 @@ window.addEventListener('scroll', function() {
           console.warn('Live menu data format unexpected:', data);
           return;
         }
-        
         var json = JSON.stringify(data.menuCategories);
         if (json !== lastJson) {
           lastJson = json;
