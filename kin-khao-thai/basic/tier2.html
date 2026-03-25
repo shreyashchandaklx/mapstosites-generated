@@ -70,6 +70,34 @@ nav.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.4);padding:.5rem 2rem}
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
 
+/* ABOUT ENHANCED */
+.about-image-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.about-img-tall { height: 100%; min-height: 400px; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-soft); }
+.about-img-tall img { width: 100%; height: 100%; object-fit: cover; }
+.about-img-stacked { display: grid; grid-template-rows: 1fr 1fr; gap: 1rem; }
+.about-img-small { border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-soft); border: 4px solid var(--white); height: 192px; }
+.about-img-small img { width: 100%; height: 100%; object-fit: cover; }
+
+.section-subtitle { color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem; display: block; }
+.about-content h2 { font-size: 3rem; margin-bottom: 1.5rem; color: var(--dark); line-height: 1.1; }
+
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+.feature-item { display: flex; align-items: flex-start; gap: 1rem; }
+.feature-icon { width: 48px; height: 48px; background: var(--saffron); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; transition: var(--transition); }
+.feature-item:hover .feature-icon { transform: scale(1.1); background: var(--gold); }
+.feature-text h4 { font-size: 1.1rem; color: var(--dark); margin-bottom: 4px; font-weight: 700; }
+.feature-text p { font-size: 0.85rem; color: var(--text-light); margin: 0; line-height: 1.4; }
+
+@media (max-width: 992px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .about-content h2 { font-size: 2.2rem; }
+}
+@media (max-width: 600px) {
+  .about-image-grid { grid-template-columns: 1fr; }
+  .about-img-tall { min-height: 250px; }
+  .about-features { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
 /* CARDS */
 .card{background:white;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);transition:var(--transition)}
 .card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover)}
@@ -86,8 +114,10 @@ nav.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.4);padding:.5rem 2rem}
 .tab-btn.active{background:var(--saffron);color:white;border:none}
 .tab-btn:hover{border-color:var(--saffron);color:var(--saffron)}
 .menu-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:2rem}
-.menu-item{background:white;padding:1.6rem;border-left:4px solid var(--saffron);border-radius:var(--radius);box-shadow:var(--shadow-soft);transition:var(--transition)}
+.menu-item{background:white;border-left:4px solid var(--saffron);border-radius:var(--radius);box-shadow:var(--shadow-soft);transition:var(--transition);overflow:hidden}
 .menu-item:hover{transform:translateX(8px);box-shadow:0 15px 40px rgba(122,28,46,.15)}
+.menu-item-img{width:100%;height:180px;object-fit:cover;display:block}
+.menu-item-body{padding:1.6rem}
 .menu-item h4{font-size:1.3rem;margin-bottom:.8rem;color:var(--dark)}
 .menu-item-desc{color:var(--text-light);font-size:.95rem;margin-bottom:1.2rem;line-height:1.6}
 .menu-item-price{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--saffron);font-weight:700}
@@ -278,6 +308,37 @@ footer{background:var(--dark);color:#ccc;padding:3rem 2rem;margin-top:4rem}
     </div>
   </section>
 
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Culinary <span class="highlight">Highlights</span></h2>
+      <div class="section-divider"></div>
+      <p style="text-align:center; max-width:600px; margin: 1rem auto; color: #666;">A sneak peek at our signature offerings and the passion we put into every plate.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-image"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600" alt="Signature Dish" style="width:100%; height:200px; object-fit:cover;"></div>
+        <div class="card-content">
+          <h3>Signature Grills</h3>
+          <p>Carefully selected cuts prepared over an open flame for that perfect smoky finish.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=600" alt="Plating" style="width:100%; height:200px; object-fit:cover;"></div>
+        <div class="card-content">
+          <h3>Artisanal Plating</h3>
+          <p>We believe that we eat with our eyes first. Every dish is a masterpiece of color and texture.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=600" alt="Experience" style="width:100%; height:200px; object-fit:cover;"></div>
+        <div class="card-content">
+          <h3>The Atmosphere</h3>
+          <p>A warm, inviting space designed to make every guest feel like part of the family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section">
     <div class="cta-content">
       <h2>Ready to Experience Premium Dining?</h2>
@@ -295,13 +356,59 @@ footer{background:var(--dark);color:#ccc;padding:3rem 2rem;margin-top:4rem}
 <div class="page" id="about">
   <section>
     <div class="grid-2">
-      <div class="about-content">
-        <h2>About <span class="highlight">Kin Khao Thai</span></h2>
-        <p>Welcome to Kin Khao Thai. We are dedicated to providing an exceptional dining experience.</p>
-        <p><strong>4.6</strong> ★ rated by <strong>904+</strong> guests.</p>
-        <button class="btn-large btn-primary" style="margin-top:1.5rem;" onclick="showPage('contact')"><i class="fas fa-calendar-alt"></i> Reserve Now</button>
+      <div class="about-image-grid">
+        <div class="about-img-tall">
+          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Exquisite dining experience">
+        </div>
+        <div class="about-img-stacked">
+          <div class="about-img-small">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Gourmet presentation">
+          </div>
+          <div class="about-img-small">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Internal ambiance">
+          </div>
+        </div>
       </div>
-      <div class="about-image"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Kin Khao Thai" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="about-content">
+        <span class="section-subtitle">Our Story</span>
+        <h2>A Legacy of Flavor Since 2011</h2>
+        <p>Welcome to Kin Khao Thai. We are dedicated to providing an exceptional dining experience.</p>
+        
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-history"></i></div>
+            <div class="feature-text">
+              <h4>Heritage</h4>
+              <p>Time-honored recipes passed down through generations.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-pepper-hot"></i></div>
+            <div class="feature-text">
+              <h4>Fresh Spices</h4>
+              <p>Locally curated spice blends for authentic taste profiles.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+            <div class="feature-text">
+              <h4>Vegetarian</h4>
+              <p>A wide range of plant-based and healthy options.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-star"></i></div>
+            <div class="feature-text">
+              <h4>Chef Special</h4>
+              <p>Unique signature dishes crafted with seasonal perfection.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <button class="btn-large btn-primary" onclick="showPage('contact')"><i class="fas fa-calendar-alt"></i> Reserve Now</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -523,6 +630,19 @@ footer{background:var(--dark);color:#ccc;padding:3rem 2rem;margin-top:4rem}
 <script>
 var menuData = {"appetizers":[{"name":"Crispy Calamari","desc":"Served with marinara sauce and lemon.","price":"$12.00"},{"name":"Bruschetta","desc":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00"},{"name":"Garlic Bread","desc":"Oven-baked with herbs and butter.","price":"$6.00"},{"name":"Stuffed Mushrooms","desc":"Portobello mushrooms filled with herbed cream cheese.","price":"$11.00"},{"name":"Corinne Wedge","desc":"Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.","price":"$17.00"}],"main_courses":[{"name":"Grilled Salmon","desc":"Fresh Atlantic salmon with seasonal vegetables.","price":"$24.00"},{"name":"Steak Frites","desc":"Classic steak with crispy fries and herb butter.","price":"$28.00"},{"name":"Chicken Parmesan","desc":"Breaded chicken topped with marinara and mozzarella.","price":"$21.00"},{"name":"Lamb Chops","desc":"Herb-crusted lamb chops with roasted potatoes and mint sauce.","price":"$32.00"},{"name":"Pasta Primavera","desc":"Penne with sautéed seasonal vegetables in a light cream sauce.","price":"$18.00"}],"desserts":[{"name":"Tiramisu","desc":"Classic Italian coffee-flavored dessert.","price":"$8.00"},{"name":"Cheesecake","desc":"New York style with berry compote.","price":"$7.00"},{"name":"Chocolate Lava Cake","desc":"Warm molten chocolate cake with vanilla ice cream.","price":"$10.00"},{"name":"Crème Brûlée","desc":"Classic French custard with a caramelized sugar crust.","price":"$9.00"}],"mocktails":[{"name":"Virgin Mojito","desc":"Fresh mint, lime, sugar, and sparkling soda.","price":"$6.00"},{"name":"Mango Sunrise","desc":"Mango purée, orange juice, and a splash of grenadine.","price":"$7.00"},{"name":"Berry Bliss","desc":"Mixed berries, lemon, and honey with crushed ice.","price":"$7.00"},{"name":"Cucumber Cooler","desc":"Cucumber, mint, lime, and tonic water.","price":"$6.00"}],"cocktails":[{"name":"Classic Margarita","desc":"Tequila, lime juice, and triple sec with a salted rim.","price":"$12.00"},{"name":"Old Fashioned","desc":"Bourbon, bitters, sugar, and an orange twist.","price":"$14.00"},{"name":"Espresso Martini","desc":"Vodka, espresso, coffee liqueur, shaken and chilled.","price":"$13.00"},{"name":"Aperol Spritz","desc":"Aperol, prosecco, and a splash of soda over ice.","price":"$11.00"}]};
 
+var MENU_IMAGES = [
+  'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1432139509613-5c4255a1d862?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=400&q=80',
+  'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80'
+];
+
 function showPage(pageId) {
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
   var el = document.getElementById(pageId);
@@ -549,8 +669,15 @@ function filterMenu(event, category) {
     var tabs = document.querySelectorAll('.tab-btn');
     if(tabs.length) tabs[0].classList.add('active');
   }
-  container.innerHTML = items.map(function(item){
-    return '<div class="menu-item"><h4>'+item.name+'</h4><p class="menu-item-desc">'+item.desc+'</p>'+(item.price?'<div class="menu-item-price">'+item.price+'</div>':'')+'</div>';
+  var itemOffset = 0;
+  var keys = Object.keys(menuData);
+  for (var k = 0; k < keys.length; k++) {
+    if (keys[k] === category) break;
+    itemOffset += (menuData[keys[k]] || []).length;
+  }
+  container.innerHTML = items.map(function(item, idx){
+    var itemIndex = itemOffset + idx;
+    return '<div class="menu-item"><img class="menu-item-img" src="'+MENU_IMAGES[itemIndex % MENU_IMAGES.length]+'" alt="'+item.name+'" loading="lazy"><div class="menu-item-body"><h4>'+item.name+'</h4><p class="menu-item-desc">'+item.desc+'</p>'+(item.price?'<div class="menu-item-price">'+item.price+'</div>':'')+'</div></div>';
   }).join('');
 }
 
@@ -585,7 +712,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwctmysl83TGxd_4PtS0pNnQdJS_k5QBHlyll12rKqF3pYIiPk2cEFh73xSWMQnnWTrpg/exec';
   var container = document.getElementById('menuContainer');
   if (!container) return;
-  var lastJson = JSON.stringify([{"name":"Appetizers","items":[{"name":"Crispy Calamari","description":"Served with marinara sauce and lemon.","price":"$12.00","image":"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=600&q=80"},{"name":"Bruschetta","description":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00","image":"https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80"},{"name":"Garlic Bread","description":"Oven-baked with herbs and butter.","price":"$6.00","image":"https://images.unsplash.com/photo-1549931319-a545753467c8?auto=format&fit=crop&w=600&q=80"},{"name":"Stuffed Mushrooms","description":"Portobello mushrooms filled with herbed cream cheese.","price":"$11.00","image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"},{"name":"Corinne Wedge","description":"Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.","price":"$17.00","image":"https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=600&q=80"}]},{"name":"Main Courses","items":[{"name":"Grilled Salmon","description":"Fresh Atlantic salmon with seasonal vegetables.","price":"$24.00","image":"https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80"},{"name":"Steak Frites","description":"Classic steak with crispy fries and herb butter.","price":"$28.00","image":"https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=600&q=80"},{"name":"Chicken Parmesan","description":"Breaded chicken topped with marinara and mozzarella.","price":"$21.00","image":"https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80"},{"name":"Lamb Chops","description":"Herb-crusted lamb chops with roasted potatoes and mint sauce.","price":"$32.00","image":"https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&w=600&q=80"},{"name":"Pasta Primavera","description":"Penne with sautéed seasonal vegetables in a light cream sauce.","price":"$18.00","image":"https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=600&q=80"}]},{"name":"Desserts","items":[{"name":"Tiramisu","description":"Classic Italian coffee-flavored dessert.","price":"$8.00","image":"https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80"},{"name":"Cheesecake","description":"New York style with berry compote.","price":"$7.00","image":"https://images.unsplash.com/photo-1565060127061-29f07613ba80?auto=format&fit=crop&w=600&q=80"},{"name":"Chocolate Lava Cake","description":"Warm molten chocolate cake with vanilla ice cream.","price":"$10.00","image":"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"},{"name":"Crème Brûlée","description":"Classic French custard with a caramelized sugar crust.","price":"$9.00","image":"https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=600&q=80"}]},{"name":"Mocktails","items":[{"name":"Virgin Mojito","description":"Fresh mint, lime, sugar, and sparkling soda.","price":"$6.00","image":"https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=600&q=80"},{"name":"Mango Sunrise","description":"Mango purée, orange juice, and a splash of grenadine.","price":"$7.00","image":"https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=600&q=80"},{"name":"Berry Bliss","description":"Mixed berries, lemon, and honey with crushed ice.","price":"$7.00","image":"https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"},{"name":"Cucumber Cooler","description":"Cucumber, mint, lime, and tonic water.","price":"$6.00","image":"https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"}]},{"name":"Cocktails","items":[{"name":"Classic Margarita","description":"Tequila, lime juice, and triple sec with a salted rim.","price":"$12.00","image":"https://images.unsplash.com/photo-1556855810-ac404aa91e85?auto=format&fit=crop&w=600&q=80"},{"name":"Old Fashioned","description":"Bourbon, bitters, sugar, and an orange twist.","price":"$14.00","image":"https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80"},{"name":"Espresso Martini","description":"Vodka, espresso, coffee liqueur, shaken and chilled.","price":"$13.00","image":"https://images.unsplash.com/photo-1575023782549-62ca0d244b39?auto=format&fit=crop&w=600&q=80"},{"name":"Aperol Spritz","description":"Aperol, prosecco, and a splash of soda over ice.","price":"$11.00","image":"https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=600&q=80"}]}]);
+  var lastJson = JSON.stringify([{"name":"Appetizers","items":[{"name":"Crispy Calamari","description":"Served with marinara sauce and lemon.","price":"$12.00"},{"name":"Bruschetta","description":"Toasted bread with fresh tomatoes, basil, and garlic.","price":"$9.00"},{"name":"Garlic Bread","description":"Oven-baked with herbs and butter.","price":"$6.00"},{"name":"Stuffed Mushrooms","description":"Portobello mushrooms filled with herbed cream cheese.","price":"$11.00"},{"name":"Corinne Wedge","description":"Gorgonzola, thick cut bacon, pickled onion, cucumber, buttermilk dressing.","price":"$17.00"}]},{"name":"Main Courses","items":[{"name":"Grilled Salmon","description":"Fresh Atlantic salmon with seasonal vegetables.","price":"$24.00"},{"name":"Steak Frites","description":"Classic steak with crispy fries and herb butter.","price":"$28.00"},{"name":"Chicken Parmesan","description":"Breaded chicken topped with marinara and mozzarella.","price":"$21.00"},{"name":"Lamb Chops","description":"Herb-crusted lamb chops with roasted potatoes and mint sauce.","price":"$32.00"},{"name":"Pasta Primavera","description":"Penne with sautéed seasonal vegetables in a light cream sauce.","price":"$18.00"}]},{"name":"Desserts","items":[{"name":"Tiramisu","description":"Classic Italian coffee-flavored dessert.","price":"$8.00"},{"name":"Cheesecake","description":"New York style with berry compote.","price":"$7.00"},{"name":"Chocolate Lava Cake","description":"Warm molten chocolate cake with vanilla ice cream.","price":"$10.00"},{"name":"Crème Brûlée","description":"Classic French custard with a caramelized sugar crust.","price":"$9.00"}]},{"name":"Mocktails","items":[{"name":"Virgin Mojito","description":"Fresh mint, lime, sugar, and sparkling soda.","price":"$6.00"},{"name":"Mango Sunrise","description":"Mango purée, orange juice, and a splash of grenadine.","price":"$7.00"},{"name":"Berry Bliss","description":"Mixed berries, lemon, and honey with crushed ice.","price":"$7.00"},{"name":"Cucumber Cooler","description":"Cucumber, mint, lime, and tonic water.","price":"$6.00"}]},{"name":"Cocktails","items":[{"name":"Classic Margarita","description":"Tequila, lime juice, and triple sec with a salted rim.","price":"$12.00"},{"name":"Old Fashioned","description":"Bourbon, bitters, sugar, and an orange twist.","price":"$14.00"},{"name":"Espresso Martini","description":"Vodka, espresso, coffee liqueur, shaken and chilled.","price":"$13.00"},{"name":"Aperol Spritz","description":"Aperol, prosecco, and a splash of soda over ice.","price":"$11.00"}]}]);
 
   function renderLiveMenu(cats) {
     if (!cats || cats.length === 0) return;
