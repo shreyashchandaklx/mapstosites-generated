@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Doon Smiles Dental Care and Implant Centre | Dehradun</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#0EA5A4;--sky:var(--brand);--sky-deep:color-mix(in srgb,var(--brand) 85%,#000);--sky-light:color-mix(in srgb,var(--brand) 6%,#fff);--slate:#0f172a;--slate-mid:#1e293b;--slate-light:#f8fafc;--slate-100:#e2e8f0;--orange:var(--brand);--white:#fff;--font-head:'Outfit',sans-serif;--font-sans:'Plus Jakarta Sans',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--white);color:var(--slate);overflow-x:hidden;line-height:1.6}
+::selection{background:var(--sky);color:white}
+img{display:block;max-width:100%}
+button{cursor:pointer;font-family:inherit;border:none;background:none}
+a{text-decoration:none;color:inherit}
+.container{max-width:1280px;margin:0 auto;padding:0 48px}
+@media(max-width:900px){.container{padding:0 24px}}
+#nav{position:fixed;top:46px;left:0;right:0;z-index:100;padding:0 48px;height:64px;display:flex;align-items:center;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--slate-100);box-shadow:0 1px 12px rgba(15,23,42,0.06);transition:all 0.3s ease}
+#nav.scrolled{background:rgba(255,255,255,0.97);top:46px}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;width:100%;height:100%}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo-icon{width:40px;height:40px;background:var(--sky);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px color-mix(in srgb,var(--brand) 35%,transparent);transition:transform 0.3s ease;flex-shrink:0}
+.nav-logo:hover .nav-logo-icon{transform:rotate(12deg)}
+.nav-logo-icon svg{width:22px;height:22px;color:white}
+.nav-logo-text{font-family:var(--font-head);font-weight:900;font-size:20px;letter-spacing:-0.04em;text-transform:uppercase;color:var(--slate);white-space:nowrap}
+.nav-logo-text span{color:var(--sky)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-link{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:rgba(15,23,42,0.6);transition:all 0.2s;padding:6px 2px;border-bottom:2px solid transparent}
+.nav-link:hover,.nav-link.active{color:var(--sky);border-color:var(--sky)}
+.nav-cta{background:var(--orange);color:white;padding:11px 22px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;transition:all 0.2s;box-shadow:0 4px 14px color-mix(in srgb,var(--brand) 25%,transparent)}
+.nav-cta:hover{box-shadow:0 8px 28px color-mix(in srgb,var(--brand) 35%,transparent);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:4px}
+.hamburger span{display:block;width:28px;height:2px;background:var(--slate);border-radius:2px;transition:all 0.3s}
+.mobile-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,0.5);backdrop-filter:blur(6px);z-index:110}
+.mobile-menu{position:fixed;top:0;right:-320px;bottom:0;width:320px;background:var(--white);z-index:120;padding:100px 32px 32px;display:flex;flex-direction:column;box-shadow:-4px 0 40px rgba(0,0,0,0.15);transition:right 0.35s cubic-bezier(0.4,0,0.2,1)}
+.mobile-menu.open{right:0}
+.mobile-overlay.open{display:block}
+.mobile-nav-link{font-family:var(--font-head);font-weight:900;font-size:clamp(24px,7vw,32px);letter-spacing:-0.04em;text-transform:uppercase;color:var(--slate);margin-bottom:28px;text-align:left;transition:color 0.2s;white-space:nowrap}
+.mobile-nav-link:hover{color:var(--sky)}
+.mobile-menu-footer{margin-top:auto;padding-top:40px;border-top:1px solid var(--slate-100)}
+.mobile-menu-footer p{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:rgba(15,23,42,0.2);margin-bottom:12px}
+.mobile-menu-footer a{font-family:var(--font-head);font-weight:900;font-size:24px;letter-spacing:-0.04em;color:var(--slate);transition:color 0.2s}
+.mobile-close{position:absolute;top:24px;right:24px;width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+.mobile-close svg{width:28px;height:28px;color:var(--slate)}
+.view{display:none}
+.view.active{display:block}
+#view-portfolio,#view-reviews,#view-faqs{padding:128px 0 96px;background:var(--white);min-height:60vh}
+.hero{min-height:90vh;display:flex;align-items:center;padding-top:134px;position:relative;overflow:hidden;border-bottom:1px solid var(--slate-100);background:rgba(248,250,252,0.5)}
+.hero-bg-shape{position:absolute;top:0;right:0;width:50%;height:100%;background:color-mix(in srgb,var(--brand) 5%,transparent);transform:skewX(12deg) translateX(80px);z-index:0}
+.hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-block;padding:4px 12px;background:var(--sky-light);color:var(--sky);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;border-radius:6px;margin-bottom:32px}
+.hero-h1{font-family:var(--font-head);font-weight:900;font-size:clamp(56px,8vw,104px);line-height:0.85;letter-spacing:-0.04em;text-transform:uppercase;color:var(--slate);margin-bottom:32px}
+.hero-h1 span{color:var(--sky)}
+.hero-desc{color:rgba(15,23,42,0.5);font-size:20px;font-weight:500;max-width:400px;line-height:1.6;margin-bottom:48px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:80px}
+.btn-primary{background:var(--sky);color:white;padding:20px 40px;border-radius:16px;font-weight:800;font-size:18px;display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:-0.02em;transition:all 0.25s;box-shadow:0 8px 32px transparent}
+.btn-primary:hover{box-shadow:0 12px 40px color-mix(in srgb,var(--brand) 40%,transparent);transform:translateY(-2px)}
+.btn-primary svg{width:20px;height:20px;transition:transform 0.2s}
+.btn-primary:hover svg{transform:translateX(4px)}
+.btn-secondary{background:var(--slate-light);border:1px solid var(--slate-100);color:var(--slate);padding:20px 40px;border-radius:16px;font-weight:800;font-size:18px;display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:-0.02em;transition:background 0.2s}
+.btn-secondary:hover{background:var(--slate-100)}
+.hero-image-wrap{position:relative}
+.hero-image-frame{border-radius:48px;overflow:hidden;border:8px solid var(--white);box-shadow:0 40px 80px rgba(15,23,42,0.15)}
+.hero-image-frame img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.hero-badge-card{position:absolute;bottom:-24px;left:-24px;background:var(--white);padding:32px;border-radius:32px;box-shadow:0 16px 48px rgba(15,23,42,0.12);border:1px solid var(--slate-100);display:flex;align-items:center;gap:16px}
+.hero-badge-card-icon{width:48px;height:48px;background:var(--sky);border-radius:16px;display:flex;align-items:center;justify-content:center}
+.hero-badge-card-icon svg{width:22px;height:22px;color:white}
+.hero-badge-card-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:rgba(15,23,42,0.3);margin-bottom:4px}
+.hero-badge-card-title{font-family:var(--font-head);font-weight:900;font-size:20px;letter-spacing:-0.04em;color:var(--slate)}
+.strip{padding:128px 0;background:var(--white)}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.strip-card{padding:32px;background:var(--slate-light);border-radius:24px;border:1px solid var(--slate-100);transition:all 0.3s}
+.strip-card:hover{box-shadow:0 20px 40px rgba(15,23,42,0.1)}
+.strip-card:hover .strip-icon{transform:scale(1.1)}
+.strip-icon{transition:transform 0.3s;margin-bottom:16px}
+.strip-icon svg{width:32px;height:32px;color:var(--sky)}
+.strip-title{font-family:var(--font-head);font-weight:900;letter-spacing:-0.04em;color:var(--slate);margin-bottom:4px}
+.strip-val{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:rgba(15,23,42,0.3)}
+.section-tag{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:var(--sky);background:var(--sky-light);padding:4px 12px;border-radius:6px;margin-bottom:24px}
+.section-h2{font-family:var(--font-head);font-weight:900;font-size:clamp(36px,5vw,72px);line-height:0.9;letter-spacing:-0.04em;text-transform:uppercase;color:var(--slate);margin-bottom:32px}
+.section-h2 .accent{color:var(--sky)}
+.section-desc{color:rgba(15,23,42,0.5);font-size:18px;font-weight:500;max-width:640px;line-height:1.6}
+.section-heading{margin-bottom:64px}
+#view-services{padding:128px 0 96px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.service-card{background:var(--slate-light);border:1px solid var(--slate-100);border-radius:40px;overflow:hidden;box-shadow:0 2px 8px rgba(15,23,42,0.04);transition:all 0.4s}
+.service-card:hover{box-shadow:0 30px 60px rgba(15,23,42,0.12);transform:translateY(-4px)}
+.service-card-img{height:240px;overflow:hidden;position:relative}
+.service-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease}
+.service-card:hover .service-card-img img{transform:scale(1.05)}
+.service-card-img-overlay{position:absolute;inset:0;background:rgba(15,23,42,0.2);transition:background 0.4s}
+.service-card:hover .service-card-img-overlay{background:transparent}
+.service-card-body{padding:40px}
+.service-card[onclick]{cursor:pointer;}
+.service-card[onclick] .service-card-body::after{content:'Tap to learn more →';display:block;margin-top:16px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--sky);}
+.service-card-title{font-family:var(--font-head);font-weight:900;font-size:24px;letter-spacing:-0.04em;color:var(--slate);margin-bottom:8px}
+.service-card-val{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:var(--sky)}
+#view-about{padding:128px 0 96px;background:var(--slate-light)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.feature-item{display:flex;gap:16px}
+.feature-icon{flex-shrink:0;width:48px;height:48px;background:var(--slate-light);border-radius:16px;display:flex;align-items:center;justify-content:center;border:1px solid var(--slate-100)}
+.feature-icon svg{width:20px;height:20px;color:var(--sky)}
+.feature-title{font-family:var(--font-head);font-weight:900;letter-spacing:-0.04em;color:var(--slate);margin-bottom:4px}
+.feature-text{color:rgba(15,23,42,0.5);font-size:14px;font-weight:500;line-height:1.6}
+.about-image-wrap{position:relative}
+.about-image-frame{border-radius:64px;overflow:hidden;border:8px solid var(--white);box-shadow:0 40px 80px rgba(15,23,42,0.15)}
+.about-image-frame img{width:100%;object-fit:cover}
+.about-center-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:128px;height:128px;background:var(--sky);border-radius:50%;border:8px solid var(--white);box-shadow:0 16px 48px color-mix(in srgb,var(--brand) 40%,transparent);display:flex;align-items:center;justify-content:center}
+.about-center-badge svg{width:48px;height:48px;color:white}
+#view-contact{padding:128px 0 96px;background:var(--white)}
+.home-services-section{padding:96px 0;background:var(--white)}
+.home-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.home-service-card{background:var(--white);border:1px solid var(--slate-100);border-radius:20px;padding:32px;position:relative;cursor:pointer;transition:all 0.3s;box-shadow:0 2px 8px rgba(15,23,42,0.04);overflow:hidden}
+.home-service-card::after{content:'';position:absolute;bottom:0;right:0;width:80px;height:80px;background:radial-gradient(circle,color-mix(in srgb,var(--brand) 15%,#fff) 0%,transparent 70%);border-radius:50% 0 20px 0}
+.home-service-card:hover{border-color:var(--brand);box-shadow:0 20px 40px rgba(15,23,42,0.1);transform:translateY(-2px)}
+.home-service-icon{width:48px;height:48px;background:var(--sky-light);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all 0.3s}
+.home-service-card:hover .home-service-icon{background:var(--brand)}
+.home-service-icon svg{width:22px;height:22px;color:var(--brand);transition:color 0.3s}
+.home-service-card:hover .home-service-icon svg{color:white}
+.home-service-name{font-family:var(--font-head);font-weight:800;font-size:18px;color:var(--slate);margin-bottom:12px;letter-spacing:-0.02em}
+.home-service-desc{color:rgba(15,23,42,0.55);font-size:14px;line-height:1.6;font-weight:500;margin-bottom:24px}
+.home-service-arrow{color:var(--brand);display:flex;align-items:center;gap:4px;font-size:13px;font-weight:800}
+.home-service-arrow svg{width:16px;height:16px}
+.service-popup-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(15,23,42,0.5);backdrop-filter:blur(8px);align-items:center;justify-content:center}
+.service-popup-overlay.open{display:flex}
+.service-popup{background:var(--white);border-radius:24px;padding:0;width:90%;max-width:520px;box-shadow:0 40px 80px rgba(15,23,42,0.3);overflow:hidden;animation:fadeUp 0.3s ease forwards;border-top:5px solid var(--brand)}
+.service-popup-inner{padding:40px}
+.service-popup-title{font-family:var(--font-head);font-weight:900;font-size:26px;color:var(--slate);margin-bottom:24px;letter-spacing:-0.04em}
+.service-popup-list{list-style:none;padding:0;margin:0 0 32px}
+.service-popup-list li{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--slate-100);font-size:15px;font-weight:500;color:var(--slate);line-height:1.5}
+.service-popup-list li:last-child{border-bottom:none}
+.service-popup-list li svg{width:16px;height:16px;color:var(--brand);flex-shrink:0;margin-top:3px}
+.service-popup-btn{background:var(--brand);color:white;padding:16px 32px;border-radius:12px;font-family:var(--font-head);font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:0.1em;transition:all 0.2s;border:none;cursor:pointer;box-shadow:0 4px 16px color-mix(in srgb,var(--brand) 30%,transparent)}
+.service-popup-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px color-mix(in srgb,var(--brand) 35%,transparent)}
+.service-popup-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--slate-light);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s;border:none}
+.service-popup-close:hover{background:var(--slate-100)}
+.service-popup-close svg{width:18px;height:18px;color:var(--slate)}
+.why-us-section{padding:96px 0;background:var(--slate-light)}
+.why-us-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
+.why-card{background:var(--white);border:1px solid var(--slate-100);border-radius:20px;padding:32px;display:flex;gap:20px;align-items:flex-start;transition:all 0.3s}
+.why-card:hover{box-shadow:0 16px 40px rgba(15,23,42,0.08);transform:translateY(-2px)}
+.why-card-emoji{font-size:32px;flex-shrink:0;line-height:1}
+.why-card-title{font-family:var(--font-head);font-weight:900;font-size:18px;color:var(--slate);margin-bottom:8px;letter-spacing:-0.02em}
+.why-card-text{color:rgba(15,23,42,0.55);font-size:14px;font-weight:500;line-height:1.6}
+.process-section{padding:96px 0;background:var(--white)}
+.process-timeline{position:relative;margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.process-timeline::before{content:'';position:absolute;top:32px;left:calc(12.5% + 16px);right:calc(12.5% + 16px);height:2px;background:linear-gradient(90deg,var(--brand) 0%,color-mix(in srgb,var(--brand) 40%,#e2e8f0) 100%);z-index:0}
+.process-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px;position:relative}
+.process-step-bubble{width:64px;height:64px;border-radius:50%;background:var(--white);border:2px solid var(--slate-100);display:flex;align-items:center;justify-content:center;font-size:26px;position:relative;z-index:1;transition:all 0.3s;margin-bottom:24px;box-shadow:0 4px 16px rgba(15,23,42,0.06)}
+.process-step:hover .process-step-bubble{border-color:var(--brand);background:var(--sky-light);transform:scale(1.1);box-shadow:0 8px 32px color-mix(in srgb,var(--brand) 20%,transparent)}
+.process-step-num{position:absolute;top:-8px;right:-8px;width:22px;height:22px;background:var(--brand);color:white;border-radius:50%;font-family:var(--font-head);font-weight:900;font-size:11px;display:flex;align-items:center;justify-content:center;border:2px solid var(--white)}
+.process-step-body{background:var(--slate-light);border:1px solid var(--slate-100);border-radius:20px;padding:28px 24px;width:100%;transition:all 0.3s}
+.process-step:hover .process-step-body{box-shadow:0 16px 40px rgba(15,23,42,0.08);border-color:color-mix(in srgb,var(--brand) 30%,var(--slate-100));transform:translateY(-2px)}
+.process-step-title{font-family:var(--font-head);font-weight:900;font-size:16px;color:var(--slate);margin-bottom:10px;letter-spacing:-0.02em}
+.process-step-text{color:rgba(15,23,42,0.55);font-size:13px;font-weight:500;line-height:1.65}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--brand) 40%,transparent)}70%{box-shadow:0 0 0 10px color-mix(in srgb,var(--brand) 0%,transparent)}100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--brand) 0%,transparent)}}
+.process-step:first-child .process-step-bubble{border-color:var(--brand);background:var(--sky-light);animation:pulseRing 2.5s infinite}
+.cta-banner-section{padding:0}
+.cta-banner{background:linear-gradient(135deg,#0f766e 0%,#0EA5A4 50%,#22d3ee 100%);padding:80px 48px;text-align:center}
+.cta-banner h2{font-family:var(--font-head);font-weight:900;font-size:clamp(32px,5vw,56px);color:white;letter-spacing:-0.04em;text-transform:uppercase;margin-bottom:16px;line-height:1}
+.cta-banner p{color:rgba(255,255,255,0.8);font-size:16px;font-weight:500;margin-bottom:32px}
+.cta-banner-btn{display:inline-flex;align-items:center;gap:10px;background:transparent;color:white;border:2px solid rgba(255,255,255,0.6);padding:16px 40px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;cursor:pointer;transition:all 0.2s}
+.cta-banner-btn:hover{background:rgba(255,255,255,0.15);border-color:white;transform:translateY(-2px)}
+.brands-section{padding:96px 0;background:var(--white)}
+.brands-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:48px}
+.brand-card{background:var(--slate-light);border:1px solid var(--slate-100);border-radius:16px;padding:24px 16px;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all 0.3s}
+.brand-card:hover{border-color:var(--brand);box-shadow:0 8px 24px rgba(15,23,42,0.08)}
+.brand-card-icon{font-size:32px}
+.brand-card-name{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:rgba(15,23,42,0.4);text-align:center}
+.credentials-section{padding:96px 0;background:var(--slate-light)}
+.credentials-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.credential-card{background:var(--white);border:1px solid var(--slate-100);border-radius:20px;padding:32px;text-align:center;transition:all 0.3s}
+.credential-card:hover{box-shadow:0 16px 40px rgba(15,23,42,0.08);transform:translateY(-2px)}
+.credential-card-icon{font-size:36px;margin-bottom:16px}
+.credential-card-title{font-family:var(--font-head);font-weight:900;font-size:16px;color:var(--slate);margin-bottom:12px;letter-spacing:-0.02em}
+.credential-card-text{color:rgba(15,23,42,0.55);font-size:13px;font-weight:500;line-height:1.6}
+.coverage-section{padding:96px 0;background:var(--white)}
+.coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.coverage-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.coverage-tag{border:1.5px solid var(--slate-100);border-radius:999px;padding:8px 20px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:var(--slate);transition:all 0.2s}
+.coverage-tag:hover{border-color:var(--brand);color:var(--brand)}
+.coverage-map-wrap{border-radius:20px;overflow:hidden;border:1px solid var(--slate-100);box-shadow:0 16px 48px rgba(15,23,42,0.1);position:relative;height:360px}
+.coverage-map-wrap iframe{width:100%;height:100%;border:none;display:block}
+.toast-overlay{display:none;position:fixed;inset:0;z-index:999;background:rgba(15,23,42,0.5);backdrop-filter:blur(8px);align-items:center;justify-content:center}
+.toast-overlay.show{display:flex}
+.toast-card{background:var(--white);border-radius:28px;padding:56px 48px;max-width:440px;width:90%;text-align:center;box-shadow:0 40px 80px rgba(15,23,42,0.2);animation:fadeUp 0.4s ease forwards;border-top:6px solid var(--brand)}
+.toast-icon{width:72px;height:72px;background:var(--sky-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.toast-icon svg{width:36px;height:36px;color:var(--brand)}
+.toast-title{font-family:var(--font-head);font-weight:900;font-size:28px;color:var(--slate);letter-spacing:-0.04em;text-transform:uppercase;margin-bottom:12px}
+.toast-msg{color:rgba(15,23,42,0.55);font-size:15px;font-weight:500;line-height:1.6;margin-bottom:32px}
+.toast-close-btn{background:var(--brand);color:white;padding:14px 32px;border-radius:12px;font-family:var(--font-head);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:0.1em;border:none;cursor:pointer;transition:all 0.2s}
+.contact-split-card{display:grid;grid-template-columns:5fr 7fr;border-radius:36px;overflow:hidden;box-shadow:0 25px 60px rgba(15,23,42,0.12);border:1px solid var(--slate-100);background:white}
+.responsive-grid{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.faq-section{padding:128px 0;background:var(--slate-light)}
+.faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+.anim-fade-up{animation:fadeUp 0.7s ease forwards}
+.anim-fade-in{animation:fadeIn 0.7s ease forwards}
+.anim-slide-left{animation:slideLeft 0.8s ease forwards}
+.anim-d1{animation-delay:0.1s;opacity:0}
+.anim-d2{animation-delay:0.2s;opacity:0}
+.anim-d3{animation-delay:0.3s;opacity:0}
+.anim-d4{animation-delay:0.4s;opacity:0}
+.anim-d5{animation-delay:0.5s;opacity:0}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:64px}.strip-grid{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:64px}.footer-grid{grid-template-columns:1fr 1fr}.home-services-grid{grid-template-columns:repeat(2,1fr)}.why-us-grid{grid-template-columns:1fr}.brands-grid{grid-template-columns:repeat(3,1fr)}.credentials-grid{grid-template-columns:repeat(2,1fr)}.coverage-grid{grid-template-columns:1fr}.contact-split-card{grid-template-columns:1fr}}
+@media(max-width:768px){#nav{padding:0 24px;top:46px}#nav.scrolled{padding:0 24px;top:46px}.nav-links{display:none}.hamburger{display:flex}.container{padding:0 20px}.hero{padding-top:126px;min-height:auto;padding-bottom:80px}.hero-h1{font-size:clamp(38px,10vw,104px);line-height:1.1}.section-h2{font-size:clamp(32px,8vw,72px);line-height:1.1}.hero-ctas{flex-direction:column}.btn-primary,.btn-secondary{justify-content:center;width:100%}.strip-grid{grid-template-columns:repeat(2,1fr);gap:16px}.services-grid{grid-template-columns:1fr}.feature-list{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;text-align:center}.process-timeline{grid-template-columns:1fr 1fr;gap:24px}.process-timeline::before{display:none}.home-services-grid{grid-template-columns:1fr}.brands-grid{grid-template-columns:repeat(2,1fr)}.credentials-grid{grid-template-columns:1fr}.cta-banner{padding:64px 24px}.hero-badge-card{left:16px;right:16px;bottom:-24px;padding:24px;justify-content:center;text-align:center;flex-direction:column;gap:8px}.hero-image-frame,.about-image-frame{border-radius:32px;border-width:4px}.about-center-badge{width:80px;height:80px;border-width:4px}.about-center-badge svg{width:32px;height:32px}}
+@media(max-width:480px){.strip-grid{grid-template-columns:1fr}.process-timeline{grid-template-columns:1fr}.checkbox-grid{grid-template-columns:1fr!important}}
+
+/* MOBILE_OPTIMIZED_PATCH */
+
+@media(max-width:768px){
+  .service-card{border-radius:20px}
+  .home-service-card{border-radius:20px;padding:20px}
+  .hero-badge-card{flex-direction:column;text-align:center;gap:8px;padding:20px;left:12px;right:12px;bottom:-20px}
+  .hero-badge-card-title{font-size:16px}
+  .section-h2{font-size:clamp(28px,7vw,56px)}
+  .hero-h1{font-size:clamp(32px,9vw,80px)}
+  .strip-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .strip-item{padding:16px 12px}
+  .strip-val{font-size:22px}
+  .cta-banner h2{font-size:clamp(28px,7vw,56px)}
+  .process-timeline{grid-template-columns:1fr;gap:20px}
+  .service-card-img{height:180px}
+  .why-us-grid{grid-template-columns:1fr}
+  .credentials-grid{grid-template-columns:1fr}
+  .contact-split-card{grid-template-columns:1fr}
+  table{font-size:13px}
+  .comparison-table th,.comparison-table td{padding:10px 8px}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .nav-links{display:none!important}
+  .hamburger{display:flex!important}
+}
+@media(max-width:480px){
+  .hero-h1{font-size:clamp(28px,8vw,52px)}
+  .section-h2{font-size:clamp(24px,7vw,42px)}
+  .strip-grid{grid-template-columns:1fr}
+  .process-timeline{grid-template-columns:1fr}
+  .checkbox-grid{grid-template-columns:1fr!important}
+  .services-grid{grid-template-columns:1fr}
+  .btn-primary,.btn-secondary{width:100%;justify-content:center;font-size:15px;padding:14px 20px}
+  .hero-ctas{gap:12px}
+  .home-services-grid{grid-template-columns:1fr}
+  .feature-list{grid-template-columns:1fr}
+  .brands-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-bottom{flex-direction:column;text-align:center;gap:12px}
+  .container{padding:0 16px}
+}
+@media(min-width:769px) and (max-width:1024px){
+  .hero-h1{font-size:clamp(48px,6vw,80px)}
+  .hero-grid{grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .home-services-grid{grid-template-columns:repeat(2,1fr)}
+  .strip-grid{grid-template-columns:repeat(3,1fr)}
+  .process-timeline{grid-template-columns:repeat(2,1fr);gap:24px}
+  .credentials-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+/* ===== COMPREHENSIVE MOBILE OPTIMIZATION PATCH ===== */
+
+/* Base: prevent any horizontal overflow on ALL elements */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; max-width: 100vw; }
+img, video, iframe, embed, object { max-width: 100%; height: auto; }
+
+/* Demo banner: stack on mobile */
+@media (max-width: 520px) {
+  #demo-banner-wrap, div[style*="position:fixed;top:0;left:0;right:0;z-index:10000"] {
+    flex-direction: column !important;
+    gap: 8px !important;
+    padding: 10px 16px !important;
+    text-align: center !important;
+  }
+  #demo-banner-wrap a, div[style*="position:fixed;top:0;left:0;right:0;z-index:10000"] a {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Nav logo: allow wrapping on very small screens */
+.nav-logo-text { white-space: normal !important; font-size: clamp(13px, 3.5vw, 20px) !important; }
+@media (max-width: 360px) {
+  .nav-logo-text { font-size: 13px !important; max-width: 160px; line-height: 1.1; }
+}
+
+/* === FOOTER FIX: override inline grid style === */
+/* The footer-grid has an inline style="grid-template-columns:1.5fr 1fr 1.2fr 1fr"
+   We can't override inline styles from CSS normally, so we use a high-specificity trick */
+@media (max-width: 768px) {
+  .footer-grid,
+  footer .footer-grid,
+  footer div.footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-grid,
+  footer .footer-grid,
+  footer div.footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+/* === ALL GRIDS: Mobile-first responsive === */
+@media (max-width: 768px) {
+  .container { padding: 0 16px !important; width: 100% !important; max-width: 100% !important; }
+  .hero { padding-top: 130px !important; padding-bottom: 60px !important; min-height: auto !important; }
+  .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .hero-h1 { font-size: clamp(30px, 8vw, 56px) !important; line-height: 1.1 !important; }
+  .section-h2 { font-size: clamp(26px, 7vw, 48px) !important; line-height: 1.1 !important; }
+  .hero-ctas { flex-direction: column !important; gap: 12px !important; }
+  .btn-primary, .btn-secondary { width: 100% !important; justify-content: center !important; }
+
+  /* Strip/stats */
+  .strip-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+  .strip-item { padding: 16px 12px !important; }
+  .strip-val { font-size: 22px !important; }
+
+  /* Service cards */
+  .services-grid { grid-template-columns: 1fr !important; }
+  .home-services-grid { grid-template-columns: 1fr !important; }
+  .service-card-img { height: 200px !important; }
+
+  /* Feature / why-us */
+  .feature-list { grid-template-columns: 1fr !important; }
+  .why-us-grid { grid-template-columns: 1fr !important; }
+
+  /* Process */
+  .process-timeline { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .process-timeline::before { display: none !important; }
+
+  /* Brands / credentials */
+  .brands-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .credentials-grid { grid-template-columns: 1fr !important; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+  .about-center-badge { width: 80px !important; height: 80px !important; }
+  .about-center-badge svg { width: 32px !important; height: 32px !important; }
+  .about-image-frame { border-radius: 32px !important; border-width: 4px !important; }
+
+  /* Hero image */
+  .hero-image-frame { border-radius: 32px !important; border-width: 4px !important; }
+  .hero-image-wrap { margin-top: 0 !important; }
+
+  /* Hero badge card */
+  .hero-badge-card {
+    left: 12px !important; right: 12px !important; bottom: -20px !important;
+    padding: 18px !important; flex-direction: column !important;
+    text-align: center !important; gap: 8px !important;
+    justify-content: center !important;
+  }
+  .hero-badge-card-title { font-size: 16px !important; }
+
+  /* CTA banner */
+  .cta-banner { padding: 56px 20px !important; }
+  .cta-banner h2 { font-size: clamp(26px, 7vw, 48px) !important; }
+
+  /* Coverage / contact */
+  .coverage-grid { grid-template-columns: 1fr !important; }
+  .contact-split-card { grid-template-columns: 1fr !important; border-radius: 24px !important; }
+
+  /* Footer bottom row */
+  .footer-bottom { flex-direction: column !important; text-align: center !important; gap: 12px !important; }
+
+  /* Nav */
+  .nav-links { display: none !important; }
+  .hamburger { display: flex !important; }
+  #nav { padding: 0 16px !important; }
+
+  /* Tables */
+  table { font-size: 13px !important; }
+  .comparison-table th, .comparison-table td { padding: 10px 8px !important; }
+
+  /* Misc */
+  section, .section { padding: 64px 0 !important; }
+  .service-popup { width: 95% !important; margin: 0 auto !important; }
+}
+
+/* === Small phones (≤ 480px) === */
+@media (max-width: 480px) {
+  .hero-h1 { font-size: clamp(26px, 7.5vw, 40px) !important; }
+  .section-h2 { font-size: clamp(22px, 6.5vw, 36px) !important; }
+  .strip-grid { grid-template-columns: 1fr !important; }
+  .process-timeline { grid-template-columns: 1fr !important; }
+  .checkbox-grid { grid-template-columns: 1fr !important; }
+  .services-grid { grid-template-columns: 1fr !important; }
+  .home-services-grid { grid-template-columns: 1fr !important; }
+  .btn-primary, .btn-secondary { font-size: 14px !important; padding: 14px 18px !important; }
+  .container { padding: 0 14px !important; }
+  .hero { padding-top: 120px !important; }
+  .footer-grid, footer .footer-grid, footer div.footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* === Tablets (769px–1024px) === */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr 1fr !important; gap: 40px !important; align-items: center !important; }
+  .hero-h1 { font-size: clamp(36px, 5.5vw, 64px) !important; }
+  .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .home-services-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .strip-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .process-timeline { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; }
+  .credentials-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .brands-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .why-us-grid { grid-template-columns: 1fr !important; }
+  .about-grid { grid-template-columns: 1fr 1fr !important; gap: 48px !important; }
+  .container { padding: 0 32px !important; }
+}
+/* ===== END MOBILE OPTIMIZATION PATCH ===== */
+
+
+/* ===== PROFESSIONAL EXCELLENCE & BADGE OVERLAP FIX ===== */
+@media (max-width: 768px) {
+  /* Ensure all views have enough top padding so section-tag doesn't overlap nav/banner */
+  #view-about, #view-services, #view-contact, #view-portfolio, #view-reviews, #view-faqs {
+    padding-top: 180px !important;
+  }
+  /* about-center-badge: centered on top of the image */
+  .about-image-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative !important;
+  }
+  .about-center-badge {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin-top: 0 !important;
+    width: 80px !important;
+    height: 80px !important;
+    border: 4px solid var(--white) !important;
+  }
+  .about-center-badge svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+/* ===== END PROFESSIONAL EXCELLENCE & BADGE OVERLAP FIX ===== */
+
+</style>
+
+<script>
+// NAV OVERLAP FIX: dynamically position nav below the demo banner
+(function() {
+  function fixNavPosition() {
+    var banner = document.querySelector('div[style*="z-index:10000"]') || document.getElementById('demo-banner');
+    var nav = document.getElementById('nav');
+    var hero = document.querySelector('.hero');
+    if (!banner || !nav) return;
+    var bannerH = banner.offsetHeight;
+    nav.style.top = bannerH + 'px';
+    // Also update scrolled state top
+    nav.dataset.bannerH = bannerH;
+    // Adjust hero padding so content isn't hidden behind nav+banner
+    if (hero) {
+      var navH = nav.offsetHeight;
+      hero.style.paddingTop = (bannerH + navH + 24) + 'px';
+    }
+  }
+  // Run on load and resize
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fixNavPosition);
+  } else {
+    fixNavPosition();
+  }
+  window.addEventListener('resize', fixNavPosition);
+  // Also run after a short delay to catch any layout shifts
+  setTimeout(fixNavPosition, 100);
+  setTimeout(fixNavPosition, 400);
+})();
+</script>
+
+</head>
+<body>
+<!-- DEMO BANNER -->
+<div style="position:fixed;top:0;left:0;right:0;z-index:10000;background:#F5A623;padding:8px 16px;display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,0.12);flex-wrap:wrap;">
+<span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:500;color:#1a1a1a;letter-spacing:-0.01em;">Doon Smiles Dental Care · Dehradun · <strong style="font-weight:800;">Make It Yours</strong></span>
+<a href="https://pixnom.com/book-appointment.html" onmouseout="this.style.background='#0f172a'" onmouseover="this.style.background='#1e293b'" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#0f172a;color:white;padding:9px 18px;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;line-height:1;" target="_blank">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:15px;height:15px;flex-shrink:0;" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+    Book Appointment
+  </a>
+</div>
+<!-- END DEMO BANNER -->
+<div class="toast-overlay" id="thankYouToast">
+<div class="toast-card">
+<div class="toast-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<div class="toast-title">Thank You!</div>
+<div class="toast-msg">Your appointment request has been submitted! Our reception team will call you shortly to confirm your appointment.</div>
+<button class="toast-close-btn" onclick="document.getElementById('thankYouToast').classList.remove('show')">Got It</button>
+</div>
+</div>
+<div class="service-popup-overlay" id="servicePopup" onclick="closeServicePopup(event)">
+<div class="service-popup" style="position:relative;">
+<button class="service-popup-close" onclick="document.getElementById('servicePopup').classList.remove('open')">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+<div class="service-popup-inner">
+<div class="service-popup-title" id="popupTitle">Service Details</div>
+<ul class="service-popup-list" id="popupList"></ul>
+<button class="service-popup-btn" onclick="document.getElementById('servicePopup').classList.remove('open');showView('contact');">Book Now</button>
+</div>
+</div>
+</div>
+<nav id="nav">
+<div class="nav-inner" style="padding:0 48px;">
+<button class="nav-logo" onclick="showView('home')">
+<div class="nav-logo-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+</div>
+<span class="nav-logo-text">Doon<span>Smiles</span></span>
+</button>
+<div class="nav-links">
+<button class="nav-link active" data-view="home" onclick="showView('home')">Home</button>
+<button class="nav-link" data-view="about" onclick="showView('about')">About Us</button>
+<button class="nav-link" data-view="services" onclick="showView('services')">Services</button>
+<button class="nav-link" data-view="portfolio" onclick="showView('portfolio')">Portfolio</button>
+<button class="nav-link" data-view="reviews" onclick="showView('reviews')">Reviews</button>
+<button class="nav-link" data-view="faqs" onclick="showView('faqs')">FAQs</button>
+<button class="nav-cta" onclick="showView('contact')" style="border:none;cursor:pointer;">FREE CONSULT</button>
+</div>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<div class="mobile-overlay" id="mobileOverlay" onclick="closeMenu()"></div>
+<div class="mobile-menu" id="mobileMenu">
+<button class="mobile-close" onclick="closeMenu()"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></button>
+<button class="mobile-nav-link" onclick="showView('home');closeMenu();">Home</button>
+<button class="mobile-nav-link" onclick="showView('about');closeMenu();">About Us</button>
+<button class="mobile-nav-link" onclick="showView('services');closeMenu();">Services</button>
+<button class="mobile-nav-link" onclick="showView('portfolio');closeMenu();">Portfolio</button>
+<button class="mobile-nav-link" onclick="showView('reviews');closeMenu();">Reviews</button>
+<button class="mobile-nav-link" onclick="showView('faqs');closeMenu();">FAQs</button>
+<button class="mobile-nav-link" onclick="showView('contact');closeMenu();" style="color:var(--orange);">FREE CONSULT</button>
+<div class="mobile-menu-footer"><p>Open 6 Days a Week</p><a href="tel:919876543210">+91 98765 43210</a></div>
+</div>
+<div class="view active" id="view-home">
+<header class="hero">
+<div class="hero-bg-shape"></div>
+<div class="container" style="width:100%;">
+<div class="hero-grid">
+<div>
+<div class="hero-badge anim-fade-up">Dehradun’s Trusted Dental & Implant Centre</div>
+<h1 class="hero-h1 anim-slide-left anim-d1">GENTLE DENTISTRY<br/><span>BRIGHTER SMILES</span></h1>
+<p class="hero-desc anim-fade-up anim-d2">Painless, premium dental care for the whole family. From routine cleanings to advanced implants — handled by experienced specialists in the heart of Dehradun.</p>
+<div class="hero-ctas anim-fade-up anim-d3">
+<button class="btn-primary" onclick="showView('contact')">Book Appointment <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+<button class="btn-secondary" onclick="showView('services')">Our Services</button>
+</div>
+</div>
+<div class="hero-image-wrap anim-fade-in anim-d2">
+<div class="hero-image-frame"><video autoplay="" loop="" muted="" playsinline="" poster="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1920&q=80" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-dentist-checking-a-patient-s-teeth-9748-large.mp4" type="video/mp4"/>
+</video></div>
+<div class="hero-badge-card">
+<div class="hero-badge-card-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+<div><div class="hero-badge-card-label">Sterilized Clinic</div><div class="hero-badge-card-title">Implant Lifetime Warranty</div></div>
+</div>
+</div>
+</div></div></header>
+<section class="strip"><div class="container"><div class="strip-grid">
+<div class="strip-card anim-fade-up anim-d1">
+<div class="strip-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+<div class="strip-title">Dental Implants</div>
+<div class="strip-val">BDS · MDS</div>
+</div>
+<div class="strip-card anim-fade-up anim-d2">
+<div class="strip-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+<div class="strip-title">Root Canal Therapy</div>
+<div class="strip-val">Same-Day Appt</div>
+</div>
+<div class="strip-card anim-fade-up anim-d3">
+<div class="strip-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+<div class="strip-title">Teeth Whitening</div>
+<div class="strip-val">Painless Care</div>
+</div>
+<div class="strip-card anim-fade-up anim-d4">
+<div class="strip-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<div class="strip-title">Braces & Aligners</div>
+<div class="strip-val">Family Friendly</div>
+</div></div></div></section>
+<section class="home-services-section"><div class="container">
+<div class="section-tag" style="color:#0f766e;background:#ccfbf1;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>What We Do</div>
+<h2 class="section-h2" style="font-size:clamp(32px,5vw,56px);">Our Core <span class="accent">Services</span></h2>
+<p class="section-desc">From routine checkups to advanced implants — comprehensive dental care under one roof.</p>
+<div class="home-services-grid">
+<div class="home-service-card anim-fade-up anim-d1" onclick="openServicePopup('Dental Implants', ['Permanent tooth replacement with single-stage and All-on-4 implants by certified implantologists.', 'EPA-approved cleaning products used', 'Background-checked, uniformed crew', 'Flexible scheduling available', 'Satisfaction guarantee on every visit', 'Free walk-through after service'])">
+<div class="home-service-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+</div>
+<div class="home-service-name">Dental Implants</div>
+<div class="home-service-desc">Permanent tooth replacement with single-stage and All-on-4 implants by certified implantologists.</div>
+<div class="home-service-arrow">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</div>
+</div>
+<div class="home-service-card anim-fade-up anim-d2" onclick="openServicePopup('Root Canal Therapy', ['Painless single-sitting root canals using rotary endodontics — save your natural tooth.', 'Professional installation by certified technicians', 'Code-compliant workmanship guaranteed', 'Free on-site measurement and estimate', 'Clean-up included after every job', 'Warranty on all installed materials'])">
+<div class="home-service-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="12" cy="13" r="4"></circle><circle cx="8" cy="7" fill="currentColor" r="1"></circle></svg>
+</div>
+<div class="home-service-name">Root Canal Therapy</div>
+<div class="home-service-desc">Painless single-sitting root canals using rotary endodontics — save your natural tooth.</div>
+<div class="home-service-arrow">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</div>
+</div>
+<div class="home-service-card anim-fade-up anim-d3" onclick="openServicePopup('Teeth Whitening', ['In-office laser whitening and take-home kits to brighten your smile by 4–6 shades safely.', 'Certified professionals with years of custom lighting experience', 'Free written estimate before any work begins', 'Licensed, bonded, and fully insured team', 'Same-day and next-day scheduling available', 'Satisfaction guaranteed on every custom lighting job', '24/7 emergency service dispatch'])">
+<div class="home-service-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5c0 5-5 11-5 11S7 12 7 7a5 5 0 0 1 5-5z"></path><circle cx="12" cy="7" r="2"></circle></svg>
+</div>
+<div class="home-service-name">Teeth Whitening</div>
+<div class="home-service-desc">In-office laser whitening and take-home kits to brighten your smile by 4–6 shades safely.</div>
+<div class="home-service-arrow">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</div>
+</div>
+<div class="home-service-card anim-fade-up anim-d4" onclick="openServicePopup('Braces & Aligners', ['Metal, ceramic and clear aligner orthodontics for kids, teens and adults.', 'Certified professionals with years of home rewiring experience', 'Free written estimate before any work begins', 'Licensed, bonded, and fully insured team', 'Same-day and next-day scheduling available', 'Satisfaction guaranteed on every home rewiring job', '24/7 emergency service dispatch'])">
+<div class="home-service-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="8" cy="8" r="1.5"></circle><circle cx="16" cy="8" r="1.5"></circle><rect height="5" rx="1" width="10" x="7" y="13"></rect></svg>
+</div>
+<div class="home-service-name">Braces & Aligners</div>
+<div class="home-service-desc">Metal, ceramic and clear aligner orthodontics for kids, teens and adults.</div>
+<div class="home-service-arrow">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</div>
+</div>
+<div class="home-service-card anim-fade-up anim-d5" onclick="openServicePopup('Kids Dentistry', ['Gentle, fear-free dental care for children — preventive checkups, sealants and fluoride.', 'Certified professionals with years of commercial dental experience', 'Free written estimate before any work begins', 'Licensed, bonded, and fully insured team', 'Same-day and next-day scheduling available', 'Satisfaction guaranteed on every commercial dental job', '24/7 emergency service dispatch'])">
+<div class="home-service-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18M7 3v18M17 3v18"></path></svg>
+</div>
+<div class="home-service-name">Kids Dentistry</div>
+<div class="home-service-desc">Gentle, fear-free dental care for children — preventive checkups, sealants and fluoride.</div>
+<div class="home-service-arrow">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</div>
+</div>
+<div class="home-service-card anim-fade-up" onclick="openServicePopup('Smile Makeover', ['Veneers, crowns and complete smile design to give you the confidence you deserve.', 'Professional installation by certified technicians', 'Code-compliant workmanship guaranteed', 'Free on-site measurement and estimate', 'Clean-up included after every job', 'Warranty on all installed materials'])" style="animation-delay:0.6s; opacity:0;">
+<div class="home-service-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+</div>
+<div class="home-service-name">Smile Makeover</div>
+<div class="home-service-desc">Veneers, crowns and complete smile design to give you the confidence you deserve.</div>
+<div class="home-service-arrow">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</div>
+</div></div>
+<div style="text-align:center;margin-top:48px;"><button class="btn-primary" onclick="showView('contact')" style="display:inline-flex;margin:0 auto;">Get a Book Online <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button></div>
+</div></section>
+<section class="why-us-section"><div class="container">
+<div class="section-tag" style="color:#0f766e;background:#ccfbf1;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Why Us</div>
+<h2 class="section-h2" style="font-size:clamp(28px,4vw,52px);">Why Choose <span class="accent">Doon Smiles Dental?</span></h2>
+<div class="why-us-grid">
+<div class="why-card">
+<div class="why-card-emoji">🔧</div>
+<div><div class="why-card-title">Specialist Doctors</div><div class="why-card-text">MDS-qualified dentists & implantologists with 15+ years of clinical experience.</div></div>
+</div>
+<div class="why-card">
+<div class="why-card-emoji">🛡️</div>
+<div><div class="why-card-title">Dental Emergencies</div><div class="why-card-text">Same-day emergency dental care for severe pain, trauma or broken teeth.</div></div>
+</div>
+<div class="why-card">
+<div class="why-card-emoji">📋</div>
+<div><div class="why-card-title">Transparent Pricing</div><div class="why-card-text">Upfront treatment plans with no hidden costs. EMI & insurance accepted.</div></div>
+</div>
+<div class="why-card">
+<div class="why-card-emoji">⭐</div>
+<div><div class="why-card-title">Advanced Tech</div><div class="why-card-text">Digital X-rays, intra-oral cameras, RVG and CAD/CAM same-day crowns.</div></div>
+</div></div>
+</div></section>
+<section class="process-section"><div class="container">
+<div class="section-tag" style="color:#0f766e;background:#ccfbf1;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>How It Works</div>
+<h2 class="section-h2" style="font-size:clamp(28px,4vw,52px);">Our Simple <span class="accent">Process</span></h2>
+<p class="section-desc">From first contact to completed work — here is exactly what to expect.</p>
+<div class="process-timeline">
+<div class="process-step">
+<div class="process-step-bubble">💬<span class="process-step-num">1</span></div>
+<div class="process-step-body">
+<div class="process-step-title">Book Online</div>
+<div class="process-step-text">Call or fill the form. Our team will help you pick a time that works for your schedule.</div>
+</div>
+</div>
+<div class="process-step">
+<div class="process-step-bubble">🔍<span class="process-step-num">2</span></div>
+<div class="process-step-body">
+<div class="process-step-title">Consultation & X-Ray</div>
+<div class="process-step-text">The doctor examines you, takes digital X-rays if needed, and explains the treatment plan and exact cost upfront.</div>
+</div>
+</div>
+<div class="process-step">
+<div class="process-step-bubble">⚙️<span class="process-step-num">3</span></div>
+<div class="process-step-body">
+<div class="process-step-title">Gentle Treatment</div>
+<div class="process-step-text">Treatment is carried out using premium materials and sterilized instruments — with comfort and precision at every step.</div>
+</div>
+</div>
+<div class="process-step">
+<div class="process-step-bubble">🔑<span class="process-step-num">4</span></div>
+<div class="process-step-body">
+<div class="process-step-title">Aftercare & Warranty</div>
+<div class="process-step-text">Detailed aftercare instructions, follow-up visits and a written warranty on implants, crowns and orthodontic work.</div>
+</div>
+</div></div>
+</div></section>
+<section class="cta-banner-section"><div class="cta-banner">
+<h2>Ready to Experience Premium Quality?</h2><p>Contact Doon Smiles Dental Care today for your 100% free, no-obligation estimate.</p>
+<button class="cta-banner-btn" onclick="showView('contact')">Get Book Online <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+</div></section>
+<section class="brands-section"><div class="container">
+<div style="text-align:center;">
+<div class="section-tag" style="justify-content:center;color:#0f766e;background:#ccfbf1;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Our Specialties</div>
+<h2 class="section-h2" style="font-size:clamp(28px,4vw,52px);text-align:center;">Services We <span class="accent">Specialize In</span></h2>
+<p class="section-desc" style="margin:0 auto;text-align:center;">Our certified professionals cover a wide range of service areas to meet all your needs.</p>
+</div>
+<div class="brands-grid">
+<div class="brand-card">
+<div class="brand-card-icon">🏠</div>
+<div class="brand-card-name">Dental Implants</div>
+</div>
+<div class="brand-card">
+<div class="brand-card-icon">🔵</div>
+<div class="brand-card-name">Root Canal Therapy</div>
+</div>
+<div class="brand-card">
+<div class="brand-card-icon">🌀</div>
+<div class="brand-card-name">Teeth Whitening</div>
+</div>
+<div class="brand-card">
+<div class="brand-card-icon">⚡</div>
+<div class="brand-card-name">Braces & Aligners</div>
+</div>
+<div class="brand-card">
+<div class="brand-card-icon">🔩</div>
+<div class="brand-card-name">Kids Dentistry</div>
+</div>
+<div class="brand-card">
+<div class="brand-card-icon">🍴</div>
+<div class="brand-card-name">Smile Makeover</div>
+</div></div>
+</div></section>
+<section class="credentials-section"><div class="container">
+<div style="text-align:center;">
+<div class="section-tag" style="justify-content:center;color:#0f766e;background:#ccfbf1;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Our Credentials</div>
+<h2 class="section-h2" style="font-size:clamp(28px,4vw,52px);text-align:center;">Licensed, Certified <span class="accent">&amp; Insured</span></h2>
+<p class="section-desc" style="margin:0 auto;text-align:center;">Doon Smiles Dental Care maintains the highest industry credentials to deliver safe, compliant, and exceptional service every time.</p>
+</div>
+<div class="credentials-grid">
+<div class="credential-card">
+<div class="credential-card-icon">📋</div>
+<div class="credential-card-title">DCI Registered</div>
+<div class="credential-card-text">Registered with the Dental Council of India and Uttarakhand State Dental Council — fully licensed clinic.</div>
+</div>
+<div class="credential-card">
+<div class="credential-card-icon">🏗️</div>
+<div class="credential-card-title">Specialist Certified</div>
+<div class="credential-card-text">Implantologist trained in Germany & ICOI member. Orthodontist & Endodontist on panel.</div>
+</div>
+<div class="credential-card">
+<div class="credential-card-icon">⭐</div>
+<div class="credential-card-title">4.9★ on Google</div>
+<div class="credential-card-text">Rated 4.9 out of 5 by 800+ patients on Google Reviews — consistently praised for gentle, honest care.</div>
+</div>
+<div class="credential-card">
+<div class="credential-card-icon">🦺</div>
+<div class="credential-card-title">Sterilization Audited</div>
+<div class="credential-card-text">Autoclave sterilization for every instrument. Disposable kits and strict CDC infection-control protocols.</div>
+</div></div>
+</div></section>
+<section class="coverage-section"><div class="container">
+<div class="coverage-grid">
+<div>
+<div class="section-tag" style="color:#0f766e;background:#ccfbf1;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Coverage Area</div>
+<h2 class="section-h2" style="font-size:clamp(28px,4vw,52px);">Serving Dehradun &amp;<br/><span class="accent">Doon Valley</span></h2>
+<p class="section-desc">Fast dispatch, local expertise, and reliable same-day or next-day scheduling across Dehradun and surrounding communities.</p>
+<div class="coverage-tags"><span class="coverage-tag">Dehradun</span>
+<span class="coverage-tag">Doon Valley</span>
+<span class="coverage-tag">Mussoorie Road</span>
+<span class="coverage-tag">Rishikesh & Haridwar</span>
+</div>
+</div>
+<div class="coverage-map-wrap">
+<iframe allowfullscreen="" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=78.0033%2C30.3137%2C78.0233%2C30.3337&amp;layer=mapnik&amp;marker=30.3236845%2C78.0133288" title="Doon Smiles Dental Care Service Area"></iframe>
+<a href="https://www.google.com/maps/place/Doon+Smiles+Dental+Care+and+Implant+Centre/@30.3236845,78.0133288,17z/" style="position:absolute;top:12px;left:12px;background:white;color:var(--slate);font-weight:800;font-size:10px;padding:8px 14px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:0.05em;z-index:10;text-decoration:none;" target="_blank">Open in Maps <svg fill="none" stroke="currentColor" stroke-width="2.5" style="width:10px;height:10px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg></a>
+</div>
+</div>
+</div></section>
+<section style="background:var(--slate);padding:80px 48px;text-align:center;">
+<h2 style="font-family:var(--font-head);font-weight:900;font-size:clamp(28px,5vw,52px);color:white;letter-spacing:-0.04em;text-transform:uppercase;margin-bottom:16px;line-height:1.1;">Ready to Get Started?<br/><span style="color:var(--brand);">Call Us for a Book Online</span></h2>
+<p style="color:rgba(255,255,255,0.7);font-size:16px;font-weight:500;max-width:540px;margin:0 auto 40px;line-height:1.6;">Schedule a free consultation with Dehradun's trusted dental & implant specialists.</p>
+<div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+<button class="btn-primary" onclick="showView('contact')" style="background:var(--brand);">Get Book Online <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+<a href="tel:919876543210" style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.1);color:white;padding:20px 40px;border-radius:16px;font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:-0.02em;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s;text-decoration:none;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:20px;height:20px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 98765 43210</a>
+</div>
+<p style="margin-top:24px;color:rgba(255,255,255,0.5);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;">🦷 Book Onlines · Sterilized Clinic · 10,000+ Happy Smiles</p>
+</section>
+<section class="faq-section"><div class="container">
+<div class="section-heading" style="text-align:center;margin-bottom:64px;">
+<div class="section-tag" style="justify-content:center;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" x2="12.01" y1="17" y2="17"></line></svg>Common Questions</div>
+<h2 class="section-h2" style="font-size:clamp(32px,4vw,56px);text-align:center;">FREQUENTLY ASKED<br/><span class="accent">QUESTIONS.</span></h2>
+</div>
+<div class="faq-grid">
+<div class="faq-card" onmouseout="this.style.boxShadow='none'" onmouseover="this.style.boxShadow='0 20px 40px rgba(15,23,42,0.1)'" style="background:var(--white);padding:32px;border-radius:24px;border:1px solid var(--slate-100);transition:all 0.3s;">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">Does the dental implant procedure hurt?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">No. Implant placement is done under local anaesthesia and most patients report only mild soreness afterwards, easily managed with regular painkillers.</p>
+</div>
+<div class="faq-card" onmouseout="this.style.boxShadow='none'" onmouseover="this.style.boxShadow='0 20px 40px rgba(15,23,42,0.1)'" style="background:var(--white);padding:32px;border-radius:24px;border:1px solid var(--slate-100);transition:all 0.3s;">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">How long does a root canal take?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">Most root canals at Doon Smiles are completed in a single 45–60 minute sitting using modern rotary endodontic technology.</p>
+</div>
+<div class="faq-card" onmouseout="this.style.boxShadow='none'" onmouseover="this.style.boxShadow='0 20px 40px rgba(15,23,42,0.1)'" style="background:var(--white);padding:32px;border-radius:24px;border:1px solid var(--slate-100);transition:all 0.3s;">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">Can my existing dental panel support an EV charger?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">Most modern 150 or 200-amp dental panels can support a Level 2 EV charger. Older 60 or 100-amp panels usually require a service panel upgrade first.</p>
+</div>
+<div class="faq-card" onmouseout="this.style.boxShadow='none'" onmouseover="this.style.boxShadow='0 20px 40px rgba(15,23,42,0.1)'" style="background:var(--white);padding:32px;border-radius:24px;border:1px solid var(--slate-100);transition:all 0.3s;">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">Do you handle dental emergencies?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">Yes — for severe pain, knocked-out teeth or trauma, call our emergency line and we will arrange a same-day appointment.</p>
+</div></div>
+</div></section>
+</div>
+<div class="view" id="view-services"><div class="container">
+<div class="section-heading anim-fade-up">
+<div class="section-tag"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Professional Excellence</div>
+<h2 class="section-h2">CORE<br><span class="accent">SERVICES.</span></br></h2>
+<p class="section-desc">World-class clinical care delivered with warmth, precision and complete transparency.</p>
+</div>
+<div class="services-grid">
+<div class="service-card anim-fade-up anim-d1" onclick="openServicePopup('Dental Implants',['Permanent tooth replacement with single-stage and All-on-4 implants by certified implantologists.','Titanium implants with lifetime warranty','Painless procedure under local anaesthesia','Same-day consultation available','Financing & EMI options accepted','Post-op care & follow-up included'])" style="cursor:pointer;">
+<div class="service-card-img">
+<img alt="Dental Implants" loading="lazy" src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop&q=70"/>
+<div class="service-card-img-overlay"></div>
+</div>
+<div class="service-card-body">
+<div class="service-card-title">Dental Implants</div>
+<div class="service-card-val">1 / Dental Implants</div>
+<p style="font-size: 14px; color: rgba(15,23,42,0.5); margin-top: 8px;">Permanent tooth replacement with single-stage and All-on-4 implants by certified implantologists.</p>
+</div>
+</div>
+<div class="service-card anim-fade-up anim-d2" onclick="openServicePopup('Root Canal Therapy',['Painless single-sitting root canals using rotary endodontics — save your natural tooth.','Modern rotary instruments for precision','Local anaesthesia for zero pain','Digital X-ray assessment included','Crown fitting in same appointment','Certified endodontist on panel'])" style="cursor:pointer;">
+<div class="service-card-img">
+<img alt="Root Canal Therapy" loading="lazy" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=70"/>
+<div class="service-card-img-overlay"></div>
+</div>
+<div class="service-card-body">
+<div class="service-card-title">Root Canal Therapy</div>
+<div class="service-card-val">2 / Root Canal Therapy</div>
+<p style="font-size: 14px; color: rgba(15,23,42,0.5); margin-top: 8px;">Painless single-sitting root canals using rotary endodontics — save your natural tooth.</p>
+</div>
+</div>
+<div class="service-card anim-fade-up anim-d3" onclick="openServicePopup('Teeth Whitening',['In-office laser whitening and take-home kits to brighten your smile by 4–6 shades safely.','Results visible in a single session','Safe for enamel — dentist supervised','Custom take-home tray kit included','No sensitivity formula available','Before & after photo documentation'])" style="cursor:pointer;">
+<div class="service-card-img">
+<img alt="Teeth Whitening" loading="lazy" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&auto=format&fit=crop&q=70"/>
+<div class="service-card-img-overlay"></div>
+</div>
+<div class="service-card-body">
+<div class="service-card-title">Teeth Whitening</div>
+<div class="service-card-val">3 / Teeth Whitening</div>
+<p style="font-size: 14px; color: rgba(15,23,42,0.5); margin-top: 8px;">In-office laser whitening and take-home kits to brighten your smile by 4–6 shades safely.</p>
+</div>
+</div>
+<div class="service-card anim-fade-up anim-d4" onclick="openServicePopup('Braces & Aligners',['Metal, ceramic and clear aligner orthodontics for kids, teens and adults.','Free orthodontic consultation','Metal, ceramic and Invisalign options','Average treatment: 12–18 months','Monthly adjustment appointments','Retainer provided post-treatment'])" style="cursor:pointer;">
+<div class="service-card-img">
+<img alt="Braces & Aligners" loading="lazy" src="https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=800&auto=format&fit=crop&q=70"/>
+<div class="service-card-img-overlay"></div>
+</div>
+<div class="service-card-body">
+<div class="service-card-title">Braces & Aligners</div>
+<div class="service-card-val">4 / Braces & Aligners</div>
+<p style="font-size: 14px; color: rgba(15,23,42,0.5); margin-top: 8px;">Metal, ceramic and clear aligner orthodontics for kids, teens and adults.</p>
+</div>
+</div>
+<div class="service-card anim-fade-up anim-d5" onclick="openServicePopup('Kids Dentistry',['Gentle, fear-free dental care for children — preventive checkups, sealants and fluoride.','Child-friendly clinic environment','Pain-free techniques & nitrous oxide available','Fluoride treatments & sealants','Habit counselling (thumb-sucking, etc.)','Parents welcome in the treatment room'])" style="cursor:pointer;">
+<div class="service-card-img">
+<img alt="Kids Dentistry" loading="lazy" src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?w=800&auto=format&fit=crop&q=70"/>
+<div class="service-card-img-overlay"></div>
+</div>
+<div class="service-card-body">
+<div class="service-card-title">Kids Dentistry</div>
+<div class="service-card-val">5 / Kids Dentistry</div>
+<p style="font-size: 14px; color: rgba(15,23,42,0.5); margin-top: 8px;">Gentle, fear-free dental care for children — preventive checkups, sealants and fluoride.</p>
+</div>
+</div>
+<div class="service-card anim-fade-up" onclick="openServicePopup('Smile Makeover',['Veneers, crowns and complete smile design to give you the confidence you deserve.','Digital smile preview before treatment','Porcelain veneers & ceramic crowns','Gum contouring & reshaping available','Combined treatments for full transformation','Personalised smile design consultation'])" style="animation-delay:0.6s; opacity:0; cursor:pointer;">
+<div class="service-card-img">
+<img alt="Smile Makeover" loading="lazy" src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=800&auto=format&fit=crop&q=70"/>
+<div class="service-card-img-overlay"></div>
+</div>
+<div class="service-card-body">
+<div class="service-card-title">Smile Makeover</div>
+<div class="service-card-val">6 / Smile Makeover</div>
+<p style="font-size: 14px; color: rgba(15,23,42,0.5); margin-top: 8px;">Veneers, crowns and complete smile design to give you the confidence you deserve.</p>
+</div>
+</div></div>
+</div></div>
+<div class="view" id="view-about"><div class="container">
+<div class="about-grid">
+<div>
+<div class="section-heading anim-fade-up">
+<div class="section-tag"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Professional Excellence</div>
+<h2 class="section-h2">THE ART OF  ELECTRICIANS<br/><span class="accent">SMILES.</span></h2>
+<p class="section-desc">Doon Smiles was founded with a simple mission — make world-class dental care accessible, painless and affordable for every family in Dehradun.</p>
+</div>
+<div class="feature-list">
+<div class="feature-item anim-fade-up anim-d1">
+<div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"></path><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"></path><path d="M4 15v-3a6 6 0 0 1 6-6h0"></path><path d="M14 6h0a6 6 0 0 1 6 6v3"></path></svg></div>
+<div><div class="feature-title">Specialist Doctors</div><div class="feature-text">MDS-qualified dentists & implantologists with 15+ years of clinical experience.</div></div>
+</div>
+<div class="feature-item anim-fade-up anim-d2">
+<div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg></div>
+<div><div class="feature-title">Dental Emergencies</div><div class="feature-text">Same-day emergency dental care for severe pain, trauma or broken teeth.</div></div>
+</div>
+<div class="feature-item anim-fade-up anim-d3">
+<div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
+<div><div class="feature-title">Transparent Pricing</div><div class="feature-text">Upfront treatment plans with no hidden costs. EMI & insurance accepted.</div></div>
+</div>
+<div class="feature-item anim-fade-up anim-d4">
+<div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+<div><div class="feature-title">Advanced Tech</div><div class="feature-text">Digital X-rays, intra-oral cameras, RVG and CAD/CAM same-day crowns.</div></div>
+</div></div>
+</div>
+<div class="about-image-wrap anim-fade-in anim-d2">
+<div class="about-image-frame"><img alt="Doon Smiles Dental Clinic Dehradun" loading="lazy" src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=900&auto=format&fit=crop&q=80"/></div>
+<div class="about-center-badge"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+</div>
+</div>
+</div></div>
+<div class="view" id="view-contact"><div class="container">
+<div class="contact-split-card anim-fade-up">
+<div style="background:linear-gradient(135deg,var(--brand) 0%,color-mix(in srgb,var(--brand) 70%,#000) 100%);color:white;padding:64px 48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;border-radius:36px 0 0 36px;">
+<div style="position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,0.15) 0%,transparent 60%);z-index:1;"></div>
+<div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:32px;height:100%;">
+<div>
+<div style="display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.2em;color:rgba(255,255,255,0.9);background:rgba(255,255,255,0.15);padding:6px 16px;border-radius:99px;margin-bottom:24px;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="width:12px;height:12px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>Quick Booking</div>
+<h2 style="font-family:var(--font-head);font-weight:900;font-size:clamp(28px,4vw,40px);line-height:1.05;letter-spacing:-0.04em;text-transform:uppercase;margin-bottom:16px;color:white;">BOOK YOUR<br/><span style="color:rgba(255,255,255,0.85);">VISIT.</span></h2>
+<p style="color:rgba(255,255,255,0.8);font-size:15px;line-height:1.5;font-weight:500;">Connect with our reception team. We serve the Dehradun region with certified, licensed assurance.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px;">
+<div style="display:flex;align-items:center;gap:16px;"><div style="width:44px;height:44px;background:rgba(255,255,255,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;border:1px solid rgba(255,255,255,0.1);"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><div><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.6);margin-bottom:2px;">Appointment Line</div><a href="tel:919876543210" style="font-family:var(--font-head);font-weight:800;font-size:20px;letter-spacing:-0.02em;color:white;">+91 98765 43210</a></div></div>
+<div style="display:flex;align-items:center;gap:16px;"><div style="width:44px;height:44px;background:rgba(255,255,255,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;border:1px solid rgba(255,255,255,0.1);"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><div><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.6);margin-bottom:2px;">Address</div><span style="font-family:var(--font-head);font-weight:800;font-size:14px;color:white;">6, Rajpur Road, Near Astley Hall, Dehradun, Uttarakhand 248001</span></div></div>
+<div style="display:flex;align-items:center;gap:16px;"><div style="width:44px;height:44px;background:rgba(255,255,255,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;border:1px solid rgba(255,255,255,0.1);"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><div><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.6);margin-bottom:2px;">Email</div><a href="mailto:care@doonsmiles.in" style="font-family:var(--font-head);font-weight:800;font-size:14px;color:white;word-break:break-all;">care@doonsmiles.in</a></div></div>
+<div style="display:flex;align-items:center;gap:16px;"><div style="width:44px;height:44px;background:rgba(255,255,255,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:white;border:1px solid rgba(255,255,255,0.1);"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><div><div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.6);margin-bottom:2px;">Hours</div><span style="font-family:var(--font-head);font-weight:800;font-size:13px;color:white;">Mon-Sat: 9:30 AM - 8:00 PM | Sunday: By Appointment</span></div></div>
+</div>
+<div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.2);height:180px;z-index:2;">
+<iframe allowfullscreen="" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=78.0033%2C30.3137%2C78.0233%2C30.3337&amp;layer=mapnik&amp;marker=30.3236845%2C78.0133288" style="border:0;display:block;width:100%;height:100%;" title="Doon Smiles Dental Care Location"></iframe>
+<a href="https://www.google.com/maps/place/Doon+Smiles+Dental+Care+and+Implant+Centre/@30.3236845,78.0133288,17z/" style="position:absolute;top:8px;left:8px;background:white;color:var(--slate);font-weight:800;font-size:10px;padding:6px 12px;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:flex;align-items:center;gap:4px;text-transform:uppercase;letter-spacing:0.05em;z-index:10;text-decoration:none;" target="_blank">Open Maps<svg fill="none" stroke="currentColor" stroke-width="2.5" style="width:9px;height:9px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg></a>
+</div>
+</div>
+</div>
+<div style="background:white;padding:64px 48px;display:flex;flex-direction:column;justify-content:center;border-radius:0 36px 36px 0;">
+<h3 style="font-family:var(--font-head);font-weight:900;font-size:26px;color:var(--slate);text-transform:uppercase;letter-spacing:-0.04em;margin-bottom:8px;">BOOK APPOINTMENT</h3>
+<p style="color:rgba(15,23,42,0.5);font-size:15px;margin-bottom:28px;font-weight:500;">Tell us what you need and we’ll arrange your appointment within 24 hours.</p>
+<form id="estimateForm" onsubmit="handleFormSubmit(event)" style="display:flex;flex-direction:column;gap:18px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+<div style="display:flex;flex-direction:column;gap:6px;"><label style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:var(--slate);">Full Name</label><input onblur="this.style.borderColor='var(--slate-100)'" onfocus="this.style.borderColor='var(--brand)'" placeholder="John Doe" required="" style="padding:13px 15px;border-radius:10px;border:1px solid var(--slate-100);background:var(--slate-light);outline:none;font-family:var(--font-sans);font-size:14px;width:100%;transition:border-color 0.2s;" type="text"/></div>
+<div style="display:flex;flex-direction:column;gap:6px;"><label style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:var(--slate);">Phone Number</label><input onblur="this.style.borderColor='var(--slate-100)'" onfocus="this.style.borderColor='var(--brand)'" placeholder="+91 98765 43210" required="" style="padding:13px 15px;border-radius:10px;border:1px solid var(--slate-100);background:var(--slate-light);outline:none;font-family:var(--font-sans);font-size:14px;width:100%;transition:border-color 0.2s;" type="tel"/></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+<div style="display:flex;flex-direction:column;gap:6px;"><label style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:var(--slate);">Preferred Date</label><input onblur="this.style.borderColor='var(--slate-100)'" onfocus="this.style.borderColor='var(--brand)'" placeholder="123 Main St" required="" style="padding:13px 15px;border-radius:10px;border:1px solid var(--slate-100);background:var(--slate-light);outline:none;font-family:var(--font-sans);font-size:14px;width:100%;transition:border-color 0.2s;" type="text"/></div>
+<div style="display:flex;flex-direction:column;gap:6px;"><label style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:var(--slate);">Email (Optional)</label><input onblur="this.style.borderColor='var(--slate-100)'" onfocus="this.style.borderColor='var(--brand)'" placeholder="care@doonsmiles.in" style="padding:13px 15px;border-radius:10px;border:1px solid var(--slate-100);background:var(--slate-light);outline:none;font-family:var(--font-sans);font-size:14px;width:100%;transition:border-color 0.2s;" type="email"/></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;"><label style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:var(--slate);">Services Needed</label>
+<div class="checkbox-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+<label class="cb-container" style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--slate);cursor:pointer;padding:12px;border:1px solid var(--slate-100);border-radius:8px;background:var(--slate-light);transition:all 0.2s;"><input name="services" onchange="this.parentElement.style.borderColor=this.checked?'var(--brand)':'var(--slate-100)';this.parentElement.style.background=this.checked?'color-mix(in srgb, var(--brand) 8%, #ffffff)':'var(--slate-light)';this.nextElementSibling.style.background=this.checked?'var(--brand)':'white';this.nextElementSibling.style.borderColor=this.checked?'var(--brand)':'rgba(15,23,42,0.15)';this.nextElementSibling.firstElementChild.style.display=this.checked?'block':'none';" style="display:none;" type="checkbox" value="Dental Implants"/><span class="custom-checkbox" style="width:18px;height:18px;border:2px solid rgba(15,23,42,0.15);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s;background:white;flex-shrink:0;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;color:white;display:none;stroke-width:3;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family:var(--font-sans);">Dental Implants</span></label>
+<label class="cb-container" style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--slate);cursor:pointer;padding:12px;border:1px solid var(--slate-100);border-radius:8px;background:var(--slate-light);transition:all 0.2s;"><input name="services" onchange="this.parentElement.style.borderColor=this.checked?'var(--brand)':'var(--slate-100)';this.parentElement.style.background=this.checked?'color-mix(in srgb, var(--brand) 8%, #ffffff)':'var(--slate-light)';this.nextElementSibling.style.background=this.checked?'var(--brand)':'white';this.nextElementSibling.style.borderColor=this.checked?'var(--brand)':'rgba(15,23,42,0.15)';this.nextElementSibling.firstElementChild.style.display=this.checked?'block':'none';" style="display:none;" type="checkbox" value="Root Canal Therapy"/><span class="custom-checkbox" style="width:18px;height:18px;border:2px solid rgba(15,23,42,0.15);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s;background:white;flex-shrink:0;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;color:white;display:none;stroke-width:3;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family:var(--font-sans);">Root Canal Therapy</span></label>
+<label class="cb-container" style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--slate);cursor:pointer;padding:12px;border:1px solid var(--slate-100);border-radius:8px;background:var(--slate-light);transition:all 0.2s;"><input name="services" onchange="this.parentElement.style.borderColor=this.checked?'var(--brand)':'var(--slate-100)';this.parentElement.style.background=this.checked?'color-mix(in srgb, var(--brand) 8%, #ffffff)':'var(--slate-light)';this.nextElementSibling.style.background=this.checked?'var(--brand)':'white';this.nextElementSibling.style.borderColor=this.checked?'var(--brand)':'rgba(15,23,42,0.15)';this.nextElementSibling.firstElementChild.style.display=this.checked?'block':'none';" style="display:none;" type="checkbox" value="Teeth Whitening"/><span class="custom-checkbox" style="width:18px;height:18px;border:2px solid rgba(15,23,42,0.15);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s;background:white;flex-shrink:0;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;color:white;display:none;stroke-width:3;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family:var(--font-sans);">Teeth Whitening</span></label>
+<label class="cb-container" style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--slate);cursor:pointer;padding:12px;border:1px solid var(--slate-100);border-radius:8px;background:var(--slate-light);transition:all 0.2s;"><input name="services" onchange="this.parentElement.style.borderColor=this.checked?'var(--brand)':'var(--slate-100)';this.parentElement.style.background=this.checked?'color-mix(in srgb, var(--brand) 8%, #ffffff)':'var(--slate-light)';this.nextElementSibling.style.background=this.checked?'var(--brand)':'white';this.nextElementSibling.style.borderColor=this.checked?'var(--brand)':'rgba(15,23,42,0.15)';this.nextElementSibling.firstElementChild.style.display=this.checked?'block':'none';" style="display:none;" type="checkbox" value="Braces & Aligners"/><span class="custom-checkbox" style="width:18px;height:18px;border:2px solid rgba(15,23,42,0.15);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s;background:white;flex-shrink:0;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;color:white;display:none;stroke-width:3;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family:var(--font-sans);">Braces & Aligners</span></label>
+<label class="cb-container" style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--slate);cursor:pointer;padding:12px;border:1px solid var(--slate-100);border-radius:8px;background:var(--slate-light);transition:all 0.2s;"><input name="services" onchange="this.parentElement.style.borderColor=this.checked?'var(--brand)':'var(--slate-100)';this.parentElement.style.background=this.checked?'color-mix(in srgb, var(--brand) 8%, #ffffff)':'var(--slate-light)';this.nextElementSibling.style.background=this.checked?'var(--brand)':'white';this.nextElementSibling.style.borderColor=this.checked?'var(--brand)':'rgba(15,23,42,0.15)';this.nextElementSibling.firstElementChild.style.display=this.checked?'block':'none';" style="display:none;" type="checkbox" value="Kids Dentistry"/><span class="custom-checkbox" style="width:18px;height:18px;border:2px solid rgba(15,23,42,0.15);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s;background:white;flex-shrink:0;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;color:white;display:none;stroke-width:3;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family:var(--font-sans);">Kids Dentistry</span></label>
+<label class="cb-container" style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--slate);cursor:pointer;padding:12px;border:1px solid var(--slate-100);border-radius:8px;background:var(--slate-light);transition:all 0.2s;"><input name="services" onchange="this.parentElement.style.borderColor=this.checked?'var(--brand)':'var(--slate-100)';this.parentElement.style.background=this.checked?'color-mix(in srgb, var(--brand) 8%, #ffffff)':'var(--slate-light)';this.nextElementSibling.style.background=this.checked?'var(--brand)':'white';this.nextElementSibling.style.borderColor=this.checked?'var(--brand)':'rgba(15,23,42,0.15)';this.nextElementSibling.firstElementChild.style.display=this.checked?'block':'none';" style="display:none;" type="checkbox" value="Smile Makeover"/><span class="custom-checkbox" style="width:18px;height:18px;border:2px solid rgba(15,23,42,0.15);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s;background:white;flex-shrink:0;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;color:white;display:none;stroke-width:3;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family:var(--font-sans);">Smile Makeover</span></label></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;"><label style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;color:var(--slate);">Additional Message (Optional)</label><textarea onblur="this.style.borderColor='var(--slate-100)'" onfocus="this.style.borderColor='var(--brand)'" placeholder="Tell us about your dental concern..." rows="3" style="padding:13px 15px;border-radius:10px;border:1px solid var(--slate-100);background:var(--slate-light);outline:none;font-family:var(--font-sans);font-size:14px;width:100%;resize:vertical;transition:border-color 0.2s;"></textarea></div>
+<div style="font-size:11px;color:rgba(15,23,42,0.4);line-height:1.4;border:1px dashed var(--slate-100);padding:12px;border-radius:8px;text-align:center;font-weight:500;">🛡️ By submitting, you agree to receive calls/messages from our reception team. We value your privacy.</div>
+<button style="width:100%;padding:17px;background:var(--brand);color:white;border:none;font-family:var(--font-head);font-weight:900;font-size:14px;letter-spacing:0.05em;text-transform:uppercase;border-radius:12px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 14px color-mix(in srgb,var(--brand) 30%,transparent);display:flex;align-items:center;justify-content:center;gap:10px;" type="submit">Get Book Online <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="width:16px;height:16px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
+</form>
+</div>
+</div>
+</div></div>
+<div class="view" id="view-portfolio"><div class="container">
+<div class="section-heading" style="text-align:center;margin-bottom:64px;"><h2 class="section-h2">OUR <span class="accent">PORTFOLIO</span></h2><p class="section-desc" style="margin:0 auto;">Explore our latest residential and commercial projects.</p></div>
+<div class="responsive-grid">
+<div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+<img alt="Dental Implant Case" src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop&q=70" style="width:100%;height:250px;object-fit:cover;"/>
+<div style="padding:24px;background:var(--white);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:8px;">Full Mouth Dental Implant</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:14px;">All-on-4 implant rehabilitation restoring a complete set of permanent teeth for a 54-year-old patient.</p>
+</div>
+</div>
+<div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+<img alt="Root Canal Treatment" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=70" style="width:100%;height:250px;object-fit:cover;"/>
+<div style="padding:24px;background:var(--white);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:8px;">Painless Root Canal Therapy</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:14px;">Single-sitting rotary root canal on a severely infected molar — tooth saved, pain gone in one visit.</p>
+</div>
+</div>
+<div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+<img alt="Teeth Whitening Result" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&auto=format&fit=crop&q=70" style="width:100%;height:250px;object-fit:cover;"/>
+<div style="padding:24px;background:var(--white);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:8px;">Laser Teeth Whitening</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:14px;">In-office laser whitening achieving 6-shade improvement in under 90 minutes for a Dehradun bride.</p>
+</div>
+</div>
+<div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+<img alt="Braces and Aligners Case" src="https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=800&auto=format&fit=crop&q=70" style="width:100%;height:250px;object-fit:cover;"/>
+<div style="padding:24px;background:var(--white);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:8px;">Clear Aligner Orthodontics</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:14px;">14-month Invisalign treatment correcting crowded teeth and bite issues for a 26-year-old professional.</p>
+</div>
+</div>
+<div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+<img alt="Kids Dentistry" src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?w=800&auto=format&fit=crop&q=70" style="width:100%;height:250px;object-fit:cover;"/>
+<div style="padding:24px;background:var(--white);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:8px;">Children's Preventive Care</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:14px;">Fluoride treatment, pit & fissure sealants and gentle checkup for a 7-year-old — zero tears, all smiles.</p>
+</div>
+</div>
+<div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+<img alt="Smile Makeover" src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=800&auto=format&fit=crop&q=70" style="width:100%;height:250px;object-fit:cover;"/>
+<div style="padding:24px;background:var(--white);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:8px;">Complete Smile Makeover</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:14px;">Porcelain veneers, gum contouring and crown placement delivering a full Hollywood smile redesign.</p>
+</div>
+</div></div>
+</div></div>
+<div class="view" id="view-reviews"><div class="container" style="text-align:center;">
+<div class="section-heading" style="text-align:center;margin-bottom:64px;"><h2 class="section-h2">CUSTOMER <span class="accent">REVIEWS</span></h2><p class="section-desc" style="margin:0 auto;">Read what our satisfied customers say about our premium services.</p></div>
+<div class="responsive-grid" style="text-align:left;">
+<div style="background:var(--slate-light);padding:40px;border-radius:24px;border:1px solid var(--slate-100);">
+<div style="color:#fbbf24;margin-bottom:16px;display:flex;gap:4px;"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div>
+<p style="color:var(--slate);font-size:16px;font-weight:500;line-height:1.6;margin-bottom:24px;font-style:italic;">“Got my dental implants done at Doon Smiles — completely painless and the doctor was amazing. My smile looks natural and feels great after 8 months.”</p>
+<div style="display:flex;align-items:center;gap:16px;">
+<div style="width:48px;height:48px;border-radius:50%;background:var(--sky);color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:var(--font-head);">SJ</div>
+<div>
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:16px;color:var(--slate);">Sarah Jenkins</h4>
+<span style="font-size:12px;color:rgba(15,23,42,0.5);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;">Patient</span>
+</div>
+</div>
+</div>
+<div style="background:var(--slate-light);padding:40px;border-radius:24px;border:1px solid var(--slate-100);">
+<div style="color:#fbbf24;margin-bottom:16px;display:flex;gap:4px;"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div>
+<p style="color:var(--slate);font-size:16px;font-weight:500;line-height:1.6;margin-bottom:24px;font-style:italic;">“Took my kids here for their first dental visit. The team was so patient and friendly — no tears, only smiles. We come every six months now.”</p>
+<div style="display:flex;align-items:center;gap:16px;">
+<div style="width:48px;height:48px;border-radius:50%;background:var(--sky);color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:var(--font-head);">MT</div>
+<div>
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:16px;color:var(--slate);">Michael Torres</h4>
+<span style="font-size:12px;color:rgba(15,23,42,0.5);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;">Patient</span>
+</div>
+</div>
+</div>
+<div style="background:var(--slate-light);padding:40px;border-radius:24px;border:1px solid var(--slate-100);">
+<div style="color:#fbbf24;margin-bottom:16px;display:flex;gap:4px;"><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div>
+<p style="color:var(--slate);font-size:16px;font-weight:500;line-height:1.6;margin-bottom:24px;font-style:italic;">“Got my braces done here. The doctor explained all options clearly, gave me a fair quote and the results in 14 months were beyond expectations. Highly recommend!”</p>
+<div style="display:flex;align-items:center;gap:16px;">
+<div style="width:48px;height:48px;border-radius:50%;background:var(--sky);color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:var(--font-head);">EC</div>
+<div>
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:16px;color:var(--slate);">Emily Chen</h4>
+<span style="font-size:12px;color:rgba(15,23,42,0.5);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;">Patient</span>
+</div>
+</div>
+</div></div>
+</div></div>
+<div class="view" id="view-faqs"><div class="container">
+<div class="section-heading" style="text-align:center;margin-bottom:64px;"><h2 class="section-h2">FREQUENTLY ASKED <span class="accent">QUESTIONS</span></h2><p class="section-desc" style="margin:0 auto;">Everything you need to know about our services, pricing, and processes.</p></div>
+<div class="responsive-grid">
+<div style="background:var(--slate-light);padding:32px;border-radius:24px;border:1px solid var(--slate-100);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">Does the dental implant procedure hurt?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">No. Implant placement is done under local anaesthesia and most patients report only mild soreness afterwards, easily managed with regular painkillers.</p>
+</div>
+<div style="background:var(--slate-light);padding:32px;border-radius:24px;border:1px solid var(--slate-100);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">How long does a root canal take?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">Most root canals at Doon Smiles are completed in a single 45–60 minute sitting using modern rotary endodontic technology.</p>
+</div>
+<div style="background:var(--slate-light);padding:32px;border-radius:24px;border:1px solid var(--slate-100);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">Can my existing dental panel support an EV charger?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">Most modern 150 or 200-amp dental panels can support a Level 2 EV charger. Older 60 or 100-amp panels usually require a service panel upgrade first.</p>
+</div>
+<div style="background:var(--slate-light);padding:32px;border-radius:24px;border:1px solid var(--slate-100);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">Do you handle dental emergencies?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">Yes — for severe pain, knocked-out teeth or trauma, call our emergency line and we will arrange a same-day appointment.</p>
+</div>
+<div style="background:var(--slate-light);padding:32px;border-radius:24px;border:1px solid var(--slate-100);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">Do you install Tesla and EV chargers?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">Yes — we accept all major health insurance providers and offer 0%-interest EMI options for implants, orthodontics and smile makeovers.</p>
+</div>
+<div style="background:var(--slate-light);padding:32px;border-radius:24px;border:1px solid var(--slate-100);">
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--slate);margin-bottom:16px;">How often should I visit the dentist?</h4>
+<p style="color:rgba(15,23,42,0.6);font-size:16px;line-height:1.6;">We recommend a routine checkup and professional cleaning every 6 months to prevent cavities, gum disease and detect issues early.</p>
+</div></div>
+</div></div>
+<footer style="background:var(--slate);color:white;padding:96px 0 48px;border-top:1px solid rgba(255,255,255,0.05);">
+<div class="container">
+<div class="footer-grid" style="display:grid;grid-template-columns:1.5fr 1fr 1.2fr 1fr;gap:48px;padding-bottom:64px;border-bottom:1px solid rgba(255,255,255,0.05);margin-bottom:48px;">
+<div style="display:flex;flex-direction:column;gap:20px;">
+<div style="display:flex;align-items:center;gap:12px;">
+<div style="width:44px;height:44px;background:var(--brand);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px color-mix(in srgb,var(--brand) 35%,transparent);flex-shrink:0;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="width:22px;height:22px;color:white;" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+<span style="font-family:var(--font-head);font-weight:900;font-size:20px;letter-spacing:-0.04em;text-transform:uppercase;color:white;">Doon Smiles <span style="color:var(--brand);">Dental</span></span>
+</div>
+<p style="color:rgba(255,255,255,0.6);font-size:14px;line-height:1.6;margin:0;">Doon Smiles Dental Care is dedicated to delivering unmatched service quality, licensed safety, and complete customer satisfaction on every job.</p>
+<div style="display:flex;gap:10px;">
+<a href="#" onmouseout="this.style.color='rgba(255,255,255,0.5)';this.style.borderColor='rgba(255,255,255,0.1)'" onmouseover="this.style.color='var(--brand)';this.style.borderColor='var(--brand)'" style="width:36px;height:36px;border:1px solid rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);transition:all 0.2s;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+<a href="#" onmouseout="this.style.color='rgba(255,255,255,0.5)';this.style.borderColor='rgba(255,255,255,0.1)'" onmouseover="this.style.color='var(--brand)';this.style.borderColor='var(--brand)'" style="width:36px;height:36px;border:1px solid rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);transition:all 0.2s;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+</div>
+</div>
+<div>
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:0.1em;color:white;margin-bottom:20px;text-align:left;">Quick Links</h4>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+<li><button onclick="showView('home')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Home</button></li>
+<li><button onclick="showView('about')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">About Us</button></li>
+<li><button onclick="showView('services')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Our Services</button></li>
+<li><button onclick="showView('portfolio')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Portfolio</button></li>
+<li><button onclick="showView('reviews')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Reviews</button></li>
+<li><button onclick="showView('faqs')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">FAQs</button></li>
+</ul>
+</div>
+<div>
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:0.1em;color:white;margin-bottom:20px;text-align:left;">Our Services</h4>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;"><li><button onclick="showView('services')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Dental Implants</button></li>
+<li><button onclick="showView('services')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Root Canal Therapy</button></li>
+<li><button onclick="showView('services')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Teeth Whitening</button></li>
+<li><button onclick="showView('services')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Braces & Aligners</button></li>
+<li><button onclick="showView('services')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Kids Dentistry</button></li>
+<li><button onclick="showView('services')" onmouseout="this.style.color='rgba(255,255,255,0.6)'" onmouseover="this.style.color='var(--brand)'" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);transition:color 0.2s;text-align:left;background:none;border:none;cursor:pointer;padding:0;">Smile Makeover</button></li>
+</ul>
+</div>
+<div>
+<h4 style="font-family:var(--font-head);font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:0.1em;color:white;margin-bottom:20px;text-align:left;">Contact Us</h4>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;color:rgba(255,255,255,0.7);font-size:13px;font-weight:600;">
+<li style="display:flex;gap:10px;align-items:flex-start;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;color:var(--brand);flex-shrink:0;margin-top:2px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:919876543210" style="color:white;">+91 98765 43210</a></li>
+<li style="display:flex;gap:10px;align-items:flex-start;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;color:var(--brand);flex-shrink:0;margin-top:2px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><a href="mailto:care@doonsmiles.in" style="color:white;word-break:break-all;">care@doonsmiles.in</a></li>
+<li style="display:flex;gap:10px;align-items:flex-start;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;color:var(--brand);flex-shrink:0;margin-top:2px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>6, Rajpur Road, Near Astley Hall, Dehradun, Uttarakhand 248001</span></li>
+<li style="display:flex;gap:10px;align-items:flex-start;"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;color:var(--brand);flex-shrink:0;margin-top:2px;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>Mon-Sat: 9:30 AM - 8:00 PM | Sunday: By Appointment</span></li>
+<li style="margin-top:6px;"><button onclick="showView('contact')" style="width:100%;border:none;font-family:var(--font-head);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;background:var(--brand);color:white;padding:13px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">FREE CONSULT</button></li>
+</ul>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;font-size:12px;font-weight:700;text-transform:uppercase;color:rgba(255,255,255,0.4);letter-spacing:0.1em;border-top:1px solid rgba(255,255,255,0.05);padding-top:32px;">
+<span>© 2026 Doon Smiles Dental Care & Implant Centre. All Rights Reserved.</span>
+<div>MADE WITH ♥ BY <a href="https://pixnom.com/" rel="noopener" style="color:var(--brand);font-weight:800;" target="_blank">PIXNOM</a></div>
+</div>
+</div>
+</footer>
+<a href="tel:919876543210" onmouseout="this.style.transform='scale(1) translateY(0)'" onmouseover="this.style.transform='scale(1.1) translateY(-2px)'" style="position:fixed;bottom:32px;right:32px;width:64px;height:64px;background:var(--brand);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(15,23,42,0.25);z-index:999;transition:all 0.3s ease;border:2px solid white;text-decoration:none;">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:26px;height:26px;stroke-width:2.5;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+</a>
+<script>
+const views=['home','services','about','contact','portfolio','reviews','faqs'];
+function showView(name){
+  views.forEach(v=>{const el=document.getElementById('view-'+v);if(el)el.classList.remove('active');});
+  const target=document.getElementById('view-'+name);
+  if(target)target.classList.add('active');
+  window.scrollTo({top:0,behavior:'instant'});
+  document.querySelectorAll('.nav-link').forEach(l=>{l.classList.remove('active');if(l.dataset.view===name)l.classList.add('active');});
+  if(target)target.querySelectorAll('.anim-fade-up,.anim-fade-in,.anim-slide-left').forEach(el=>{el.style.animation='none';el.offsetHeight;el.style.animation='';});
+}
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');document.getElementById('mobileOverlay').classList.toggle('open');}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileOverlay').classList.remove('open');}
+function openServicePopup(title,items){
+  document.getElementById('popupTitle').textContent=title;
+  const list=document.getElementById('popupList');
+  list.innerHTML=items.map(item=>`<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;color:var(--brand);flex-shrink:0;margin-top:3px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>${item}</li>`).join('');
+  document.getElementById('servicePopup').classList.add('open');
+}
+function closeServicePopup(e){if(e.target===document.getElementById('servicePopup'))document.getElementById('servicePopup').classList.remove('open');}
+function handleFormSubmit(e){
+  e.preventDefault();
+  document.getElementById('estimateForm').reset();
+  document.querySelectorAll('.cb-container').forEach(label=>{
+    label.style.borderColor='var(--slate-100)';label.style.background='var(--slate-light)';
+    const cb=label.querySelector('.custom-checkbox');if(cb){cb.style.background='white';cb.style.borderColor='rgba(15,23,42,0.15)';}
+    const svg=label.querySelector('.custom-checkbox svg');if(svg)svg.style.display='none';
+  });
+  document.getElementById('thankYouToast').classList.add('show');
+}
+document.getElementById('thankYouToast').addEventListener('click',function(e){if(e.target===this)this.classList.remove('show');});
+</script>
+
+<script>
+// Mobile footer grid fix — CSS can't override inline styles, so JS does it
+(function() {
+  function fixFooterGrid() {
+    var w = window.innerWidth;
+    var fg = document.querySelector('.footer-grid');
+    if (!fg) return;
+    if (w <= 768) {
+      fg.style.gridTemplateColumns = '1fr';
+      fg.style.gap = '32px';
+    } else if (w <= 1024) {
+      fg.style.gridTemplateColumns = '1fr 1fr';
+      fg.style.gap = '32px';
+    } else {
+      fg.style.gridTemplateColumns = '1.5fr 1fr 1.2fr 1fr';
+      fg.style.gap = '48px';
+    }
+  }
+  fixFooterGrid();
+  window.addEventListener('resize', fixFooterGrid);
+})();
+</script>
+
+</body>
+</html>
